@@ -1,0 +1,97 @@
+body{
+	background-color: #1bbee3;
+	font-family: snell roundhand, cursive;
+}
+
+#topBar{
+	border-style: solid;
+	border-radius: 50px;
+	border-width: .5px;
+	height:150px;
+	width: 100%;
+	background-color: #18abcc;
+	
+	
+}
+#topBar img[src ="ChipHome.jpeg"] {
+	/*border: 1px solid black;*/
+	height: 150px;
+	width: auto;
+	float: left;
+	margin-left: 5%;
+}
+#topBar h1{
+	/*border: 1px solid black;*/
+	height: auto;
+	width: auto;
+	float:left;
+	font-size: 4em;
+	text-align: center;
+
+}
+
+/****************************************/
+
+#statement{
+	border: 1px solid black;
+	height: auto;
+	width: 100%;
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+#statement > p{
+	/*border: 1px solid black;*/
+	height: auto;
+	width: 15%;
+	text-align: center;
+}
+
+/****************************************/
+
+#landscapeImage{
+	border: 1px solid black;
+	height: 250px;
+	width: 100%;
+	margin-bottom: 1%;
+
+}
+
+/****************************************/
+
+
+
+.login{
+	border: 1px solid black;
+	border-radius: 25px;
+	height: 200px;
+	width: 45%;
+	float: left;
+	margin-left: 2%;
+	padding-left: .8%;
+	background-color: #e55331;
+	letter-spacing: 2px;
+	
+}
+
+#teacher{
+	background-color: #18cc93;
+}
+
+form{
+	/*border: 1px solid black;*/
+	height: 130px;
+	width: 250px;
+	margin-top: 7.5%;
+	margin-left: 1%;
+	font-weight: bold;	
+}
+
+#title{
+	/*border: 1px solid black;*/
+	height: auto;
+	width: 200px;
+	float: left;
+	margin-left: 1%;
+	text-align: center;
+}
