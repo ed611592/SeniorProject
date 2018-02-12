@@ -1,0 +1,75 @@
+body{
+	background-color: #f46524;
+	font-family: snell roundhand, cursive;
+}
+
+#topBar{
+	background-color: #ce4a2c;
+	height:100px;
+	width: 100%;
+	border-style: solid;
+	border-radius: 50px;
+	border-width: .5px;
+}
+#topBar img[src ="secretSquirrel.png"] {
+	/*border: 1px solid black;*/
+	height: 99px;
+	width: auto;
+	float: left;
+	margin-left: 25%;
+}
+#topBar h1{
+	/*border: 1px solid black;*/
+	float:left;
+	font-size: 40px;
+	text-align: center;
+	margin-left: 10px;
+}
+
+/****************************************/
+
+#chipStory{
+	border: 1px solid black;
+	background-color: #e55331;
+	height: auto;
+	width: 90%;
+	float: left;
+	margin-left: 5%;
+	padding-left: 5px;
+}
+
+/****************************************/
+
+#animation{
+	height: 400px;
+	width: 400px;
+	border: 3px solid black;
+	float: left;
+	margin-top: 1%;
+	margin-left: 10%;
+}
+
+#Adventures{
+	height: 400px;
+	width: 400px;
+	border: 3px solid black;
+	float: right;
+	margin-top: 1%;
+	margin-right: 10%;	
+}
+
+ol{
+	margin: 5%;
+}
+#Adventures ol li{
+	
+	font-weight: bold;
+	
+	margin-top: 10%;
+	border: 1.5px solid black;
+}
+
+#Adventures ol li:hover{
+	background-color: black;
+	background-color: #89311d;
+}
