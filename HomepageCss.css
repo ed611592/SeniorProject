@@ -1,97 +1,40 @@
-body{
-	background-color: #1bbee3;
-	font-family: snell roundhand, cursive;
+body {
+  padding-top: 50px;
+  background-color: #1bbee3;
 }
 
-#topBar{
-	border-style: solid;
-	border-radius: 50px;
-	border-width: .5px;
-	height:150px;
-	width: 100%;
-	background-color: #18abcc;
-	
-	
+.myNav {
+  background-color: #18abcc;
+  border-bottom: none;
+ }
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand{
+	color: #98DE0F;
+	font-weight: bold;
+	text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -1px black;
+	font-size: 15px;
 }
-#topBar img[src ="ChipHome.jpeg"] {
-	/*border: 1px solid black;*/
-	height: 150px;
-	width: auto;
-	float: left;
-	margin-left: 5%;
-}
-#topBar h1{
-	/*border: 1px solid black;*/
-	height: auto;
-	width: auto;
-	float:left;
-	font-size: 4em;
-	text-align: center;
-
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus{
+	color:white;
+	background-color: #1598b5;
 }
 
-/****************************************/
-
-#statement{
-	border: 1px solid black;
-	height: auto;
-	width: 100%;
-	margin-top: 1%;
-	margin-bottom: 1%;
+.home {
+  padding: 40px 15px;
+  text-align: center;
 }
 
-#statement > p{
-	/*border: 1px solid black;*/
-	height: auto;
-	width: 15%;
-	text-align: center;
+.lead{
+  font-style: italic;
 }
 
-/****************************************/
-
-#landscapeImage{
-	border: 1px solid black;
-	height: 250px;
-	width: 100%;
-	margin-bottom: 1%;
-
+img{
+  border: 4px solid black;
+  padding: 10px;
+  border-radius: 50%;
 }
 
-/****************************************/
-
-
-
-.login{
-	border: 1px solid black;
-	border-radius: 25px;
-	height: 200px;
-	width: 45%;
-	float: left;
-	margin-left: 2%;
-	padding-left: .8%;
-	background-color: #e55331;
-	letter-spacing: 2px;
-	
-}
-
-#teacher{
-	background-color: #18cc93;
-}
-
-form{
-	/*border: 1px solid black;*/
-	height: 130px;
-	width: 250px;
-	margin-top: 7.5%;
-	margin-left: 1%;
-	font-weight: bold;	
-}
-
-#title{
-	/*border: 1px solid black;*/
-	height: auto;
-	width: 200px;
-	float: left;
-	margin-left: 1%;
-	text-align: center;
+.btn{
+  width: 50%; 
 }
