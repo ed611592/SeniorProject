@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "da09222fa517c9335c9efe9180adc149",
+    "content-hash": "1f55ecd9ca0c3f34fa3e900ea7f22254",
     "packages": [
         {
             "name": "markrogoyski/math-php",
@@ -70,6 +70,45 @@
                 "statistics"
             ],
             "time": "2017-12-11T05:05:12+00:00"
+        },
+        {
+            "name": "mnshankar/linear-regression",
+            "version": "1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mnshankar/linear-regression.git",
+                "reference": "cb6d1b2bdd2b1df4354806d66e818303bdc92120"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mnshankar/linear-regression/zipball/cb6d1b2bdd2b1df4354806d66e818303bdc92120",
+                "reference": "cb6d1b2bdd2b1df4354806d66e818303bdc92120",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "mnshankar\\LinearRegression\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Shankar Manamalkav",
+                    "email": "nshankar@ufl.edu"
+                }
+            ],
+            "description": "PHP package for computation of simple linear regression parameters",
+            "time": "2015-02-24T18:40:26+00:00"
         }
     ],
     "packages-dev": [

@@ -45,13 +45,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Chip The Pet Detective 2</a>
+          <a class="navbar-brand" href="<?php echo base_url();?>">Chip The Pet Detective 2</a>
         </div>
         <div id="navbar" class=" collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#about">Student</a></li>
-            <li><a href="#contact">Teacher</a></li>
+            <li class="active"><a href="<?php echo base_url();?>">Home</a></li>
+            <li><a href="<?php echo base_url();?>student">Student</a></li>
+            <li><a href="<?php echo base_url();?>teacher">Teacher</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>

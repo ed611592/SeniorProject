@@ -1,0 +1,100 @@
+<?php
+namespace MathPHP\Probability\Distribution\Continuous;
+
+use MathPHP\Functions\Special;
+use MathPHP\Functions\Support;
+
+/**
+ * Dirac Delta Function
+ * https://en.wikipedia.org/wiki/Dirac_delta_function
+ */
+class DiracDelta extends Continuous
+{
+    /**
+     * Distribution parameter bounds limits
+     *
+     * @var array
+     */
+    const PARAMETER_LIMITS = [];
+
+    /**
+     * Distribution support bounds limits
+     * x  ∈ (-∞,∞)
+     *
+     * @var array
+     */
+    const SUPPORT_LIMITS = [
+        'x'  => '(-∞,∞)',
+    ];
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    /**
+     * Probability density function
+     *
+     *
+     *          /‾
+     *         |  +∞,   x = 0
+     * δ(x) = <
+     *         |  0,    x ≠ 0
+     *          \_
+     *
+     *
+     * @param float $x
+     *
+     * @return number probability
+     */
+    public function pdf(float $x)
+    {
+        if ($x == 0) {
+            return \INF;
+        } else {
+            return 0;
+        }
+    }
+
+    /**
+     * Cumulative distribution function
+     * https://en.wikipedia.org/wiki/Heaviside_step_function
+     *
+     *  |\+∞
+     *  |   δ(x) dx = 1
+     * \|-∞
+     *
+     * @param float $x
+     * @todo how to handle x = 0, depending on context, some say CDF=.5 @ x=0
+     * @return number
+     */
+    public function cdf(float $x)
+    {
+        if ($x >= 0) {
+            return 1;
+        }
+        return 0;
+    }
+    
+    /**
+     * The inverse of the CDF function
+     *
+     */
+    public function inverse(float $p)
+    {
+        return 0;
+    }
+
+    /**
+     * Mean of the distribution
+     *
+     * @return number
+     */
+    public function mean()
+    {
+        return 0;
+    }
+}

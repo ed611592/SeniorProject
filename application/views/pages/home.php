@@ -1,4 +1,15 @@
 
+<?php 
+use MathPHP\Statistics\Regression;
+$points = [[1,2], [2,3], [4,5], [5,7], [6,8]];
+
+// Simple linear regression (least squares method)
+//$regression = new Regression\Linear($points);
+
+
+?>
+
+<h2><?= $title ?></h2>
  <div class="home">
         <h1>Welcome To Chip's Adventure!</h1>
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>

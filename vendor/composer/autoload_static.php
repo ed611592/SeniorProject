@@ -15,6 +15,10 @@ class ComposerStaticInitb2b77a3a01dddcaa5bf66766d07080be
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'm' => 
+        array (
+            'mnshankar\\LinearRegression\\' => 27,
+        ),
         'W' => 
         array (
             'Webmozart\\Assert\\' => 17,
@@ -40,6 +44,10 @@ class ComposerStaticInitb2b77a3a01dddcaa5bf66766d07080be
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'mnshankar\\LinearRegression\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mnshankar/linear-regression/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
