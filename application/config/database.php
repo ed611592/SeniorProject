@@ -78,11 +78,8 @@ $db['default'] = array(
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-<<<<<<< HEAD
 	'database' => 'Chip',
-=======
 	'database' => '',
->>>>>>> 63fe49e54628c699f32fe08580fdb9aab0867e11
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
