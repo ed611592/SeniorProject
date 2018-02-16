@@ -1,12 +1,14 @@
 
+
+
 <?php 
-use MathPHP\Statistics\Regression;
-$points = [[1,2], [2,3], [4,5], [5,7], [6,8]];
+require_once(__DIR__ . '/vendor/autoload.php');
 
-// Simple linear regression (least squares method)
-//$regression = new Regression\Linear($points);
+use MathPHP\Algebra;
 
-
+// Greatest common divisor (GCD)
+$gcd = Algebra::gcd(8, 12);
+//echo $gcd;
 ?>
 
 <h2><?= $title ?></h2>
