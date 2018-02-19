@@ -11,8 +11,6 @@ $gcd = Algebra::gcd(8, 12);
 //echo $gcd;
 ?>
 
-<title>Home</title>
-<h2><?= $title ?></h2>
  <div class="home">
         <h1>Welcome To Chip's Adventure!</h1>
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
