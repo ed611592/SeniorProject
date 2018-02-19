@@ -4,7 +4,7 @@ CREATE TABLE Teacher
   teach_ID INT NOT NULL AUTO_INCREMENT,
   Name VARCHAR(50) NOT NULL,
   username VARCHAR(15) NOT NULL,
-  password VARCHAR(20) NOT NULL,
+  password VARCHAR(50) NOT NULL,
   PRIMARY KEY (teach_ID)
 );
 
@@ -36,7 +36,7 @@ CREATE TABLE Student
   AVG_Grade INT NOT NULL,
   teach_ID INT NOT NULL,
   username VARCHAR(20) NOT NULL,
-  password VARCHAR(20) NOT NULL,
+  password VARCHAR(50) NOT NULL,
   lName VARCHAR(20) NOT NULL,
   PRIMARY KEY (S_ID),
   FOREIGN KEY (teach_ID) REFERENCES Teacher(teach_ID)
