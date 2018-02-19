@@ -9,6 +9,8 @@ use MathPHP\Algebra;
 // Greatest common divisor (GCD)
 $gcd = Algebra::gcd(8, 12);
 //echo $gcd;
+$id = $this -> session -> get_userdata();
+echo $id['S_ID'];
 ?>
 
  <div class="home">

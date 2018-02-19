@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Teacher Login</title>
+    <title>Student Login</title>
 
     <!-- Core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"
@@ -43,16 +43,16 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-<body id = "teacherLogIn">
+<body>
   <center>
           <div  class = "Logo">
            
-              <img  src="<?php echo base_url();?>assets/images/ChipTeacher.png">
+              <img  src="<?php echo base_url();?>assets/images/ChipStudent.png">
               <h3> Chip The Pet Detective</h3>
             
           </div>
   </center>  
-  <?php echo form_open('teacher/login'); ?>
+  <?php echo form_open('student/login'); ?>
 
   	<center>
   	<div class = "row">
@@ -73,8 +73,6 @@
                 			<input type="checkbox" value="remember-me"> Remember me
               		</label>
             		</div>
-
-           	 <a type="text" href ="<?php echo base_url();?>teacher/register">Don't have an account? Create Username.</a>
 
   			<button type = "submit" class = "btn btn-lg btn-primary btn-block">Sign in</button>
 
