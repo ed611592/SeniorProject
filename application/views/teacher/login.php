@@ -37,39 +37,51 @@
     <![endif]-->
   </head>
 
-  <body id= teacherLogIn>
-
-    <div class="container">
-      <center>
+<center>
         <div  class = "Logo">
          
             <img  src="assets/images/ChipTeacher.png">
             <h3> Chip The Pet Detective</h3>
           
         </div>
-      </center>
-      <form class="form-signin">
-        <center>
-        <h2 class="form-signin-heading">Please Sign In</h2></center>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
-       
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <center>
-          <div class="checkbox">
-            <label>
-              <input type="checkbox" value="remember-me"> Remember me
-            </label>
-          </div>
+</center>  
+<?php echo form_open('teacher/login'); ?>
 
-          <a type="text" href ="<?php echo base_url();?>teacher/register">Don't have an account? Create Username.</a>
-          <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+	<center>
+	<div class = "row">
+		<div class = "form-signin">
+			<h2 class = "form-signin-heading"><?php echo $title; ?></h2></center>
+
+			<div class = "form-group">
+				<input type = "text" name = "username" class = "form-control" placeholder = "Username" required autofocus>
+			</div>
+
+			<div class = "form-group">
+				<input type = "password" name = "password" class = "form-control" placeholder = "Password" required autofocus>
+			</div>
+
+			 <center>
+         		<div class="checkbox">
+          			<label>
+              			<input type="checkbox" value="remember-me"> Remember me
+            		</label>
+          		</div>
+
+         	 <a type="text" href ="<?php echo base_url();?>teacher/register">Don't have an account? Create Username.</a>
+
+			<button type = "submit" class = "btn btn-lg btn-primary btn-block">Sign in</button>
+
         </center>
-      </form>
-
-    </div> <!-- /container -->
 
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+
+		</div>
+	</div>
+	</center>
+
+<?php echo form_close(); ?>
+
+ <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
   </body>
 </html>

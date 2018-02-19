@@ -52,6 +52,15 @@
             <li class="active"><a href="<?php echo base_url();?>">Home</a></li>
             <li><a href="<?php echo base_url();?>student">Student</a></li>
             <li><a href="<?php echo base_url();?>teacher">Teacher</a></li>
+            <?php if(!$this -> session -> userdata('logged_in')): ?>
+              <li><a href = "<?php echo base_url();?>teacher/login">Log in</a>
+            <?php endif; ?>  
+            <?php if ($this -> session -> userdata('logged_in')): ?>
+              <li><a href = "<?php echo base_url();?>teacher/logout">Log Out</a>
+            <?php endif; ?>    
+
+
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -59,4 +68,25 @@
 
     	<div class = "container">
 
+        <!-- Flash messages -->
+        <?php if($this-> session-> flashdata('user_registered')): ?>
+            <?php echo '<p class = "alert alert-success">'.$this -> session -> flashdata('user_registered').'</p>'; ?>
 
+        <?php endif; ?> 
+
+        <?php if($this-> session-> flashdata('login_failed')): ?>
+            <?php echo '<p class = "alert alert-danger">'.$this -> session -> flashdata('login_failed').'</p>'; ?>
+
+        <?php endif; ?>  
+
+         <?php if($this-> session-> flashdata('user_loggedin')): ?>
+            <?php echo '<p class = "alert alert-success">'.$this -> session -> flashdata('user_loggedin').'</p>'; ?>
+
+        <?php endif; ?>  
+
+
+         <?php if($this-> session-> flashdata('user_loggedout')): ?>
+            <?php echo '<p class = "alert alert-success">'.$this -> session -> flashdata('user_loggedout').'</p>'; ?>
+
+        <?php endif; ?>  
+       
