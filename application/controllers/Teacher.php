@@ -62,12 +62,14 @@
                         'username' => $username,
                         'logged_in' => true);
 
+                    $this -> session -> set_userdata($user_data);
+
                     $this -> session -> set_flashdata('user_loggedin','You are now logged in');
 
-                    redirect('home');
+                    redirect('teacher/login');
 
                 }else{
-                       //for some reason this isn't working 
+                       
                     $this -> session ->set_flashdata('login_failed', 'Login is invalid');
 
                       redirect('teacher/login');
@@ -93,7 +95,7 @@
             //this isn't working either
             $this -> session ->set_flashdata('user_loggedout', 'You are now logged out');
 
-            redirect('teacher/login');
+            redirect('home');
         }
 
         //Check if username exists
