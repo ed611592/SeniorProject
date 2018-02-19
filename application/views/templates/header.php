@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Home</title>
+    
 
     <!-- Latest compiled and minified CSS -->
     <!-- Core CSS -->
@@ -51,7 +51,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="<?php echo base_url();?>">Home</a></li>
             <li><a href="<?php echo base_url();?>student">Student</a></li>
-            <li><a href="<?php echo base_url();?>teacher">Teacher</a></li>
+            <li><a href="<?php echo base_url();?>teacher/login">Teacher</a></li>
             <?php if(!$this -> session -> userdata('logged_in')): ?>
               <li><a href = "<?php echo base_url();?>teacher/login">Log in</a>
             <?php endif; ?>  

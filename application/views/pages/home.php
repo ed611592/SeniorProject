@@ -11,6 +11,7 @@ $gcd = Algebra::gcd(8, 12);
 //echo $gcd;
 ?>
 
+<title>Home</title>
 <h2><?= $title ?></h2>
  <div class="home">
         <h1>Welcome To Chip's Adventure!</h1>
@@ -21,8 +22,8 @@ $gcd = Algebra::gcd(8, 12);
         <br>
         <br>
         <!--<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>-->
-        <a class="btn btn-lg btn-primary btn-block" type="submit" href ="<?php echo base_url();?>student">Student</a>
-        <a class="btn btn-lg btn-primary btn-block" type="submit" href = "<?php echo base_url();?>teacher">Teacher</a>
+        <a class="btn btn-lg btn-primary btn-block" type="submit" href="<?php echo base_url();?>student"student">Student</a>
+        <a class="btn btn-lg btn-primary btn-block" type="submit" href="<?php echo base_url();?>teacher/login">Teacher</a>
 
         
       </center>

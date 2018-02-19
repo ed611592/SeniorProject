@@ -1,9 +1,16 @@
-<br><br><br><h2>Create an account</h2>
+<br><br><br><center><h2>Create an account</h2></center>
 
 
 <?php echo validation_errors(); ?>
 
+ <!-- Main Custom Styles -->
+    <link href="<?php echo base_url();?>/assets/css/mainCss.css" rel="stylesheet">
+
+
+
 <?php echo form_open('teacher/register'); ?>
+
+ <body id= teacherLogIn>
 	<div class = "row">
 		<div class = 'col-md-4 col-md-offset-4'>
 			<div class = "form-group">
@@ -27,7 +34,9 @@
 			</div>
 		</div>
 	</div>
+	<center>
+		<button type = "submit" class = "btn btn-primary btn-block">Submit</button>
+	</center>
 
-	<button type = "submit" class = "btn btn-primary btn-block">Submit</button>
-
+</body>
 <?php echo form_close(); ?>
