@@ -16,17 +16,18 @@ echo $id['S_ID'];
  <div class="home">
         <h1>Welcome To Chip's Adventure!</h1>
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-      </div>
-      <center>
-        <img src = "assets/images/ChipHome.jpeg">
-        <br>
-        <br>
-        <!--<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>-->
-        <a class="btn btn-lg btn-primary btn-block" type="submit" href="<?php echo base_url();?>student"student">Student</a>
-        <a class="btn btn-lg btn-primary btn-block" type="submit" href="<?php echo base_url();?>teacher/login">Teacher</a>
+  </div>
+  <center>
+    <img src = "assets/images/ChipHome.jpeg">
+    <br>
+    <br>
+    <!--<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>-->
+    <a class="btn btn-lg btn-primary btn-block" type="submit" href="<?php echo base_url();?>student">Student</a>
+    <a class="btn btn-lg btn-primary btn-block" type="submit" href="<?php echo base_url();?>teacher/login">Teacher</a>
+    <a class="btn btn-lg btn-primary btn-block" type="submit" href="<?php echo base_url();?>student/StudentSurvey">Student Survey</a>
 
-        
-      </center>
+    
+  </center>
 
 
     
