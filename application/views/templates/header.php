@@ -50,7 +50,7 @@
         <div id="navbar" class=" collapse navbar-collapse">
           <ul class="nav navbar-nav">
             <li class="active"><a href="<?php echo base_url();?>">Home</a></li>
-            <li><a href="<?php echo base_url();?>student">Student</a></li>
+            <li><a href="<?php echo base_url();?>student/login">Student</a></li>
             <li><a href="<?php echo base_url();?>teacher/login">Teacher</a></li>
             <?php if(!$this -> session -> userdata('logged_in')): ?>
               <li><a href = "<?php echo base_url();?>teacher/login">Log in</a>
