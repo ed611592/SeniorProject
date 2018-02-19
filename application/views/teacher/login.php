@@ -69,9 +69,9 @@
 
   			 <center>
            		<div class="checkbox">
-            			<label>
+            		  <!--<label>
                 			<input type="checkbox" value="remember-me"> Remember me
-              		</label>
+              		</label>-->
             		</div>
 
            	 <a type="text" href ="<?php echo base_url();?>teacher/register">Don't have an account? Create Username.</a>
