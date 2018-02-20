@@ -66,7 +66,7 @@
 
                     $this -> session -> set_flashdata('user_loggedin','You are now logged in');
 
-                    redirect('teacher/login');
+                    redirect('home');
 
                 }else{
                        
