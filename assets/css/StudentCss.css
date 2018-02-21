@@ -29,14 +29,14 @@ color:#e5e5e5;
 }
 
 #questionBox{
-  /*border: 1px solid black;*/
+  border: 1px solid black;
   float: left;
   width: 1100px;
   height: 170px;
 }
 
 #question{
-	/*border: 1px solid red;*/
+	border: 5px solid black;
 	position: absolute;
 	width: 1000px;
 	height: 100px;
@@ -49,7 +49,7 @@ color:#e5e5e5;
 }
 
 .list-group{
-	border: 3px dotted black;
+	border: 2px dotted black;
 	position: absolute;
 	width: 505px;
 	float: left;
@@ -78,16 +78,16 @@ a.list-group-item, button.list-group-item {
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus{
 	color:white;
-	background-color: #a9324e;
+	background-color: #88283E;
 }
 
 #teacherLogIn .myNav {
   background-color: #8b4b40;
  }
 
-#teacherLogIn .navbar-inverse .navbar-nav > .active > a,
-.navbar-inverse .navbar-nav > .active > a:hover,
-.navbar-inverse .navbar-nav > .active > a:focus{
+#teacherLogIn .navbar-inverse .navbar-nav > #teacherLogIn .active > a,
+#teacherLogIn .navbar-inverse .navbar-nav > #teacherLogIn .active > a:hover,
+#teacherLogIn .navbar-inverse .navbar-nav > .active > a:focus{
 	color:white;
 	background-color: #7c4339;
 }

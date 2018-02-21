@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Student</title>
+    <title>Student Homepage</title>
 
     <!-- Latest compiled and minified CSS -->
     <!-- Core CSS -->
@@ -23,7 +23,10 @@
     <link href="mainCss.css" rel="stylesheet">
 
     <!-- Student Custom Styles -->
-    <link href="assets/css/StudentCss.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/assets/css/StudentCss.css" rel="stylesheet">
+
+    <!-- Student Custom Styles -->
+    <link href="<?php echo base_url();?>/assets/css/studentHome.css" rel="stylesheet">
 
 
 
@@ -40,46 +43,31 @@
 
   <body>
 
-    <nav class=" myNav navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"<>/span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Chip The Pet Detective 2</a>
-        </div>
-        <div id="navbar" class=" collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
-            <li class="active"><a href="#about">Student</a></li>
-            <li><a href="#contact">Teacher</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+    
 
     <div class="container">
 
-	<div class="home">
-		<h1>Hello Student!</h1>
-		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-	</div>
-	<div class="survey">
+    	<div class="home">
+    		<h1>Hello Student!</h1>
+    		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    	</div>
 
-		<img id = "questionBox" src = "assets/images/speechBubble.png">
-		<p id = "question"> I wish I could play sports but, like I said, I’m too small. My family still does a lot though. My oldest brother, Chap,  plays a lot of sports and my older sister is in the chess club! What about you? Are you in any sports, clubs or any other activities?</p>
-		<img id = "chip" src="assets/images/ChipStudent.png">
-		
-	</div>
-	<div class="list-group">
-		  <a href="#!" class="list-group-item list-group-item-action">Yes, I’m in at least one club at school</a>
-		  <a href="#!" class="list-group-item list-group-item-action">Yes, I’m in some clubs in school and some outside of school</a>
-		  <a href="#!" class="list-group-item list-group-item-action">No, I’m not in any school activities</a>
-		</div>
-
+      <div id ="chipStory">
+        <center>
+         <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sed aliquam lectus, gravida luctus dolor. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam sed elit non sapien vestibulum suscipit. Sed cursus, ligula non tincidunt dapibus, purus nulla cursus dui, in rhoncus dui sem nec massa. Nam sed lectus quis est venenatis ornare. Donec tristique neque ac sem molestie, non sagittis eros consequat. Nullam ut laoreet neque. Duis vestibulum nec lectus et hendrerit. Vivamus viverra consectetur elit vitae molestie. Phasellus bibendum, nulla vel placerat viverra, urna dui posuere felis, quis efficitur nibh tellus sed magna.
+         </p>
+        </center>
+      </div>
+      <div id="stories">
+        <center>
+          <h4> Start an investigation...</h4>
+          <div class="list-group">
+            <a href="#!" class="list-group-item list-group-item-action">Story 1</a>
+            <a href="#!" class="list-group-item list-group-item-action">Story 2</a>
+            <a href="#!" class="list-group-item list-group-item-action">Story 3</a>
+          </div>
+        </center>
+      </div>
     </div><!-- /.container -->
 
 

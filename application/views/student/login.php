@@ -45,7 +45,7 @@
   </head>
 <body>
   <center>
-          <div  class = "Logo">
+          <div  class = "chip">
            
               <img  src="<?php echo base_url();?>assets/images/ChipStudent.png">
               <h3> Chip The Pet Detective</h3>
