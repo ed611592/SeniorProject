@@ -20,10 +20,10 @@
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Main Custom Styles -->
-    <link href="mainCss.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/assets/css/mainCss.css" rel="stylesheet">
 
     <!-- Student Custom Styles -->
-    <link href="assets/css/StudentCss.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/assets/css/StudentCss.css" rel="stylesheet">
 
 
 
@@ -40,45 +40,26 @@
 
   <body>
 
-    <nav class=" myNav navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"<>/span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Chip The Pet Detective 2</a>
-        </div>
-        <div id="navbar" class=" collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
-            <li class="active"><a href="#about">Student</a></li>
-            <li><a href="#contact">Teacher</a></li>
-          </ul>
-        </div><!--/.nav-collapse -->
-      </div>
-    </nav>
+   
 
     <div class="container">
 
-	<div class="home">
-		<h1>Hello Student!</h1>
-		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-	</div>
-	<div class="survey">
+    	<div class="home">
+    		<h1>Hello Student!</h1>
+    		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    	</div>
+    	<div class="survey">
 
-		<img id = "questionBox" src = "assets/images/speechBubble.png">
-		<p id = "question"> I wish I could play sports but, like I said, I’m too small. My family still does a lot though. My oldest brother, Chap,  plays a lot of sports and my older sister is in the chess club! What about you? Are you in any sports, clubs or any other activities?</p>
-		<img id = "chip" src="assets/images/ChipStudent.png">
-		
-	</div>
-	<div class="list-group">
-		  <a href="#!" class="list-group-item list-group-item-action">Yes, I’m in at least one club at school</a>
-		  <a href="#!" class="list-group-item list-group-item-action">Yes, I’m in some clubs in school and some outside of school</a>
-		  <a href="#!" class="list-group-item list-group-item-action">No, I’m not in any school activities</a>
-		</div>
+    		<img id = "questionBox" src = "assets/images/speechBubble.png">
+    		<p id = "question"> I wish I could play sports but, like I said, I’m too small. My family still does a lot though. My oldest brother, Chap,  plays a lot of sports and my older sister is in the chess club! What about you? Are you in any sports, clubs or any other activities?</p>
+    		<img id = "chip" src = "assets/images/ChipStudent.png">
+    		
+    	</div>
+    	<div class="list-group">
+    		  <a href="#!" class="list-group-item list-group-item-action">Yes, I’m in at least one club at school</a>
+    		  <a href="#!" class="list-group-item list-group-item-action">Yes, I’m in some clubs in school and some outside of school</a>
+    		  <a href="#!" class="list-group-item list-group-item-action">No, I’m not in any school activities</a>
+    	</div>
 
     </div><!-- /.container -->
 
