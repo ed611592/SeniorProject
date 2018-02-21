@@ -1,5 +1,18 @@
 <?php
     class Student extends CI_Controller {
+        //why isn't this working
+          public function view($page = 'StudentSurvey')
+        {
+            if(!file_exists(APPPATH.'views/student/'.$page.'.php')){
+                show_404();
+            }
+
+            $data['title'] = ucfirst($page);
+
+            $this->load->view('templates/header');
+            $this->load->view('view/student/'.$page, $data);
+            $this->load->view('templates/footer');
+        }
 
         //Log in user
          public function login(){

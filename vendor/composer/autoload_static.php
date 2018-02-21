@@ -18,6 +18,8 @@ class ComposerStaticInitb2b77a3a01dddcaa5bf66766d07080be
         'm' => 
         array (
             'mnshankar\\LinearRegression\\' => 27,
+            'mcordingley\\Regression\\' => 23,
+            'mcordingley\\LinearAlgebra\\' => 26,
         ),
         'W' => 
         array (
@@ -48,6 +50,14 @@ class ComposerStaticInitb2b77a3a01dddcaa5bf66766d07080be
         'mnshankar\\LinearRegression\\' => 
         array (
             0 => __DIR__ . '/..' . '/mnshankar/linear-regression/src',
+        ),
+        'mcordingley\\Regression\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mcordingley/regression/src',
+        ),
+        'mcordingley\\LinearAlgebra\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/mcordingley/linearalgebra/src',
         ),
         'Webmozart\\Assert\\' => 
         array (
