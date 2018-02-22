@@ -4,8 +4,9 @@
 <?php 
 require_once(__DIR__ . '/vendor/autoload.php');
 
-
+//this library works
 use MathPHP\Algebra;
+<<<<<<< HEAD
 use Regression\Algorithm\LeastSquares;
 //$algorithm = new LeastSquares;
 use Regression\src\Observations;
@@ -13,8 +14,14 @@ use Regression\src\Observations;
 
 //$observations = new Observation;
 // Greatest common divisor (GCD)
+=======
+>>>>>>> c7ce8c5664ebc52c8254889207019bb7d84efbbf
 $gcd = Algebra::gcd(8, 12);
-//echo $gcd;
+
+//this library does not work
+use MCordingley\Regression\Algorithm\LeastSquares;
+//$algorithm = new LeastSquares;
+
 $id = $this -> session -> get_userdata();
 //echo $id['S_ID'];
 ?>
