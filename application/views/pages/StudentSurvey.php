@@ -23,7 +23,7 @@
     <link href="<?php echo base_url();?>/assets/css/mainCss.css" rel="stylesheet">
 
     <!-- Student Custom Styles -->
-    <link href="<?php echo base_url();?>/assets/css/StudentCss.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/assets/css/UserCss.css" rel="stylesheet">
 
 
 
@@ -50,16 +50,17 @@
     	</div>
     	<div class="survey">
 
-    		<img id = "questionBox" src = "assets/images/speechBubble.png">
+    		<!--<img id = "questionBox" src = "<?php echo base_url();?>assets/images/speechBubble.png">-->
     		<p id = "question"> I wish I could play sports but, like I said, I’m too small. My family still does a lot though. My oldest brother, Chap,  plays a lot of sports and my older sister is in the chess club! What about you? Are you in any sports, clubs or any other activities?</p>
     		<img id = "chip" src = "assets/images/ChipStudent.png">
+            <div class="list-group">
+              <a href="#!" class="list-group-item list-group-item-action">Yes, I’m in at least one club at school</a>
+              <a href="#!" class="list-group-item list-group-item-action">Yes, I’m in some clubs in school and some outside of school</a>
+              <a href="#!" class="list-group-item list-group-item-action">No, I’m not in any school activities</a>
+        </div>
     		
     	</div>
-    	<div class="list-group">
-    		  <a href="#!" class="list-group-item list-group-item-action">Yes, I’m in at least one club at school</a>
-    		  <a href="#!" class="list-group-item list-group-item-action">Yes, I’m in some clubs in school and some outside of school</a>
-    		  <a href="#!" class="list-group-item list-group-item-action">No, I’m not in any school activities</a>
-    	</div>
+    	
 
     </div><!-- /.container -->
 

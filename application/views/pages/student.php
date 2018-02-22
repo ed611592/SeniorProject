@@ -21,7 +21,7 @@
     <link href="assets/css/mainCss.css" rel="stylesheet">
 
     <!-- Student Custom Styles -->
-    <link href="assets/css/studentCss.css" rel="stylesheet">
+    <link href="assets/css/UserCss.css" rel="stylesheet">
 
     <!-- Sign-In Custom Styles -->
     <link href="assets/css/signInCss.css" rel="stylesheet">

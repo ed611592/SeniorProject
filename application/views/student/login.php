@@ -27,7 +27,7 @@
     <link href="<?php echo base_url();?>/assets/css/mainCss.css" rel="stylesheet">
 
     <!-- Student Custom Styles -->
-    <link href="<?php echo base_url();?>/assets/css/studentCss.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/assets/css/UserCss.css" rel="stylesheet">
 
     <!-- Sign-In Custom Styles -->
     <link href="<?php echo base_url();?>/assets/css/signInCss.css" rel="stylesheet">
