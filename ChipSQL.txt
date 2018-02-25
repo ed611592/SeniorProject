@@ -60,7 +60,7 @@ INSERT INTO Teacher VALUES(1,'Jane Smith', 'Jane', '8D788385431273D11E8B43BB78F3
 
 INSERT INTO Student VALUES(2,'andy', 12, 1, 'andy',  'DA41BCEFF97B1CF96078FFB249B3D66E', 'less');
 
-INSERT INTO Student VALUES(3,'andy', 93, 1, 'brandy',  '6C29E9CC4042D972B15FF0304E636886', 'jackson-shorts');
+INSERT INTO Student VALUES(3,'brandy', 93, 1, 'brandy',  '6C29E9CC4042D972B15FF0304E636886', 'jackson-shorts');
 
 INSERT INTO Student VALUES(1,'emily', 93, 1, 'emily',  'B02AE5AAEFE3F7090668DF034B0F2324', 'demarco');
 
