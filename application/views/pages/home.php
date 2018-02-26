@@ -14,7 +14,7 @@ use Regression\src\Observations;
 
 $gcd = Algebra::gcd(8, 12);
 
-//this library does not work
+
 <<<<<<< HEAD
 use MCordingley\Regression\Observations;
 
@@ -22,7 +22,7 @@ $observations = new Observations;
 =======
 use MCordingley\Regression\Algorithm\LeastSquares;
 //$algorithm = new LeastSquares;*/
->>>>>>> 46d51e60b702db17983df8c41f1a0e9c43151acc
+
 
 $id = $this -> session -> get_userdata();
 //echo $id['S_ID'];

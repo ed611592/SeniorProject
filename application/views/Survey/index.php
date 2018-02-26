@@ -1,4 +1,4 @@
-<h2><?= $title ?></h2>
+
 
 <?php
 	//$answer = array('');
@@ -10,7 +10,7 @@
 ?>
 
 <?php 
-	print_r($survey[0]);
+	//print_r($survey[0]);
 ?>
 
 <?php echo "

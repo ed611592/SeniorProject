@@ -32,7 +32,7 @@
                 // Get username
                 $username = $this -> input -> post('username');
                 // Get and encrypt password
-                $password = $this -> input -> post('password');
+                $password = md5($this -> input -> post('password'));
 
                 //Login student
                 $S_ID = $this -> Student_model -> login($username, $password);
@@ -44,7 +44,7 @@
                     $user_data = array(
                         'S_ID' => $S_ID, 
                         'username' => $username,
-                        'logged_in' => true);
+                        's_logged_in' => true);
 
                     $this -> session -> set_userdata($user_data);
 
@@ -70,7 +70,7 @@
         // log user out
         public function logout(){
             //Unset user data
-            $this -> session -> unset_userdata('logged_in');
+            $this -> session -> unset_userdata('s_logged_in');
             $this -> session -> unset_userdata('S_ID');
             $this -> session -> unset_userdata('username');
 

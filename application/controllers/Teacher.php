@@ -2,6 +2,19 @@
 <?php
     class Teacher extends CI_Controller {
 
+        public function view($page = 'home')
+        {
+            if(!file_exists(APPPATH.'views/teacher/'.$page.'.php')){
+                show_404();
+            }
+
+            $data['title'] = ucfirst($page);
+
+            $this->load->view('templates/header');
+            $this->load->view('teacher/'.$page, $data);
+            $this->load->view('templates/footer');
+        }
+
 //Register User
         public function register(){
      
@@ -60,13 +73,13 @@
                     $user_data = array(
                         'teach_ID' => $teach_ID, 
                         'username' => $username,
-                        'logged_in' => true);
+                        't_logged_in' => true);
 
                     $this -> session -> set_userdata($user_data);
 
                     $this -> session -> set_flashdata('user_loggedin','You are now logged in');
 
-                    redirect('home');
+                    redirect('teacher/view/teacherHome');
 
                 }else{
                        
@@ -88,7 +101,7 @@
         // log user out
         public function logout(){
             //Unset user data
-            $this -> session -> unset_userdata('logged_in');
+            $this -> session -> unset_userdata('t_logged_in');
             $this -> session -> unset_userdata('teach_ID');
             $this -> session -> unset_userdata('username');
 
