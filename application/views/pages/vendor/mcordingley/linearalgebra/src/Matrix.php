@@ -1,34 +1,18 @@
 <?php
 
-namespace mcordingley\LinearAlgebra;
+declare(strict_types = 1);
+
+namespace MCordingley\LinearAlgebra;
 
 use ArrayAccess;
+use MCordingley\LinearAlgebra\Decomposition\LUP;
 
 class Matrix implements ArrayAccess
 {
-    /**
-     * @var int
-     */
-    protected $columnCount;
-
-    /**
-     * @var int
-     */
-    protected $rowCount;
-
-    /**
-     * @var array
-     */
+    /** @var array */
     protected $internal;
 
     /**
-     * @var LUDecomposition
-     */
-    protected $decomposition;
-
-    /**
-     * __construct
-     *
      * Example:
      *      $transform = new Matrix([
      *          [0, 1, 2],
@@ -41,34 +25,32 @@ class Matrix implements ArrayAccess
      */
     public function __construct(array $literal)
     {
-        if (!$this->isLiteralValid($literal)) {
+        if (!static::isLiteralValid($literal)) {
             throw new MatrixException('Invalid array provided: ' . print_r($literal, true));
         }
 
         $this->internal = $literal;
-
-        $this->rowCount = count($literal);
-        $this->columnCount = count($literal[0]);
     }
 
     /**
      * @param array $literal
      * @return boolean
      */
-    protected function isLiteralValid(array $literal)
+    private static function isLiteralValid(array $literal): bool
     {
-        if (!$literal) {
-            return false;
-        }
+        return $literal && $literal[0] && static::subArraysAreEqualSize($literal);
+    }
 
-        $firstRowSize = count($literal[0]);
+    /**
+     * @param array $subArrays
+     * @return bool
+     */
+    private static function subArraysAreEqualSize(array $subArrays): bool
+    {
+        $firstSize = count($subArrays[0]);
 
-        if (!$firstRowSize) {
-            return false;
-        }
-
-        foreach ($literal as $row) {
-            if (count($row) !== $firstRowSize) {
+        foreach ($subArrays as $subArray) {
+            if (count($subArray) !== $firstSize) {
                 return false;
             }
         }
@@ -78,9 +60,9 @@ class Matrix implements ArrayAccess
 
     /**
      * @param int $size How many rows and columns the identity matrix should have
-     * @return Matrix
+     * @return self
      */
-    public static function identity($size)
+    final public static function identity(int $size): self
     {
         $literal = [];
 
@@ -96,37 +78,54 @@ class Matrix implements ArrayAccess
     }
 
     /**
-     * Adds either another matrix or a scalar to the current matrix, returning
-     * a new matrix instance.
-     *
-     * @param Matrix|int|float $value Matrix or scalar to add to this matrix
-     * @return Matrix
-     * @throws MatrixException
-     * @deprecated Use `addMatrix` or `addScalar` instead.
+     * @param int $row
+     * @param int $column
+     * @return float
      */
-    public function add($value)
+    final public function get($row, $column): float
     {
-        if ($value instanceof Matrix) {
-            return $this->addMatrix($value);
-        }
-
-        return $this->addScalar($value);
+        return $this->internal[$row][$column];
     }
 
     /**
-     * @param Matrix $value
-     * @return Matrix
-     * @throws MatrixException
+     * @return boolean
      */
-    public function addMatrix(Matrix $value)
+    final public function isSquare(): bool
     {
-        if ($this->getRowCount() !== $value->getRowCount() || $this->getColumnCount() !== $value->getColumnCount()) {
-            throw new MatrixException('Cannot add two matrices of different size.');
-        }
+        return $this->getColumnCount() === $this->getRowCount();
+    }
 
-        return $this->map(function ($element, $i, $j) use ($value) {
-            return $element + $value->get($i, $j);
-        });
+    /**
+     * @return int
+     */
+    final public function getColumnCount(): int
+    {
+        return count($this->internal[0]);
+    }
+
+    /**
+     * @return int
+     */
+    final public function getRowCount(): int
+    {
+        return count($this->internal);
+    }
+
+    /**
+     * @param Matrix $matrix
+     * @return boolean
+     */
+    final public function equals(Matrix $matrix): bool
+    {
+        return $this->internal === $matrix->internal;
+    }
+
+    /**
+     * @return array
+     */
+    public function toArray(): array
+    {
+        return $this->internal;
     }
 
     /**
@@ -138,91 +137,92 @@ class Matrix implements ArrayAccess
      * - The matrix being iterated over
      *
      * @param callable $callback
-     * @return Matrix
+     * @return self
      */
-    public function map(callable $callback)
+    final public function map(callable $callback): self
     {
         $literal = [];
 
-        for ($i = 0; $i < $this->getRowCount(); $i++) {
+        for ($i = 0, $rows = $this->getRowCount(); $i < $rows; $i++) {
             $row = [];
 
-            for ($j = 0; $j < $this->getColumnCount(); $j++) {
+            for ($j = 0, $columns = $this->getColumnCount(); $j < $columns; $j++) {
                 $row[] = $callback($this->get($i, $j), $i, $j, $this);
             }
 
             $literal[] = $row;
         }
 
-        return new static($literal);
+        return new self($literal);
     }
 
     /**
-     * @param int $row
-     * @param int $column
-     * @return float
+     * @param self $value
+     * @return self
+     * @throws MatrixException
      */
-    public function get($row, $column)
+    final public function addMatrix(self $value): self
     {
-        return $this->internal[$row][$column];
+        $this->checkEqualSize($value);
+
+        return $this->map(function (float $element, int $i, int $j) use ($value) {
+            return $element + $value->get($i, $j);
+        });
+    }
+
+    /**
+     * @param self $matrix
+     * @throws MatrixException
+     */
+    private function checkEqualSize(self $matrix)
+    {
+        if ($this->getRowCount() !== $matrix->getRowCount() || $this->getColumnCount() !== $matrix->getColumnCount()) {
+            throw new MatrixException('Operation requires matrices of equal size: ' . print_r($this->internal, true) . ' ' . print_r($matrix->internal, true));
+        }
     }
 
     /**
      * @param float $value
-     * @return Matrix
+     * @return self
      */
-    public function addScalar($value)
+    final public function addScalar(float $value): self
     {
-        return $this->map(function ($element) use ($value) {
+        return $this->map(function (float $element) use ($value) {
             return $element + $value;
         });
     }
 
     /**
-     * @return Matrix
+     * @param self $value
+     * @return self
      * @throws MatrixException
      */
-    public function adjoint()
+    final public function subtractMatrix(self $value): self
     {
-        if (!$this->isSquare()) {
-            throw new MatrixException('Adjoints can only be called on square matrices: ' . print_r($this->internal, true));
-        }
+        $this->checkEqualSize($value);
 
-        return $this->inverse()->multiplyScalar($this->determinant());
+        return $this->map(function (float $element, int $i, int $j) use ($value) {
+            return $element - $value->get($i, $j);
+        });
     }
 
     /**
-     * @return boolean
+     * @param float $value
+     * @return self
      */
-    public function isSquare()
+    final public function subtractScalar(float $value): self
     {
-        return $this->getRowCount() === $this->getColumnCount();
+        return $this->map(function (float $element) use ($value) {
+            return $element - $value;
+        });
     }
 
     /**
-     * Multiplies either another matrix or a scalar with the current matrix,
-     * returning a new matrix instance.
-     *
-     * @param Matrix|int|float $value Matrix or scalar to multiply with this matrix
-     * @return Matrix
-     * @throws MatrixException
-     * @deprecated Use `multiplyMatrix` or `multiplyScalar` instead.
-     */
-    public function multiply($value)
-    {
-        if ($value instanceof Matrix) {
-            return $this->multiplyMatrix($value);
-        }
-
-        return $this->multiplyScalar($value);
-    }
-
-    /**
-     * @param Matrix $value
-     * @return Matrix
+     * @param self $value
+     * @return self
      * @throws MatrixException
      */
-    public function multiplyMatrix(Matrix $value)
+    final public function multiplyMatrix(self $value): self
     {
         if ($this->getColumnCount() !== $value->getRowCount()) {
             throw new MatrixException('Cannot multiply matrices of these sizes.');
@@ -230,13 +230,13 @@ class Matrix implements ArrayAccess
 
         $literal = [];
 
-        for ($i = 0; $i < $this->getRowCount(); $i++) {
+        for ($i = 0, $rows = $this->getRowCount(); $i < $rows; $i++) {
             $row = [];
 
-            for ($j = 0; $j < $value->columnCount; $j++) {
+            for ($j = 0, $valueColumns = $value->getColumnCount(); $j < $valueColumns; $j++) {
                 $sum = 0;
 
-                for ($k = 0; $k < $this->getColumnCount(); $k++) {
+                for ($k = 0, $columns = $this->getColumnCount(); $k < $columns; $k++) {
                     $sum += $this->get($i, $k) * $value->get($k, $j);
                 }
 
@@ -251,234 +251,326 @@ class Matrix implements ArrayAccess
 
     /**
      * @param float $value
-     * @return Matrix
+     * @return self
      */
-    public function multiplyScalar($value)
+    final public function multiplyScalar(float $value): self
     {
-        return $this->map(function ($element) use ($value) {
+        return $this->map(function (float $element) use ($value) {
             return $element * $value;
         });
     }
 
+
     /**
-     * @return Matrix
+     * @param float $value
+     * @return self
      * @throws MatrixException
      */
-    public function inverse()
+    final public function divideScalar(float $value): self
     {
-        if (!$this->isSquare()) {
-            throw new MatrixException('Inverse can only be called on square matrices: ' . print_r($this->internal, true));
+        if ($value == 0) {
+            throw new MatrixException("Zero can not be denominator.");
         }
 
-        if ($this->determinant() === 0) {
-            throw new MatrixException('This matrix has a zero determinant and is therefore not invertable: ' . print_r($this->internal, true));
-        }
-
-        return $this->getLUDecomp()->inverse();
-    }
-
-    /**
-     * @return float The matrix's determinant
-     * @throws MatrixException
-     */
-    public function determinant()
-    {
-        if (!$this->isSquare()) {
-            throw new MatrixException('Determinants can only be called on square matrices: ' . print_r($this->internal, true));
-        }
-
-        return $this->getLUDecomp()->determinant();
-    }
-
-    /**
-     * @return LUDecomposition
-     */
-    protected function getLUDecomp()
-    {
-        if (!$this->decomposition) {
-            $this->decomposition = new LUDecomposition($this->internal);
-        }
-
-        return $this->decomposition;
-    }
-
-    /**
-     * @return boolean
-     * @deprecated Not useful enough to remain. Test if the transpose is equal, instead.
-     */
-    public function isSymmetric()
-    {
-        if (!$this->isSquare()) {
-            return false;
-        }
-
-        for ($i = 0; $i < $this->getRowCount(); $i++) {
-            for ($j = 0; $j < $this->getColumnCount(); $j++) {
-                if ($i == $j) {
-                    continue;
-                }
-
-                if ($this->get($i, $j) != $this->get($j, $i)) {
-                    return false;
-                }
-            }
-        }
-
-        return true;
-    }
-
-    /**
-     * @return array
-     */
-    public function toArray()
-    {
-        return $this->internal;
-    }
-
-    /**
-     * @param Matrix $other
-     * @return Matrix
-     * @throws MatrixException
-     */
-    public function concatenateBottom(Matrix $other)
-    {
-        if ($this->getColumnCount() !== $other->getColumnCount()) {
-            throw new MatrixException(
-                'Cannot concatenate matrices of incompatible size: '
-                . print_r($this->internal, true)
-                . ' and '
-                . print_r($other->internal, true)
-            );
-        }
-
-        return new static(array_merge($this->internal, $other->internal));
-    }
-
-    /**
-     * @param Matrix $other
-     * @return Matrix
-     * @throws MatrixException
-     */
-    public function concatenateRight(Matrix $other)
-    {
-        if ($this->getRowCount() !== $other->getRowCount()) {
-            throw new MatrixException(
-                'Cannot concatenate matrices of incompatible size: '
-                . print_r($this->internal, true)
-                . ' and '
-                . print_r($other->internal, true)
-            );
-        }
-
-        $concatenated = [];
-
-        for ($i = 0; $i < $this->getRowCount(); $i++) {
-            $concatenated[] = array_merge($this->internal[$i], $other->internal[$i]);
-        }
-
-        return new static($concatenated);
-    }
-
-    /**
-     * @return Matrix
-     */
-    public function diagonal()
-    {
-        $diagonal = [];
-        $max = min([$this->getRowCount(), $this->getColumnCount()]);
-
-        for ($i = 0; $i < $max; $i++) {
-            $diagonal[] = $this->get($i, $i);
-        }
-
-        return new static([$diagonal]);
-    }
-
-    /**
-     * @param Matrix $matrixB
-     * @return boolean
-     */
-    public function equals(Matrix $matrixB)
-    {
-        return $this->internal === $matrixB->internal;
-    }
-
-    /**
-     * Returns a new matrix with the selected row and column removed, useful for
-     * calculating determinants or other recursive operations on matrices.
-     *
-     * @param int|null $row Row to remove, null to remove no row.
-     * @param int|null $column Column to remove, null to remove no column.
-     * @return Matrix
-     * @deprecated
-     */
-    public function submatrix($row = null, $column = null)
-    {
-        $literal = [];
-
-        for ($i = 0; $i < $this->getRowCount(); $i++) {
-            if ($i === $row) {
-                continue;
-            }
-
-            $rowLiteral = [];
-
-            for ($j = 0; $j < $this->getColumnCount(); $j++) {
-                if ($j === $column) {
-                    continue;
-                }
-
-                $rowLiteral[] = $this->get($i, $j);
-            }
-
-            $literal[] = $rowLiteral;
-        }
-
-        return new static($literal);
-    }
-
-    /**
-     * Subtracts either another matrix or a scalar from the current matrix,
-     * returning a new matrix instance.
-     *
-     * @param Matrix|int|float $value Matrix or scalar to subtract from this matrix
-     * @return Matrix
-     * @throws MatrixException
-     * @deprecated Use `subtractMatrix` or `subtractScalar` instead.
-     */
-    public function subtract($value)
-    {
-        if ($value instanceof Matrix) {
-            return $this->subtractMatrix($value);
-        }
-
-        return $this->subtractScalar($value);
-    }
-
-    /**
-     * @param Matrix $value
-     * @return Matrix
-     * @throws MatrixException
-     */
-    public function subtractMatrix(Matrix $value)
-    {
-        if ($this->getRowCount() !== $value->getRowCount() || $this->getColumnCount() !== $value->columnCount) {
-            throw new MatrixException('Cannot subtract two matrices of different size.');
-        }
-
-        return $this->map(function ($element, $i, $j) use ($value) {
-            return $element - $value->get($i, $j);
+        return $this->map(function (float $element) use ($value) {
+            return $element / $value;
         });
     }
 
     /**
-     * @param float $value
-     * @return Matrix
+     * @param self $value
+     * @return self
+     * @throws MatrixException
+     * @link https://en.wikipedia.org/wiki/Hadamard_product_%28matrices%29
      */
-    public function subtractScalar($value)
+    final public function entrywise(self $value): self
     {
-        return $this->map(function ($element) use ($value) {
-            return $element - $value;
+        $this->checkEqualSize($value);
+
+        return $this->map(function (float $element, int $i, int $j) use ($value) {
+            return $element * $value->get($i, $j);
+        });
+    }
+
+    /**
+     * @return self
+     * @throws MatrixException
+     */
+    final public function adjugate(): self
+    {
+        $this->checkSquare();
+
+        return $this->inverse()->multiplyScalar($this->determinant());
+    }
+
+    /**
+     * @throws MatrixException
+     */
+    private function checkSquare()
+    {
+        if (!$this->isSquare()) {
+            throw new MatrixException('Operation can only be called on square matrix: ' . print_r($this->internal, true));
+        }
+    }
+
+    /**
+     * @return self
+     * @throws MatrixException
+     */
+    final public function inverse(): self
+    {
+        $this->checkSquare();
+
+        $size = $this->getRowCount();
+        $transpose = $this->transpose();
+        $aTa = $transpose->multiplyMatrix($this);
+
+        $padded = $aTa->pad($size);
+        $inverted = $this->recursiveSolveInverse($padded);
+        $trimmed = $inverted->sliceRows(0, $size)->sliceColumns(0, $size);
+
+        return $trimmed->multiplyMatrix($transpose);
+    }
+
+    /**
+     * @param int $size
+     * @return self
+     */
+    private function pad(int $size): self
+    {
+        $nextPower = pow(2, ceil(log($size, 2)));
+        $padded = $this->toArray();
+
+        for ($row = 0; $row < $size; $row++) {
+            for ($column = $size; $column < $nextPower; $column++) {
+                $padded[$row][$column] = $row === $column ? 1 : 0;
+            }
+        }
+
+        for ($row = $size; $row < $nextPower; $row++) {
+            $padded[] = [];
+
+            for ($column = 0; $column < $nextPower; $column++) {
+                $padded[$row][$column] = $row === $column ? 1 : 0;
+            }
+        }
+
+        return new static($padded);
+    }
+
+    /**
+     * @param self $source
+     * @return self
+     */
+    private function recursiveSolveInverse(self $source): self
+    {
+        $size = $source->getRowCount();
+
+        if ($size === 1) {
+            return new static([[1 / $source->get(0, 0)]]);
+        }
+
+        $half = (int) ($size / 2);
+
+        // Partition source matrix.
+        $B = $source->sliceRows(0, $half)->sliceColumns(0, $half);
+        $CT = $source->sliceRows(0, $half)->sliceColumns($half);
+        $D = $source->sliceRows($half)->sliceColumns($half);
+        $C = $source->sliceRows($half)->sliceColumns(0, $half);
+
+        // Handle intermediate calculations.
+        $Binv = $this->recursiveSolveInverse($B);
+        $W = $C->multiplyMatrix($Binv);
+        $WT = $W->transpose();
+        $X = $W->multiplyMatrix($CT);
+        $S = $D->subtractMatrix($X);
+        $Sinv = $this->recursiveSolveInverse($S);
+        $V = $Sinv;
+        $Y = $Sinv->multiplyMatrix($W);
+        $YT = $Y->transpose();
+        $T = $YT->multiplyScalar(-1);
+        $U = $Y->multiplyScalar(-1);
+        $Z = $WT->multiplyMatrix($Y);
+        $R = $Binv->addMatrix($Z);
+
+        // Stitch together intermediate results into the final result
+        return $R->concatenateRight($T)->concatenateBottom($U->concatenateRight($V));
+    }
+
+    /**
+     * @param int $offset
+     * @param int|null $length
+     * @return self
+     */
+    final public function sliceRows(int $offset, int $length = null): self
+    {
+        return new static(array_slice($this->toArray(), $offset, $length));
+    }
+
+    /**
+     * @param int $offset
+     * @param int|null $length
+     * @return self
+     */
+    final public function sliceColumns(int $offset, int $length = null): self
+    {
+        return new static(array_map(function (array $row) use ($offset, $length) {
+            return array_slice($row, $offset, $length);
+        }, $this->toArray()));
+    }
+
+    /**
+     * @param int $offset
+     * @param int|null $length
+     * @param array|null $replacement
+     * @return Matrix
+     * @throws MatrixException
+     */
+    final public function spliceRows(int $offset, int $length = null, array $replacement = null): self
+    {
+        if ($replacement) {
+            if ($this->getColumnCount() !== count($replacement[0])) {
+                throw new MatrixException(
+                    'Cannot splice ['
+                    . count($replacement)
+                    . '] columns into matrix of ['
+                    . $this->getRowCount()
+                    . '] column.'
+                );
+            }
+
+            if (!static::subArraysAreEqualSize($replacement)) {
+                throw new MatrixException('Cannot splice in new rows of unequal size.');
+            }
+        }
+
+        $spliced = $this->toArray();
+
+        array_splice($spliced, $offset, $length, $replacement);
+
+        return new static($spliced);
+    }
+
+    /**
+     * @param int $offset
+     * @param int|null $length
+     * @param array|null $replacement
+     * @return Matrix
+     * @throws MatrixException
+     */
+    final public function spliceColumns(int $offset, int $length = null, array $replacement = null): self
+    {
+        if ($replacement) {
+            if ($this->getRowCount() !== count($replacement)) {
+                throw new MatrixException(
+                    'Cannot splice ['
+                    . count($replacement)
+                    . '] row into matrix of ['
+                    . $this->getRowCount()
+                    . '] rows.'
+                );
+            }
+
+            if (!static::subArraysAreEqualSize($replacement)) {
+                throw new MatrixException('Cannot splice in new columns of unequal size.');
+            }
+        }
+
+        $rowIndex = 0;
+
+        $spliced = array_map(function (array $row) use ($offset, $length, $replacement, &$rowIndex) {
+            array_splice($row, $offset, $length, $replacement ? $replacement[$rowIndex++] : null);
+
+            return $row;
+        }, $this->toArray());
+
+        return new static($spliced);
+    }
+
+    /**
+     * @return float
+     */
+    final public function determinant(): float
+    {
+        $this->checkSquare();
+
+        try {
+            $decomp = new LUP($this);
+        } catch (MatrixException $exception) {
+            // Singular matrix, so determinant is defined to be zero.
+            return 0.0;
+        }
+
+        $upper = $decomp->upper();
+
+        $determinant = 1.0;
+
+        for ($i = 0, $size = $upper->getRowCount(); $i < $size; $i++) {
+            $determinant *= $upper->get($i, $i);
+        }
+
+        $sign = $decomp->parity() % 2 ? -1 : 1;
+
+        return $sign * $determinant;
+    }
+
+    /**
+     * @param bool $unitriangular True to have ones along the diagonal. False to include parent matrix values, instead.
+     * @return self
+     */
+    final public function upper(bool $unitriangular): self
+    {
+        return $this->map(function (float $element, int $i, int $j) use ($unitriangular) {
+            if ($unitriangular && $i === $j) {
+                return 1;
+            }
+
+            return $j < $i ? 0 : $element;
+        });
+    }
+
+    /**
+     * @param bool $unitriangular True to have ones along the diagonal. False to include parent matrix values, instead.
+     * @return self
+     */
+    final public function lower(bool $unitriangular): self
+    {
+        return $this->map(function (float $element, int $i, int $j) use ($unitriangular) {
+            if ($unitriangular && $i === $j) {
+                return 1;
+            }
+
+            return $i < $j ? 0 : $element;
+        });
+    }
+
+    /**
+     * @param self $other
+     * @return self
+     * @throws MatrixException
+     */
+    final public function concatenateBottom(self $other): self
+    {
+        return $this->spliceRows($this->getRowCount(), 0, $other->toArray());
+    }
+
+    /**
+     * @param self $other
+     * @return self
+     * @throws MatrixException
+     */
+    final public function concatenateRight(self $other): self
+    {
+        return $this->spliceColumns($this->getColumnCount(), 0, $other->toArray());
+    }
+
+    /**
+     * @return self
+     */
+    final public function diagonal(): self
+    {
+        return $this->map(function (float $element, int $i, int $j) {
+            return $i === $j ? $element : 0;
         });
     }
 
@@ -486,15 +578,13 @@ class Matrix implements ArrayAccess
      * @return float
      * @throws MatrixException
      */
-    public function trace()
+    final public function trace(): float
     {
-        if (!$this->isSquare()) {
-            throw new MatrixException('Trace can only be called on square matrices: ' . print_r($this->internal, true));
-        }
+        $this->checkSquare();
 
         $trace = 0;
 
-        for ($i = 0; $i < $this->getRowCount(); $i++) {
+        for ($i = 0, $rows = $this->getRowCount(); $i < $rows; $i++) {
             $trace += $this->get($i, $i);
         }
 
@@ -502,16 +592,16 @@ class Matrix implements ArrayAccess
     }
 
     /**
-     * @return Matrix
+     * @return self
      */
-    public function transpose()
+    final public function transpose(): self
     {
         $literal = [];
 
-        for ($i = 0; $i < $this->getColumnCount(); $i++) {
+        for ($i = 0, $columns = $this->getColumnCount(); $i < $columns; $i++) {
             $literal[] = [];
 
-            for ($j = 0; $j < $this->getRowCount(); $j++) {
+            for ($j = 0, $rows = $this->getRowCount(); $j < $rows; $j++) {
                 $literal[$i][] = $this->get($j, $i);
             }
         }
@@ -522,89 +612,38 @@ class Matrix implements ArrayAccess
     /**
      * @param mixed $offset
      * @return bool
-     * @deprecated Use `get()` instead of ArrayAccess methods.
      */
-    public function offsetExists($offset)
+    public function offsetExists($offset): bool
     {
         return isset($this->internal[$offset]);
     }
 
     /**
      * @param mixed $offset
-     * @return mixed
-     * @deprecated Use `get()` instead of ArrayAccess methods.
+     * @return Vector|null
+     * @throws MatrixException
      */
     public function offsetGet($offset)
     {
-        return $this->internal[$offset];
+        return $this->offsetExists($offset) ? new Vector($this->internal[$offset]) : null;
     }
 
     /**
      * @param mixed $offset
      * @param mixed $value
      * @throws MatrixException
-     * @deprecated Use `get()` instead of ArrayAccess methods.
      */
-    public function offsetSet($offset, $value)
+    final public function offsetSet($offset, $value)
     {
-        throw new MatrixException('Attempt to set a value on a matrix. Matrix instances are immutable.');
+        throw new MatrixException('Matrices are immutable.');
     }
 
     /**
      * @param mixed $offset
      * @throws MatrixException
-     * @deprecated Use `get()` instead of ArrayAccess methods.
      */
-    public function offsetUnset($offset)
+    final public function offsetUnset($offset)
     {
-        throw new MatrixException('Attempt to unset a value on a matrix. Matrix instances are immutable.');
-    }
-
-    /**
-     * Magic method to make the public "properties" read-only.
-     *
-     * @param string $property
-     * @return int|null
-     * @deprecated Use `getColumns` or `getRows` instead
-     */
-    public function __get($property)
-    {
-        switch ($property) {
-            case 'columns':
-                return $this->getColumnCount();
-            case 'rows':
-                return $this->getRowCount();
-            default:
-                return null;
-        }
-    }
-
-    /**
-     * @return int
-     */
-    public function getColumnCount()
-    {
-        return $this->columnCount;
-    }
-
-    /**
-     * @return int
-     */
-    public function getRowCount()
-    {
-        return $this->rowCount;
-    }
-
-    /**
-     * @return string
-     * @deprecated
-     */
-    public function __toString()
-    {
-        $rowStrings = array_map(function ($row) {
-            return '[' . implode(', ', $row) . ']';
-        }, $this->internal);
-
-        return '[' . implode(', ', $rowStrings) . ']';
+        throw new MatrixException('Matrices are immutable.');
     }
 }

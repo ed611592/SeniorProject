@@ -1,12 +1,14 @@
 <?php
 
-namespace mcordingley\Regression\Algorithm\GradientDescent;
+declare(strict_types = 1);
 
-use mcordingley\Regression\Algorithm\Algorithm;
-use mcordingley\Regression\Algorithm\GradientDescent\Gradient\Gradient;
-use mcordingley\Regression\Algorithm\GradientDescent\Schedule\Schedule;
-use mcordingley\Regression\Algorithm\GradientDescent\StoppingCriteria\StoppingCriteria;
-use mcordingley\Regression\Observations;
+namespace MCordingley\Regression\Algorithm\GradientDescent;
+
+use MCordingley\Regression\Algorithm\Algorithm;
+use MCordingley\Regression\Algorithm\GradientDescent\Gradient\Gradient;
+use MCordingley\Regression\Algorithm\GradientDescent\Schedule\Schedule;
+use MCordingley\Regression\Algorithm\GradientDescent\StoppingCriteria\StoppingCriteria;
+use MCordingley\Regression\Data\Collection;
 
 abstract class GradientDescent implements Algorithm
 {
@@ -32,10 +34,10 @@ abstract class GradientDescent implements Algorithm
     }
 
     /**
-     * @param Observations $observations
+     * @param Collection $observations
      * @return array
      */
-    final public function regress(Observations $observations)
+    final public function regress(Collection $observations): array
     {
         $coefficients = array_fill(0, $observations->getFeatureCount(), 0.0);
 
@@ -49,18 +51,18 @@ abstract class GradientDescent implements Algorithm
     }
 
     /**
-     * @param Observations $observations
+     * @param Collection $observations
      * @param array $coefficients
      * @return array
      */
-    abstract protected function calculateGradient(Observations $observations, array $coefficients);
+    abstract protected function calculateGradient(Collection $observations, array $coefficients): array;
 
     /**
      * @param array $coefficients
      * @param array $gradient
      * @return array
      */
-    private function updateCoefficients(array $coefficients, array $gradient)
+    private function updateCoefficients(array $coefficients, array $gradient): array
     {
         foreach ($gradient as $i => $slope) {
             $coefficients[$i] -= $this->schedule->step($i) * $slope;

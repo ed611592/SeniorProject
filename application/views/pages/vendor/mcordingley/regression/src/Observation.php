@@ -1,8 +1,12 @@
 <?php
 
-namespace mcordingley\Regression;
+declare(strict_types = 1);
 
-final class Observation
+namespace MCordingley\Regression;
+
+use MCordingley\Regression\Data\Entry;
+
+final class Observation implements Entry
 {
     /** @var array */
     private $features;
@@ -14,7 +18,7 @@ final class Observation
      * @param array $features
      * @param float $outcome
      */
-    public function __construct(array $features, $outcome)
+    public function __construct(array $features, float $outcome)
     {
         $this->features = $features;
         $this->outcome = $outcome;
@@ -23,7 +27,7 @@ final class Observation
     /**
      * @return array
      */
-    public function getFeatures()
+    public function getFeatures(): array
     {
         return $this->features;
     }
@@ -31,7 +35,7 @@ final class Observation
     /**
      * @return float
      */
-    public function getOutcome()
+    public function getOutcome(): float
     {
         return $this->outcome;
     }

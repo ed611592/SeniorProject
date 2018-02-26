@@ -1,19 +1,21 @@
 <?php
 
-namespace mcordingley\Regression\Algorithm;
+declare(strict_types = 1);
+
+namespace MCordingley\Regression\Algorithm;
 
 use InvalidArgumentException;
-use mcordingley\LinearAlgebra\Matrix;
-use mcordingley\Regression\Observations;
+use MCordingley\LinearAlgebra\Matrix;
+use MCordingley\Regression\Data\Collection;
 
 final class LeastSquares implements Algorithm
 {
     /**
-     * @param Observations $observations
+     * @param Collection $observations
      * @return array
      * @throws InvalidArgumentException
      */
-    public function regress(Observations $observations)
+    public function regress(Collection $observations): array
     {
         $design = new Matrix($observations->getFeatures());
         $observed = (new Matrix([$observations->getOutcomes()]))->transpose();

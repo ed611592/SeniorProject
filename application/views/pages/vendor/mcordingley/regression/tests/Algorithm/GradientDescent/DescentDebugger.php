@@ -1,14 +1,14 @@
 <?php
 
-namespace mcordingley\Regression\Tests\Algorithm\GradientDescent;
+namespace MCordingley\Regression\Tests\Algorithm\GradientDescent;
 
-use mcordingley\Regression\Algorithm\GradientDescent\StoppingCriteria\DescentSpy;
-use mcordingley\Regression\Algorithm\GradientDescent\StoppingCriteria\StoppingCriteria;
+use MCordingley\Regression\Algorithm\GradientDescent\StoppingCriteria\DescentSpy;
+use MCordingley\Regression\Algorithm\GradientDescent\StoppingCriteria\StoppingCriteria;
 
 /**
  * Helper trait for tests to output the results of each gradient descent iteration.
  *
- * @package mcordingley\Regression\Tests\Algorithm\GradientDescent
+ * @package MCordingley\Regression\Tests\Algorithm\GradientDescent
  */
 trait DescentDebugger
 {
@@ -18,11 +18,9 @@ trait DescentDebugger
      */
     private function getDescentSpy(StoppingCriteria $criteria)
     {
-        $onIteration = function (array $gradient, array $coefficients) {
+        return new DescentSpy($criteria, function (array $gradient, array $coefficients) {
             $output = '[[' . implode(',', $gradient) . '], [' . implode(',', $coefficients) . ']]' . "\n";
             fwrite(STDERR, $output);
-        };
-
-        return new DescentSpy($criteria, $onIteration);
+        });
     }
 }

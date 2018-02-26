@@ -94,7 +94,7 @@ class Algebra
      *
      * @return int
      */
-    public static function lcm(int $a, int $b)
+    public static function lcm(int $a, int $b): int
     {
         // Special case
         if ($a === 0 || $b === 0) {

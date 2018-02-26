@@ -1,6 +1,8 @@
 <?php
 
-namespace mcordingley\Regression\Algorithm\GradientDescent\StoppingCriteria;
+declare(strict_types = 1);
+
+namespace MCordingley\Regression\Algorithm\GradientDescent\StoppingCriteria;
 
 /**
  * Checks for when the coefficients themselves have completely stopped changing.
@@ -8,7 +10,7 @@ namespace mcordingley\Regression\Algorithm\GradientDescent\StoppingCriteria;
  * time to occur, as the update for each weight must become smaller than can be
  * represented in floating points.
  *
- * @package mcordingley\Regression\Algorithm\GradientDescent\StoppingCriteria
+ * @package MCordingley\Regression\Algorithm\GradientDescent\StoppingCriteria
  */
 final class CoefficientEquality implements StoppingCriteria
 {
@@ -20,7 +22,7 @@ final class CoefficientEquality implements StoppingCriteria
      * @param array $coefficients
      * @return bool
      */
-    public function converged(array $gradient, array $coefficients)
+    public function converged(array $gradient, array $coefficients): bool
     {
         $oldCoefficients = $this->oldCoefficients;
         $this->oldCoefficients = $coefficients;

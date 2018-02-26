@@ -1,6 +1,8 @@
 <?php
 
-namespace mcordingley\Regression\Algorithm\GradientDescent\Schedule;
+declare(strict_types = 1);
+
+namespace MCordingley\Regression\Algorithm\GradientDescent\Schedule;
 
 interface Schedule
 {
@@ -14,5 +16,5 @@ interface Schedule
      * @param int $featureIndex
      * @return float
      */
-    public function step($featureIndex);
+    public function step(int $featureIndex): float;
 }

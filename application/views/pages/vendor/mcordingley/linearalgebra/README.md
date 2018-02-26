@@ -1,7 +1,6 @@
 # Matrix
 
 [![Build Status](https://api.travis-ci.org/repositories/mcordingley/LinearAlgebra.svg)](https://travis-ci.org/mcordingley/LinearAlgebra)
-[![Code Climate](https://codeclimate.com/github/mcordingley/LinearAlgebra/badges/gpa.svg)](https://codeclimate.com/github/mcordingley/LinearAlgebra)
 [![Code Coverage](https://codeclimate.com/github/mcordingley/LinearAlgebra/badges/coverage.svg)](https://codeclimate.com/github/mcordingley/LinearAlgebra)
 
 Stand-alone Linear Algebra Library for PHP
@@ -12,16 +11,18 @@ Stand-alone Linear Algebra Library for PHP
 
 Alternately, include this in your composer.json and then update:
 
-    "mcordingley/linearalgebra": "^1.3.0"
+    "mcordingley/linearalgebra": "^2.1.0"
 
 If Composer isn't an option for you, clone this repository and run `build-phar.php` to generate a phar
 archive that you can include into your project. PHP will autoload classes from inside the archive as needed.
 
 ## Usage
 
+### Matrix
+
 Start with a `use` statement for the class:
 
-    use mcordingley\LinearAlgebra\Matrix;
+    use MCordingley\LinearAlgebra\Matrix;
 
 Then, instantiate a new instance of the matrix class like so:
 
@@ -65,17 +66,28 @@ In addition to these basic operations, the Matrix class offers other common
 matrix operations:
 
     $matrix->inverse()
-    $matrix->adjoint()
+    $matrix->adjugate()
     $matrix->determinant()
     $matrix->trace()
     $matrix->transpose()
-    $matrix->submatrix()
+
+You can get the upper and lower triangular matrices by calling `upper(bool)` and `lower(bool)`. The lone argument tells
+whether the main diagonal of the triangular matrix should be set to ones (`true`) or the value of the parent matrix
+(`false`).
 
 It's also possible to run a map over the matrix:
 
     $squaredElements = $matrix->map(function($element, $row, $column, $matrix) {
         return $element * $element
     });
+
+Submatrices may be extracted with `sliceColumns($offset, $length)` and `sliceRows($offset, $length)`. The semantics of
+the arguments are the same as PHP's `array_slice`.
+
+Similarly, `spliceColumns($offset, $length, $replacement)` and `spliceRows($offset, $length, $replacement)` can be used
+to create new matrices with specific rows or columns removed or replaced. Unlike the native PHP `array_splice`, these
+operations do not modify the matrix in place and return the removed elements, but instead return a new matrix with the
+splice applied.
 
 If you need to combine together matrices, you can do so by calling the concatenation methods:
 
@@ -104,13 +116,73 @@ If you need to combine together matrices, you can do so by calling the concatena
     //     [3,2,1],
     // ]
 
+LU and LUP decomposition methods are available as separate classes and both expose `lower()` and `upper()` for the L
+and U portions of the decompositions, respectively. The LUP decomposition additionally exposes `permutationMatrix` and
+`permutationArray` to fetch the P component of the decomposition as well as `parity` to return the total number of
+pivots performed.
+
+### Vector
+
+As with `Matrix`, import the class into your current namespace:
+
+    use MCordingley\LinearAlgebra\Vector;
+
+Since a `Vector` is a special case of a `Matrix`, `Vector` inherits from `Matrix`. As such, every method available on
+`Matrix` is also available on `Vector`. `Vector` also exposes additional methods specific to working with vectors.
+
+Creating a `Vector` differs from creating a `Matrix` only in that the constructor takes an array of scalars, rather
+than an array of arrays:
+
+    $vector = new Vector([1, 2, 3, 4]);
+
+Note that `Vector` instances are all row vectors. If you need a column vector, `transpose()` the vector to get a
+`Matrix` with a single column.
+
+If you need to cast a `Matrix` into a `Vector`, call the factory method `fromMatrix()`:
+
+    $vector = Vector::fromMatrix($matrix);
+
+`toArray()` is overridden to return an array of scalars to mirror how the constructor works. It is equivalent to
+calling `$matrix->toArray()[0]` on a `Matrix` instance.
+
+`getSize()` is provided as an alias for `getColumnCount()`. `sum()` will return the sum of the `Vector` elements,
+while `dotProduct($otherVector)` will return the sum of the pair-wise products of `$vector` and `$otherVector`,
+and is also availabe aliased as `innerProduct($otherVector)`. `outerProduct($otherVector)` will return a new Matrix
+representing the outer product of the two vectors. `crossProduct($otherVector)` is also available. Vectors may be
+normalized with `normalize()`. They may also be projected onto other vectors with `project($otherVector)`.
+
+For measures of vector magnitude, `l1Norm()`, `l2Norm()`, and `maxNorm()` are all available, with `length()` as
+an alias for `l2Norm()`.
+
+Links to relevant Wikipedia articles are provided in the function documentation for additional detail.
+
+
 ## Change-log
 
-- 2.0.0 (future)
+- 2.2.0
+    - Implement the `ArrayAccess` interface on `Matrix` to return row vectors.
+    - Implement the `ArrayAccess` interface on `Vector` to return scalars.
+    - Add `addVector()` and `subtractVector()` to `Vector`
+    - Add `magnitude()` as an alias to `length()` on `Vector`
+
+- 2.1.1
+    - Fix a bug involving inheritance with `map()` on `Vector`.
+
+- 2.1.0
+    - Add `Vector` as a subclass of `Matrix`. Thanks to battlecook for this contribution.
+
+- 2.0.0
     - Drop support for PHP 5.x
     - Introduce strict scalar type hints
     - Drop deprecated functions and properties.
     - Tighten up interface with the `final` and `private` keywords.
+    - `diagonal()` now returns a full matrix, not a vector.
+    - Rename `adjoint()` to `adjugate()` for clarity.
+    - Add `entrywise()` to compute the Hadamard product.
+    - Add `upper()` and `lower()`
+    - Add `sliceColumns()` and `sliceRows()`
+    - Add `spliceColumns()` and `spliceRows()`
+    - Add `LU` and `LUP` decompositions as classes.
 
 - 1.3.2
     - Deprecate `__toString()` magic method.

@@ -1,41 +1,35 @@
 <?php
 
-namespace mcordingley\Regression\Tests\Algorithm\GradientDescent;
+namespace MCordingley\Regression\Tests\Algorithm\GradientDescent;
 
-use mcordingley\Regression\Algorithm\GradientDescent\Batch;
-use mcordingley\Regression\Algorithm\GradientDescent\Gradient\Linear;
-use mcordingley\Regression\Algorithm\GradientDescent\Schedule\Adagrad;
-use mcordingley\Regression\Algorithm\GradientDescent\StoppingCriteria\GradientNorm;
-use mcordingley\Regression\Observations;
-use PHPUnit_Framework_TestCase;
+use MCordingley\Regression\Algorithm\Algorithm;
+use MCordingley\Regression\Algorithm\GradientDescent\Batch;
+use MCordingley\Regression\Algorithm\GradientDescent\Gradient\Logistic as LogisticGradient;
+use MCordingley\Regression\Algorithm\GradientDescent\Schedule\Adam;
+use MCordingley\Regression\Algorithm\GradientDescent\StoppingCriteria\GradientNorm;
 
-class BatchTest extends PHPUnit_Framework_TestCase
+class BatchTest extends GradientDescent
 {
-    private static $features = [
-        [1, 1],
-        [1, 2],
-        [1, 1.3],
-        [1, 3.75],
-        [1, 2.25],
-    ];
-
-    private static $outcomes = [
-        1,
-        2,
-        3,
-        4,
-        5,
-    ];
+    /**
+     * @return Algorithm
+     */
+    protected function makeRegression()
+    {
+        return new Batch(new LogisticGradient, new Adam, new GradientNorm);
+    }
 
     /**
-     * @large
+     * @return array
      */
-    public function testRegression()
+    protected function getExpectedCoefficients()
     {
-        $regression = new Batch(new Linear, new Adagrad, new GradientNorm);
-        $coefficients = $regression->regress(Observations::fromArray(static::$features, static::$outcomes));
-
-        $this->assertEquals(1.095, round($coefficients[0], 3));
-        $this->assertEquals(0.925, round($coefficients[1], 3));
+        return [
+            -3.9574854804237094,
+            0.22580894980156149,
+            0.79622399659931598,
+            -0.67753634191079093,
+            -1.3413824186724197,
+            -1.5537312883686745,
+        ];
     }
 }

@@ -1,11 +1,13 @@
 <?php
 
-namespace mcordingley\Regression\Algorithm\GradientDescent;
+declare(strict_types = 1);
 
-use mcordingley\Regression\Algorithm\GradientDescent\Gradient\Gradient;
-use mcordingley\Regression\Algorithm\GradientDescent\Schedule\Schedule;
-use mcordingley\Regression\Algorithm\GradientDescent\StoppingCriteria\StoppingCriteria;
-use mcordingley\Regression\Observations;
+namespace MCordingley\Regression\Algorithm\GradientDescent;
+
+use MCordingley\Regression\Algorithm\GradientDescent\Gradient\Gradient;
+use MCordingley\Regression\Algorithm\GradientDescent\Schedule\Schedule;
+use MCordingley\Regression\Algorithm\GradientDescent\StoppingCriteria\StoppingCriteria;
+use MCordingley\Regression\Data\Collection;
 
 final class MiniBatch extends GradientDescent
 {
@@ -18,7 +20,7 @@ final class MiniBatch extends GradientDescent
      * @param StoppingCriteria $stoppingCriteria
      * @param int $batchSize
      */
-    public function __construct(Gradient $gradient, Schedule $schedule, StoppingCriteria $stoppingCriteria, $batchSize)
+    public function __construct(Gradient $gradient, Schedule $schedule, StoppingCriteria $stoppingCriteria, int $batchSize)
     {
         parent::__construct($gradient, $schedule, $stoppingCriteria);
 
@@ -26,18 +28,23 @@ final class MiniBatch extends GradientDescent
     }
 
     /**
-     * @param Observations $observations
+     * @param Collection $observations
      * @param array $coefficients
      * @return array
      */
-    protected function calculateGradient(Observations $observations, array $coefficients)
+    protected function calculateGradient(Collection $observations, array $coefficients): array
     {
-        $gradient = array_fill(0, count($observations->getObservation(0)->getFeatures()), 0.0);
-        $batchElementIndices = (array) array_rand(range(0, count($observations) - 1), $this->batchSize);
+        $gradient = array_fill(0, $observations->getFeatureCount(), 0.0);
+        $batchElementIndices = (array) array_rand(range(0, $observations->count() - 1), $this->batchSize);
 
         foreach ($batchElementIndices as $index) {
             $observation = $observations->getObservation($index);
-            $observationGradient = $this->gradient->gradient($coefficients, $observation->getFeatures(), $observation->getOutcome());
+
+            $observationGradient = $this->gradient->gradient(
+                $coefficients,
+                $observation->getFeatures(),
+                $observation->getOutcome()
+            );
 
             foreach ($observationGradient as $i => $observationSlope) {
                 $gradient[$i] += $observationSlope / $this->batchSize;

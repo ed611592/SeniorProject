@@ -1,6 +1,8 @@
 <?php
 
-namespace mcordingley\Regression\Predictor;
+declare(strict_types = 1);
+
+namespace MCordingley\Regression\Predictor;
 
 final class Logistic implements Predictor
 {
@@ -19,7 +21,7 @@ final class Logistic implements Predictor
      * @param array $features
      * @return float
      */
-    public function predict(array $features)
+    public function predict(array $features): float
     {
         return 1.0 / (1.0 + exp(-array_sum(array_map(function ($coefficient, $feature) {
                 return $coefficient * $feature;

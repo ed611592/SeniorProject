@@ -1,8 +1,15 @@
 <?php
 
-namespace mcordingley\LinearAlgebra;
+declare(strict_types = 1);
 
-class MatrixTest extends \PHPUnit_Framework_TestCase
+namespace MCordingley\LinearAlgebraTest;
+
+use MCordingley\LinearAlgebra\Matrix;
+use MCordingley\LinearAlgebra\MatrixException;
+use MCordingley\LinearAlgebra\Vector;
+use PHPUnit_Framework_TestCase;
+
+final class MatrixTest extends PHPUnit_Framework_TestCase
 {
     private function buildMatrix()
     {
@@ -62,6 +69,16 @@ class MatrixTest extends \PHPUnit_Framework_TestCase
         static::assertEquals(0, $identity->get(2, 0));
         static::assertEquals(0, $identity->get(2, 1));
         static::assertEquals(1, $identity->get(2, 2));
+    }
+
+    public function testIsSquare()
+    {
+        $matrix = new Matrix([
+            [1, 2],
+            [3, 4],
+        ]);
+
+        static::assertTrue($matrix->isSquare());
     }
 
     public function testMap()
@@ -290,6 +307,38 @@ class MatrixTest extends \PHPUnit_Framework_TestCase
         static::assertEquals(4, $multiplied->get(2, 2));
     }
 
+    public function testEntrywise()
+    {
+        $matrix1 = new Matrix([
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],
+        ]);
+
+        $matrix2 = $matrix1->transpose();
+
+        static::assertEquals([
+            [1,   8, 21],
+            [8,  25, 48],
+            [21, 48, 81],
+        ], $matrix1->entrywise($matrix2)->toArray());
+    }
+
+    public function testEntrywiseWrongSize()
+    {
+        $matrix1 = $this->buildMatrix();
+
+        $matrix2 = new Matrix([
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9],
+        ]);
+
+        static::expectException(MatrixException::class);
+
+        $matrix1->entrywise($matrix2);
+    }
+
     public function testDiagonal()
     {
         $matrix = new Matrix([
@@ -300,11 +349,15 @@ class MatrixTest extends \PHPUnit_Framework_TestCase
 
         $diagonal = $matrix->diagonal();
 
-        static::assertEquals(1, $diagonal->rows);
-        static::assertEquals(3, $diagonal->columns);
         static::assertEquals(1, $diagonal->get(0, 0));
-        static::assertEquals(5, $diagonal->get(0, 1));
-        static::assertEquals(9, $diagonal->get(0, 2));
+        static::assertEquals(0, $diagonal->get(0, 1));
+        static::assertEquals(0, $diagonal->get(0, 2));
+        static::assertEquals(0, $diagonal->get(1, 0));
+        static::assertEquals(5, $diagonal->get(1, 1));
+        static::assertEquals(0, $diagonal->get(1, 2));
+        static::assertEquals(0, $diagonal->get(2, 0));
+        static::assertEquals(0, $diagonal->get(2, 1));
+        static::assertEquals(9, $diagonal->get(2, 2));
     }
 
     public function testTrace()
@@ -366,7 +419,7 @@ class MatrixTest extends \PHPUnit_Framework_TestCase
         $matrix->inverse();
     }
 
-    public function testAdjoint()
+    public function testAdjugate()
     {
         $matrix = new Matrix([
             [1, -1, 2],
@@ -374,7 +427,7 @@ class MatrixTest extends \PHPUnit_Framework_TestCase
             [0, 1, -1],
         ]);
 
-        $adjoint = $matrix->adjoint();
+        $adjoint = $matrix->adjugate();
 
         static::assertEquals(-6, $adjoint->get(0, 0));
         static::assertEquals(1, $adjoint->get(0, 1));
@@ -393,7 +446,123 @@ class MatrixTest extends \PHPUnit_Framework_TestCase
 
         static::expectException(MatrixException::class);
 
-        $matrix->adjoint();
+        $matrix->adjugate();
+    }
+
+    public function testSpliceRows()
+    {
+        $matrix = new Matrix([
+            [1, -1, 2],
+            [4, 0, 6],
+            [0, 1, -1],
+        ]);
+
+        $spliced = $matrix->spliceRows(1, 1, [
+            [8, 5, 2],
+        ]);
+
+        static::assertEquals(1, $spliced->get(0, 0));
+        static::assertEquals(-1, $spliced->get(0, 1));
+        static::assertEquals(2, $spliced->get(0, 2));
+
+        static::assertEquals(8, $spliced->get(1, 0));
+        static::assertEquals(5, $spliced->get(1, 1));
+        static::assertEquals(2, $spliced->get(1, 2));
+
+        static::assertEquals(0, $spliced->get(2, 0));
+        static::assertEquals(1, $spliced->get(2, 1));
+        static::assertEquals(-1, $spliced->get(2, 2));
+    }
+
+    public function testSpliceBadRows()
+    {
+        $matrix = new Matrix([
+            [1, -1, 2],
+            [4, 0, 6],
+            [0, 1, -1],
+        ]);
+
+        static::expectException(MatrixException::class);
+
+        $matrix->spliceRows(1, 1, [
+            [8, 5],
+        ]);
+    }
+
+    public function testSpliceUnevenRows()
+    {
+        $matrix = new Matrix([
+            [1, -1, 2],
+            [4, 0, 6],
+            [0, 1, -1],
+        ]);
+
+        static::expectException(MatrixException::class);
+
+        $matrix->spliceRows(1, 1, [
+            [8, 5, 1],
+            [2],
+        ]);
+    }
+
+    public function testSpliceColumns()
+    {
+        $matrix = new Matrix([
+            [1, -1, 2],
+            [4, 0, 6],
+            [0, 1, -1],
+        ]);
+
+        $spliced = $matrix->spliceColumns(1, 1, [
+            [8],
+            [5],
+            [2],
+        ]);
+
+        static::assertEquals(1, $spliced->get(0, 0));
+        static::assertEquals(8, $spliced->get(0, 1));
+        static::assertEquals(2, $spliced->get(0, 2));
+
+        static::assertEquals(4, $spliced->get(1, 0));
+        static::assertEquals(5, $spliced->get(1, 1));
+        static::assertEquals(6, $spliced->get(1, 2));
+
+        static::assertEquals(0, $spliced->get(2, 0));
+        static::assertEquals(2, $spliced->get(2, 1));
+        static::assertEquals(-1, $spliced->get(2, 2));
+    }
+
+    public function testSpliceBadColumns()
+    {
+        $matrix = new Matrix([
+            [1, -1, 2],
+            [4, 0, 6],
+            [0, 1, -1],
+        ]);
+
+        static::expectException(MatrixException::class);
+
+        $matrix->spliceColumns(1, 1, [
+            [5],
+            [2],
+        ]);
+    }
+
+    public function testSpliceUnevenColumns()
+    {
+        $matrix = new Matrix([
+            [1, -1, 2],
+            [4, 0, 6],
+            [0, 1, -1],
+        ]);
+
+        static::expectException(MatrixException::class);
+
+        $matrix->spliceColumns(1, 1, [
+            [8, 3],
+            [5],
+            [2],
+        ]);
     }
 
     public function testConcatenateBottom()
@@ -421,8 +590,17 @@ class MatrixTest extends \PHPUnit_Framework_TestCase
 
     public function testConcatenateRight()
     {
-        $matrixA = new Matrix([[1], [2], [3]]);
-        $matrixB = new Matrix([[4], [5], [6]]);
+        $matrixA = new Matrix([
+            [1],
+            [2],
+            [3],
+        ]);
+
+        $matrixB = new Matrix([
+            [4],
+            [5],
+            [6],
+        ]);
 
         $concatenated = $matrixA->concatenateRight($matrixB);
 
@@ -454,6 +632,80 @@ class MatrixTest extends \PHPUnit_Framework_TestCase
         static::assertEquals(-306, $matrix->determinant());
     }
 
+    public function testSingularDeterminant()
+    {
+        $matrix = new Matrix([
+            [0, 1],
+            [0, 1],
+        ]);
+
+        static::assertEquals(0, $matrix->determinant());
+    }
+
+    public function testGetUpper()
+    {
+        $matrix = new Matrix([
+            [ 2,  0,    2, 0.6],
+            [ 3,  3,    4,  -2],
+            [ 5,  5,    4,   2],
+            [-1, -2,  3.4,  -1],
+        ]);
+
+        $upper = $matrix->upper(true);
+
+        static::assertEquals(1, $upper->get(0, 0));
+        static::assertEquals(0, $upper->get(0, 1));
+        static::assertEquals(2, $upper->get(0, 2));
+        static::assertEquals(0.6, $upper->get(0, 3));
+
+        static::assertEquals(0, $upper->get(1, 0));
+        static::assertEquals(1, $upper->get(1, 1));
+        static::assertEquals(4, $upper->get(1, 2));
+        static::assertEquals(-2, $upper->get(1, 3));
+
+        static::assertEquals(0, $upper->get(2, 0));
+        static::assertEquals(0, $upper->get(2, 1));
+        static::assertEquals(1, $upper->get(2, 2));
+        static::assertEquals(2, $upper->get(2, 3));
+
+        static::assertEquals(0, $upper->get(3, 0));
+        static::assertEquals(0, $upper->get(3, 1));
+        static::assertEquals(0, $upper->get(3, 2));
+        static::assertEquals(1, $upper->get(3, 3));
+    }
+
+    public function testGetLower()
+    {
+        $matrix = new Matrix([
+            [ 2,  0,    2, 0.6],
+            [ 3,  3,    4,  -2],
+            [ 5,  5,    4,   2],
+            [-1, -2,  3.4,  -1],
+        ]);
+
+        $lower = $matrix->lower(true);
+
+        static::assertEquals(1, $lower->get(0, 0));
+        static::assertEquals(0, $lower->get(0, 1));
+        static::assertEquals(0, $lower->get(0, 2));
+        static::assertEquals(0, $lower->get(0, 3));
+
+        static::assertEquals(3, $lower->get(1, 0));
+        static::assertEquals(1, $lower->get(1, 1));
+        static::assertEquals(0, $lower->get(1, 2));
+        static::assertEquals(0, $lower->get(1, 3));
+
+        static::assertEquals(5, $lower->get(2, 0));
+        static::assertEquals(5, $lower->get(2, 1));
+        static::assertEquals(1, $lower->get(2, 2));
+        static::assertEquals(0, $lower->get(2, 3));
+
+        static::assertEquals(-1, $lower->get(3, 0));
+        static::assertEquals(-2, $lower->get(3, 1));
+        static::assertEquals(3.4, $lower->get(3, 2));
+        static::assertEquals(1, $lower->get(3, 3));
+    }
+
     public function testNonSquareDeterminant()
     {
         $matrix = $this->buildMatrix();
@@ -461,5 +713,40 @@ class MatrixTest extends \PHPUnit_Framework_TestCase
         static::expectException(MatrixException::class);
 
         $matrix->determinant();
+    }
+
+    public function testOffsetExists()
+    {
+        $matrix = $this->buildMatrix();
+
+        static::assertTrue(isset($matrix[0]));
+        static::assertFalse(isset($matrix[100]));
+    }
+
+    public function testOffsetGet()
+    {
+        $matrix = $this->buildMatrix();
+
+        $vector = $matrix[1];
+
+        static::assertInstanceOf(Vector::class, $vector);
+    }
+
+    public function testOffsetSet()
+    {
+        $matrix = $this->buildMatrix();
+
+        static::expectException(MatrixException::class);
+
+        $matrix[0] = true;
+    }
+
+    public function testOffsetUnset()
+    {
+        $matrix = $this->buildMatrix();
+
+        static::expectException(MatrixException::class);
+
+        unset($matrix[0]);
     }
 }

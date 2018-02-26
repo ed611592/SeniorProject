@@ -9,20 +9,24 @@
         {
             "name": "Michael Cordingley",
             "email": "Michael.Cordingley@gmail.com"
-        },
-        {
-            "name": "James Thomin",
-            "email": "james.thomin@gmail.com"
         }
     ],
     "license": "MIT",
+    "require": {
+        "php": "^7.0.0"
+    },
     "require-dev": {
         "phpunit/phpunit": "^5.5.3",
         "codeclimate/php-test-reporter": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "mcordingley\\LinearAlgebra\\": "src/"
+            "MCordingley\\LinearAlgebra\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MCordingley\\LinearAlgebraTest\\": "tests/"
         }
     }
 }

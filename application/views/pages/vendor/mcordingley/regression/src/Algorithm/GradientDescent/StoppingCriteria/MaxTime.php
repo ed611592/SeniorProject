@@ -1,6 +1,8 @@
 <?php
 
-namespace mcordingley\Regression\Algorithm\GradientDescent\StoppingCriteria;
+declare(strict_types = 1);
+
+namespace MCordingley\Regression\Algorithm\GradientDescent\StoppingCriteria;
 
 /**
  * Run the descent for a certain amount of time before stopping. Goes well with
@@ -8,7 +10,7 @@ namespace mcordingley\Regression\Algorithm\GradientDescent\StoppingCriteria;
  * the amount of time that a descent can run. Nice to make sure that a descent
  * doesn't become runaway on a production server.
  *
- * @package mcordingley\Regression\Algorithm\GradientDescent\StoppingCriteria
+ * @package MCordingley\Regression\Algorithm\GradientDescent\StoppingCriteria
  */
 final class MaxTime implements StoppingCriteria
 {
@@ -21,7 +23,7 @@ final class MaxTime implements StoppingCriteria
     /**
      * @param int $seconds
      */
-    public function __construct($seconds)
+    public function __construct(int $seconds)
     {
         $this->seconds = $seconds;
     }
@@ -31,7 +33,7 @@ final class MaxTime implements StoppingCriteria
      * @param array $coefficients
      * @return bool
      */
-    public function converged(array $gradient, array $coefficients)
+    public function converged(array $gradient, array $coefficients): bool
     {
         $time = time();
 
