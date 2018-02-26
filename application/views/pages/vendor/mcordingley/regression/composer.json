@@ -10,19 +10,21 @@
         }
     ],
     "require": {
-        "mcordingley/linearalgebra": "^1.3.0"
+        "php": "^7.0.0",
+        "mcordingley/linearalgebra": "^2.0.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "~4.0"
+        "phpunit/phpunit": "^5.5.3",
+        "codeclimate/php-test-reporter": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "mcordingley\\Regression\\": "src/"
+            "MCordingley\\Regression\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "mcordingley\\Regression\\Tests\\": "tests/"
+            "MCordingley\\Regression\\Tests\\": "tests/"
         }
     }
 }

@@ -1,16 +1,18 @@
 <?php
 
-namespace mcordingley\Regression\Algorithm;
+declare(strict_types = 1);
+
+namespace MCordingley\Regression\Algorithm;
 
 use InvalidArgumentException;
-use mcordingley\Regression\Observations;
+use MCordingley\Regression\Data\Collection;
 
 interface Algorithm
 {
     /**
-     * @param Observations $observations
+     * @param Collection $observations
      * @return array
      * @throws InvalidArgumentException
      */
-    public function regress(Observations $observations);
+    public function regress(Collection $observations): array;
 }

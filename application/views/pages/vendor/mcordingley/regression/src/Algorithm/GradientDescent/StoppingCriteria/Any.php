@@ -1,11 +1,13 @@
 <?php
 
-namespace mcordingley\Regression\Algorithm\GradientDescent\StoppingCriteria;
+declare(strict_types = 1);
+
+namespace MCordingley\Regression\Algorithm\GradientDescent\StoppingCriteria;
 
 /**
  * Checks for when any of a given list of stopping criteria is met.
  *
- * @package mcordingley\Regression\Algorithm\GradientDescent\StoppingCriteria
+ * @package MCordingley\Regression\Algorithm\GradientDescent\StoppingCriteria
  */
 final class Any implements StoppingCriteria
 {
@@ -27,7 +29,7 @@ final class Any implements StoppingCriteria
      * @param array $coefficients
      * @return bool
      */
-    public function converged(array $gradient, array $coefficients)
+    public function converged(array $gradient, array $coefficients): bool
     {
         /** @var StoppingCriteria $criteria */
         foreach ($this->criteriaList as $criteria) {

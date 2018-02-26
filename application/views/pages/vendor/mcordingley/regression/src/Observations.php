@@ -1,16 +1,16 @@
 <?php
 
-namespace mcordingley\Regression;
+declare(strict_types = 1);
+
+namespace MCordingley\Regression;
 
 use ArrayIterator;
-use IteratorAggregate;
-use Countable;
 use InvalidArgumentException;
+use MCordingley\Regression\Data\Collection;
+use MCordingley\Regression\Data\Entry;
 use Traversable;
 
-final class Observations implements
-    Countable,
-    IteratorAggregate
+final class Observations implements Collection
 {
     /** @var int */
     private $featureCount = 0;
@@ -21,9 +21,9 @@ final class Observations implements
     /**
      * @param array $features
      * @param array $outcomes
-     * @return Observations
+     * @return self
      */
-    public static function fromArray(array $features, array $outcomes)
+    public static function fromArray(array $features, array $outcomes): self
     {
         $observationCount = count($outcomes);
 
@@ -43,16 +43,18 @@ final class Observations implements
     /**
      * @param array $features
      * @param float $outcome
+     * @return self
      */
-    public function add(array $features, $outcome)
+    public function add(array $features, float $outcome): self
     {
-        $this->addObservation(new Observation($features, $outcome));
+        return $this->addObservation(new Observation($features, $outcome));
     }
 
     /**
      * @param Observation $observation
+     * @return self
      */
-    public function addObservation(Observation $observation)
+    public function addObservation(Observation $observation): self
     {
         $featureCount = count($observation->getFeatures());
 
@@ -63,12 +65,14 @@ final class Observations implements
         }
 
         $this->observations[] = $observation;
+
+        return $this;
     }
 
     /**
      * @return array
      */
-    public function getFeatures()
+    public function getFeatures(): array
     {
         return array_map(function (Observation $observation) {
             return $observation->getFeatures();
@@ -78,7 +82,7 @@ final class Observations implements
     /**
      * @return array
      */
-    public function getOutcomes()
+    public function getOutcomes(): array
     {
         return array_map(function (Observation $observation) {
             return $observation->getOutcome();
@@ -88,7 +92,7 @@ final class Observations implements
     /**
      * @return Traversable
      */
-    public function getIterator()
+    public function getIterator(): Traversable
     {
         return new ArrayIterator($this->observations);
     }
@@ -96,7 +100,7 @@ final class Observations implements
     /**
      * @return int
      */
-    public function getFeatureCount()
+    public function getFeatureCount(): int
     {
         return $this->featureCount;
     }
@@ -104,16 +108,16 @@ final class Observations implements
     /**
      * @return int
      */
-    public function count()
+    public function count(): int
     {
         return count($this->observations);
     }
 
     /**
      * @param int $index
-     * @return Observation
+     * @return Entry
      */
-    public function getObservation($index)
+    public function getObservation(int $index): Entry
     {
         return $this->observations[$index];
     }

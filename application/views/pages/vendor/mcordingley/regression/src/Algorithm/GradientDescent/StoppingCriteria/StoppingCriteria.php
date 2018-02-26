@@ -1,6 +1,8 @@
 <?php
 
-namespace mcordingley\Regression\Algorithm\GradientDescent\StoppingCriteria;
+declare(strict_types = 1);
+
+namespace MCordingley\Regression\Algorithm\GradientDescent\StoppingCriteria;
 
 interface StoppingCriteria
 {
@@ -9,5 +11,5 @@ interface StoppingCriteria
      * @param array $coefficients
      * @return bool
      */
-    public function converged(array $gradient, array $coefficients);
+    public function converged(array $gradient, array $coefficients): bool;
 }

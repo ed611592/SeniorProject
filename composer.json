@@ -12,9 +12,8 @@
 	},
 	"require": {
 		"php": ">=5.3.7",
-		"markrogoyski/math-php": "0.*",
-		"mnshankar/linear-regression": "1.0.*",
-		"mcordingley/Regression": "1.0.*"
+		"mcordingley/Regression": "2.2.0.*",
+		"markrogoyski/math-php": "0.*"
 	},
 
 	"suggest": {

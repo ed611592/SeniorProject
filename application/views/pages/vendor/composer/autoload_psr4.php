@@ -7,12 +7,11 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'phpDocumentor\\Reflection\\' => array($vendorDir . '/phpdocumentor/reflection-common/src', $vendorDir . '/phpdocumentor/reflection-docblock/src', $vendorDir . '/phpdocumentor/type-resolver/src'),
-    'mnshankar\\LinearRegression\\' => array($vendorDir . '/mnshankar/linear-regression/src'),
-    'mcordingley\\Regression\\' => array($vendorDir . '/mcordingley/regression/src'),
-    'mcordingley\\LinearAlgebra\\' => array($vendorDir . '/mcordingley/linearalgebra/src'),
     'Webmozart\\Assert\\' => array($vendorDir . '/webmozart/assert/src'),
     'Symfony\\Component\\Yaml\\' => array($vendorDir . '/symfony/yaml'),
     'MathPHP\\' => array($vendorDir . '/markrogoyski/math-php/src'),
+    'MCordingley\\Regression\\' => array($vendorDir . '/mcordingley/regression/src'),
+    'MCordingley\\LinearAlgebra\\' => array($vendorDir . '/mcordingley/linearalgebra/src'),
     'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
     'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
 );

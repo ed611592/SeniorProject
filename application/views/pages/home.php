@@ -1,6 +1,4 @@
 
-
-
 <?php 
 require_once(__DIR__ . '/vendor/autoload.php');
 
@@ -9,8 +7,9 @@ use MathPHP\Algebra;
 $gcd = Algebra::gcd(8, 12);
 
 //this library does not work
-use MCordingley\Regression\Algorithm\LeastSquares;
-//$algorithm = new LeastSquares;
+use MCordingley\Regression\Observations;
+
+$observations = new Observations;
 
 $id = $this -> session -> get_userdata();
 //echo $id['S_ID'];
