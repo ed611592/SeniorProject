@@ -65,7 +65,6 @@ a.list-group-item, button.list-group-item {
 
 .myNav {
   background-color: #a9324e;
-  border-bottom: 1px solid black;
  }
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand{
 	color: #98DE0F;

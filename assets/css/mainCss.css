@@ -5,7 +5,6 @@ body {
 
 .myNav {
   background-color: #18abcc;
-  border-bottom: 1px solid black;
  }
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand{
 	color: #98DE0F;

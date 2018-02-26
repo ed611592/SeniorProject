@@ -4,7 +4,7 @@
 <?php 
 require_once(__DIR__ . '/vendor/autoload.php');
 
-//this library works
+/*//this library works
 use MathPHP\Algebra;
 use Regression\Algorithm\LeastSquares;
 //$algorithm = new LeastSquares;
@@ -18,7 +18,7 @@ $gcd = Algebra::gcd(8, 12);
 
 //this library does not work
 use MCordingley\Regression\Algorithm\LeastSquares;
-//$algorithm = new LeastSquares;
+//$algorithm = new LeastSquares;*/
 
 $id = $this -> session -> get_userdata();
 //echo $id['S_ID'];
@@ -36,6 +36,7 @@ $id = $this -> session -> get_userdata();
     <a class="btn btn-lg btn-primary btn-block" type="submit" href="<?php echo base_url();?>student/login">Student</a>
     <a class="btn btn-lg btn-primary btn-block" type="submit" href="<?php echo base_url();?>teacher/login">Teacher</a>
     <a class="btn btn-lg btn-primary btn-block" type="submit" href="<?php echo base_url();?>studentHome">Student Home</a>
+    <a class="btn btn-lg btn-primary btn-block" type="submit" href="<?php echo base_url();?>survey">Survey</a>
 
     
   </center>

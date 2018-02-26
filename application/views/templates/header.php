@@ -20,7 +20,7 @@
     <link href="assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="assets/css/HomepageCss.css" rel="stylesheet">
+    <link href="assets/css/mainCss.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -45,7 +45,8 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="<?php echo base_url();?>">Chip The Pet Detective</a>
+          <a class="navbar-brand" href="<?php echo base_url();?>">  Chip The Pet Detective</a>
+          <ing src = "chipHome.jpeg">
         </div>
         <div id="navbar" class=" collapse navbar-collapse">
           <ul class="nav navbar-nav">

@@ -74,8 +74,8 @@
               		</label>
             		</div>
 
-  			<button type = "submit" class = "btn btn-lg btn-primary btn-block">Sign in</button>
-
+  			   <button type = "submit" class = "btn btn-lg btn-primary btn-block">Sign in</button>
+           
           </center>
 
 
