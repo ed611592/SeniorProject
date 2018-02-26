@@ -24,6 +24,7 @@ CREATE TABLE Question
   option2 VARCHAR(100) NOT NULL,
   option3 VARCHAR(100) NOT NULL,
   option4 VARCHAR(100) NOT NULL,
+  story   TEXT,
   Surv_ID INT NOT NULL,
   PRIMARY KEY (Q_ID),
   FOREIGN KEY (Surv_ID) REFERENCES Survey(Surv_ID)
@@ -55,11 +56,111 @@ CREATE TABLE Responses
   FOREIGN KEY (Surv_ID) REFERENCES Survey(Surv_ID)
 );
 
-CREATE TABLE Answers
-(
-  S_ID INT NOT NULL,
-  R_id INT NOT NULL,
-  PRIMARY KEY (S_ID, R_id),
-  FOREIGN KEY (S_ID) REFERENCES Student(S_ID),
-  FOREIGN KEY (R_id) REFERENCES Responses(R_id)
-);
+INSERT INTO Teacher VALUES(1,'Jane Smith', 'Jane', '8D788385431273D11E8B43BB78F3AA41');
+
+INSERT INTO Student VALUES(1,'andy', 12, 1, 'andy',  'DA41BCEFF97B1CF96078FFB249B3D66E', 'less');
+
+INSERT INTO Student VALUES(2,'brandy', 93, 1, 'brandy',  '6C29E9CC4042D972B15FF0304E636886', 'jackson-shorts');
+
+INSERT INTO Student VALUES(3,'emily', 93, 1, 'emily',  'B02AE5AAEFE3F7090668DF034B0F2324', 'demarco');
+
+INSERT INTO Survey VALUES('Adventure 1', 1, '2018-1-11');
+
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(1, 'I live in a BIG log with my mommy and daddy chipmunks! How about you?', 
+'I just live with my mom! / I just live with my dad!', 
+'I live with my mom and dad!', 
+'I live with a step mom / I live with a step dad!', 
+'I live with my mom and someone else / I live with my dad and someone else!', '', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(2, 'I have 8 siblings! That’s a lot right? How many siblings do you have?', 
+'I don’t have any siblings!', 
+'I have 1-2 siblings', 
+'I have 3 or more siblings', 
+'I have siblings and at least one of them is a step sibling', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(3, 'I’m from a town called Munksville, Chiptucky! Where are you from?', 
+'Paoli', 
+'Radnor', 
+'Bryn Mawr', 
+'Wayne', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(4, 'When I go to school, my favorite classes are music class and woodshop! What is your favorite class?', 
+'Math', 
+'English/Reading', 
+'Science', 
+'History', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(5, 'My least favorite class is gym (I’m too small to play the games!). What’s your least favorite class', 
+'Math', 
+'English/Reading', 
+'Science', 
+'History', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(6, 'I like most of the kids in my school but some people are really mean! What about your school? Do you get along with people?', 
+'I like spending time with a lot of different kids at school', 
+'I like hanging out with some of the kids at school', 
+'I have trouble getting along with the kids at school', 
+'I like to spend time by myself at school', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(7, 'Remember how I said there are meanies at my school? Well… sometimes they bully me. Does that happen to you?', 
+'Yes, I feel like I get bullied almost every day', 
+'Yes, I feel like I get bullied a couple times a week', 
+'Yes, I feel like I get bullied every once in a while', 
+'No, I never feel bullied at school', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(8, 'I wish I could play sports but, like I said, I’m too small. My family still does a lot though. My oldest brother, Chap,  plays a lot of sports and my older sister is in the chess club! What about you? Are you in any sports, clubs or any other activities?', 
+'Yes, I’m in at least one club at school', 
+'Yes, I’m in at least one school activity', 
+'Yes, I’m in some clubs in school and some outside of school', 
+'No, I’m not in any school activities', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(9, 'I really like going to school! It’s so much fun! What about you?', 
+'I like going to school every day!', 
+'I like going to school most days!', 
+'Sometimes I like going to school and sometimes I don’t', 
+'I never like going to school!', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(10, 'I’m a brown chipmunk, but some of my friends are more grey! What do you look like?', 
+'I’m a white (caucasian) person!', 
+'I’m a black / African American person!', 
+'I’m a Hispanic person!', 
+'I’m an Asian person / Pacific Islander', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(11, 'I don’t have a computer at home but that’s okay because my brothers, sisters and I like to play a lot of games outside.', 
+'Yes, I can get on the computer/internet quick and easily at home', 
+'Yes I can usually get onto the computer/internet at home.', 
+'Sometimes I can get onto the computer/internet at home but sometimes I can’t.', 
+'No, I can’t get on the computer/internet at home.', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(12, 'I try to work really hard in school because I want to make my mom and dad happy and I like doing well in school! How do you feel about school?', 
+'School is important to me. I work really hard and I do really well!', 
+'School is important to me. I work as hard as I can but I’m still struggling in school.', 
+'School isn’t important to me but I still do well!',
+'School isn’t important to me and I don’t do very well in school.', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(13, 'Sometimes it’s hard for me to fall asleep at night because I’m so excited for all the activities I get to do the next day! Do you ever have trouble sleeping?', 
+'No, I never have trouble sleeping', 
+'Yes, sometimes I have trouble sleeping and sometimes I don’t', 
+'Yes, I have trouble sleeping a lot of the time', 
+'Yes, I always have trouble sleeping', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(14, 'I’ve learned to be really patient because my siblings and I have to take turns doing a lot of things. What about you? How do you handle waiting for your turn?', 
+'I never have trouble waiting my turn. I’m very patient', 
+'Sometimes I have trouble waiting my turn and sometimes I don’t', 
+'I have trouble waiting my turn a lot of the time', 
+'I always have trouble waiting my turn', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES (15, 'Sometimes my homework is really hard! When that happens, it can be hard for me to finish it. Do you have trouble finishing your homework?', 'No, I never have trouble finishing my homework', 'Yes, sometimes I have trouble finishing my homework and sometimes I don’t', 'Yes, I have trouble finishing my homework a lot of the time', 'Yes, I always have trouble finishing my homework', '', 1)

@@ -16,45 +16,44 @@ color:#e5e5e5;
 }
 .survey{
 	/*border: 1px solid black;*/
-	height: 450px;
-	width: 1000px;
+	height: 400px;
+	width: 1100px;
 	float: left;
 }
-#chip{
+
+
+
+#question{
+	/*border: 5px solid black;*/
+	float: left;
+	
+	width: 1100px;
 	height: 250px;
+	font-size: 1.5em;
+  	font-weight: 300;
+  	/*Margin numbers: top right bottom left*/
+  	margin: 28px 0px 0px 70px;
+  	padding: 35px;
+  	text-align: center;
+  	background-image: url("../../assets/images/speechBubble.png");
+  	background-repeat: no-repeat;
+  	background-size: 1100px 200px;
+
+  	
+}
+#chip{
+	height: 220px;
 	border: none;
 	float:left;
 	padding-left: 95px;
 
 }
-
-#questionBox{
-  border: 1px solid black;
-  float: left;
-  width: 1100px;
-  height: 170px;
-}
-
-#question{
-	border: 5px solid black;
-	position: absolute;
-	width: 1000px;
-	height: 100px;
-	font-size: 1.5em;
-  	font-weight: 300;
-  	/*Margin numbers: top right bottom left*/
-  	margin: 28px 0px 0px 70px;
-  	padding-left: 0px;
-  	text-align: center;
-}
-
 .list-group{
 	border: 2px dotted black;
-	position: absolute;
 	width: 505px;
 	float: left;
 	/*Margin numbers: top right bottom left*/
-  	margin: 180px 0px 0px 400px;
+  	margin-left: 45px;
   	text-shadow: none;
 }
 
@@ -66,7 +65,6 @@ a.list-group-item, button.list-group-item {
 
 .myNav {
   background-color: #a9324e;
-  border-bottom: 1px solid black;
  }
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand{
 	color: #98DE0F;

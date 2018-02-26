@@ -20,10 +20,10 @@
     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Main Custom Styles -->
-    <link href="mainCss.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/assets/css/mainCss.css" rel="stylesheet">
 
     <!-- Student Custom Styles -->
-    <link href="<?php echo base_url();?>/assets/css/StudentCss.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/assets/css/UserCss.css" rel="stylesheet">
 
     <!-- Student Custom Styles -->
     <link href="<?php echo base_url();?>/assets/css/studentHome.css" rel="stylesheet">
@@ -62,7 +62,7 @@
         <center>
           <h4> Start an investigation...</h4>
           <div class="list-group">
-            <a href="#!" class="list-group-item list-group-item-action">Story 1</a>
+            <a href="survey" class="list-group-item list-group-item-action">Initial Survey</a>
             <a href="#!" class="list-group-item list-group-item-action">Story 2</a>
             <a href="#!" class="list-group-item list-group-item-action">Story 3</a>
           </div>
