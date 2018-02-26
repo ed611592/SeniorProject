@@ -21,6 +21,16 @@ padding: 10px;
 	text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -1px black;
 }
 
+#cloud{
+	
+	width: 310px;
+	height: 210px;
+	background-image: url("../../assets/images/clouds.png");
+  	background-repeat: no-repeat;
+  	background-size: 300px 200px;
+  	margin-bottom: 100px;
+}
+
 .list-group{
 	margin: 0px;
 	border: none;
@@ -31,4 +41,34 @@ a.list-group-item, button.list-group-item {
     width: 500px;
 	color: black;
 
+}
+
+/*-------------------------------------ANIMATIONS----------------------------------*/
+#cloud {
+   
+    
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 2s;
+     animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {left:0px; top:0px;}
+   
+    50%  { top:1px;}
+  
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   { left:0px; top:0px;}
+   
+    50%  {  top:10px;}
+  
+    100% { left:0px; top:0px;}
 }

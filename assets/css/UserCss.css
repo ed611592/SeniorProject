@@ -5,7 +5,7 @@ body{
 	text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -1px black;
 }
 
-#teacherLogIn{
+#teacher{
 background: #9b5448;
 color:#e5e5e5;
   
@@ -79,13 +79,13 @@ a.list-group-item, button.list-group-item {
 	background-color: #88283E;
 }
 
-#teacherLogIn .myNav {
+#teacher .myNav {
   background-color: #8b4b40;
  }
 
-#teacherLogIn .navbar-inverse .navbar-nav > #teacherLogIn .active > a,
-#teacherLogIn .navbar-inverse .navbar-nav > #teacherLogIn .active > a:hover,
-#teacherLogIn .navbar-inverse .navbar-nav > .active > a:focus{
+#teacher .navbar-inverse .navbar-nav > #teacherLogIn .active > a,
+#teacher .navbar-inverse .navbar-nav > #teacherLogIn .active > a:hover,
+#teacher .navbar-inverse .navbar-nav > .active > a:focus{
 	color:white;
 	background-color: #7c4339;
 }

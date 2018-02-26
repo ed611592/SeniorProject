@@ -10,7 +10,7 @@
 
 <?php echo form_open('teacher/register'); ?>
 
- <body id= teacherLogIn>
+ <body id= "teacher">
 	<div class = "row">
 		<div class = 'col-md-4 col-md-offset-4'>
 			<div class = "form-group">

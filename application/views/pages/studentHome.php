@@ -16,11 +16,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Main Custom Styles -->
-    <link href="<?php echo base_url();?>/assets/css/mainCss.css" rel="stylesheet">
+ 
 
     <!-- Student Custom Styles -->
     <link href="<?php echo base_url();?>/assets/css/UserCss.css" rel="stylesheet">
@@ -51,6 +47,10 @@
     		<h1>Hello Student!</h1>
     		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
     	</div>
+
+      <div id=cloud>
+
+      </div>
 
       <div id ="chipStory">
         <center>
