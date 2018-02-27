@@ -13,6 +13,18 @@
 			return $this -> db -> insert('Teacher', $data);
 		}	
 
+		public function register_student($enc_password){
+			//user data array
+			$data = array(
+				'S_name' => $this -> input->post('S_name'),
+				'S_username' => $this -> input->post('S_username'),
+				'S_password' => $enc_password
+			);
+
+			//insert teacher user
+			return $this -> db -> insert('Student', $data);
+		}	
+
 		//Log teacher in
 		public function login($username, $password){
 			//Validate

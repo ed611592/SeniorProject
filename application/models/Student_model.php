@@ -1,21 +1,23 @@
 <?php
 
 	class Student_model extends CI_Model{
-		/*
+		
 		public function register($enc_password){
 			//user data array
 			$data = array(
-				'name' => $this -> input->post('name'),
+				'fname' => $this -> input->post('fname'),
+				'lname' => $this -> input->post('lname'),
 				'username' => $this -> input->post('username'),
-				'password' => $enc_password
+				'password' => $enc_password,
+				'AVG_Grade' => $this -> input->post('AVG_Grade')
 			);
 
-			//insert teacher user
-			return $this -> db -> insert('Teacher', $data);
+			//insert student user
+			return $this -> db -> insert('Student', $data);
 		}	
-		*/
+		
 
-		//Log teacher in
+		//Log student in
 		public function login($username, $password){
 			//Validate
 			$this -> db -> where('username', $username);

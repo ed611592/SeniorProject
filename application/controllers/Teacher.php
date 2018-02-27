@@ -15,7 +15,7 @@
             $this->load->view('templates/footer');
         }
 
-//Register User
+//Register Teacher User
         public function register(){
      
             $data['title'] = 'Sign Up';
@@ -36,13 +36,15 @@
                 $this -> Teacher_model -> register($enc_password);
 
                 //set message
-           //   $this->session->set_flashdata('user_registered','You are now registered and can log in.')
+              $this->session->set_flashdata('user_registered','You are now registered and can log in.');
 
                 redirect('home');
             }
 
         }
 
+
+         
 //Log in user
          public function login(){
             $data['title'] = 'Sign In';
