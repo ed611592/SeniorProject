@@ -37,7 +37,7 @@ if(isset($_POST['reset'])) {
               <a href="#" class="list-group-item list-group-item-action" id = "option3" onclick=" return myFunction()"><?php echo $survey[$_SESSION['counter']]['option3']; ?></a>
               <a href="#" class="list-group-item list-group-item-action" id = "option4" onclick=" return myFunction()"><?php echo $survey[$_SESSION['counter']]['option4']; ?></a>
             </div>
-        <input type="submit" name="button" value="Next" />
-        <input type="submit" name="reset" value="Reset" />
+        <input type="submit" name="button" value="Next"/>
+        <input type="submit" name="reset" value="Reset"/>
     </form>
 
