@@ -14,53 +14,6 @@ color:#e5e5e5;
 	
 	padding: 23px ;
 }
-.survey{
-	/*border: 1px solid black;*/
-	height: 400px;
-	width: 1100px;
-	float: left;
-}
-
-
-
-#question{
-	/*border: 5px solid black;*/
-	float: left;
-	
-	width: 1100px;
-	height: 250px;
-	font-size: 1.5em;
-  	font-weight: 300;
-  	/*Margin numbers: top right bottom left*/
-  	margin: 28px 0px 0px 70px;
-  	padding: 35px;
-  	text-align: center;
-  	background-image: url("../../assets/images/speechBubble.png");
-  	background-repeat: no-repeat;
-  	background-size: 1100px 200px;
-
-  	
-}
-#chip{
-	height: 220px;
-	border: none;
-	float:left;
-	padding-left: 95px;
-
-}
-.list-group{
-	border: 2px dotted black;
-	width: 505px;
-	float: left;
-	/*Margin numbers: top right bottom left*/
-  	margin-left: 45px;
-  	text-shadow: none;
-}
-
-a.list-group-item, button.list-group-item {
-    height: 70px;
-    width: 500px;
-
 }
 
 .myNav {

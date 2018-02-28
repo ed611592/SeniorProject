@@ -13,13 +13,13 @@
 
     <!-- Latest compiled and minified CSS -->
     <!-- Core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    
 
 
  
 
     <!-- Student Custom Styles -->
-    <link href="<?php echo base_url();?>/assets/css/UserCss.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/assets/css/userCss.css" rel="stylesheet">
 
     <!-- Student Custom Styles -->
     <link href="<?php echo base_url();?>/assets/css/studentHome.css" rel="stylesheet">
@@ -28,7 +28,7 @@
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
