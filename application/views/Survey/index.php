@@ -31,6 +31,8 @@ if(isset($_POST['reset'])) {
 <!-- Css for Survey -->
 <link href="assets/css/surveyCss.css" rel="stylesheet">
 
+<?php echo form_open('Survey/add_response'); ?>
+
 <form method="POST">
   <input type="hidden" name="counter" value="<?php echo $_SESSION['counter']; ?>"/>
   <h3 id = "question"> <?php echo $survey[$_SESSION['counter']]['Q_text']; ?></h3>
@@ -38,10 +40,10 @@ if(isset($_POST['reset'])) {
   <img id = "chip" src = "assets/images/ChipStudent.png">
 
   <div class="list-group">
-    <a href="#" class="list-group-item list-group-item-action" id ="option1" onclick=" return myFunction()"><?php echo $survey[$_SESSION['counter']]['option1']; ?></a>
-    <a href="#" class="list-group-item list-group-item-action" id = "option2" onclick=" return myFunction()"><?php echo $survey[$_SESSION['counter']]['option2']; ?></a>
-    <a href="#" class="list-group-item list-group-item-action" id = "option3" onclick=" return myFunction()"><?php echo $survey[$_SESSION['counter']]['option3']; ?></a>
-    <a href="#" class="list-group-item list-group-item-action" id = "option4" onclick=" return myFunction()"><?php echo $survey[$_SESSION['counter']]['option4']; ?></a>
+    <a href="#" class="list-group-item list-group-item-action" id ="option1" name="option1"><?php echo $survey[$_SESSION['counter']]['option1']; ?></a>
+    <a href="#" class="list-group-item list-group-item-action" id = "option2" name="option2"><?php echo $survey[$_SESSION['counter']]['option2']; ?></a>
+    <a href="#" class="list-group-item list-group-item-action" id = "option3" name= "option3"><?php echo $survey[$_SESSION['counter']]['option3']; ?></a>
+    <a href="#" class="list-group-item list-group-item-action" id = "option4" name = "option4"><?php echo $survey[$_SESSION['counter']]['option4']; ?></a>
   </div>
 
   <div id = buttons>
@@ -51,4 +53,6 @@ if(isset($_POST['reset'])) {
     
   </div>
 </form>
+
+<?php echo form_close(); ?>
 

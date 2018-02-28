@@ -2,15 +2,13 @@
 
 	class Student_model extends CI_Model{
 		
-		public function register($enc_password){
+		public function register($enc_password, $teach_ID){
 
-			$teacher_info = $this -> session -> get_userdata();
-			$teacher_ID = $teacher_info['teach_ID'];
 			//user data array
 			$data = array(
 				'fname' => $this -> input->post('fname'),
 				'AVG_Grade' => $this -> input->post('AVG_Grade'),
-				'teach_ID' => $this -> input ->post('1'),
+				'teach_ID' => $this -> input ->post('teach_ID'),
 				'username' => $this -> input->post('username'),
 				'password' => $enc_password,
 				'lname' => $this -> input->post('lname')

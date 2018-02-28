@@ -14,7 +14,7 @@ echo $id['teach_ID'];
  <body id= "teacher">
 	<div class = "row">
 		<div class = 'col-md-4 col-md-offset-4'>
-			<input type="hidden" class = "form-control" name = "teach_ID" value="<?php $id ?>" />
+			<input type="hidden" class = "form-control" name = "teach_ID" value= "<?php echo htmlspecialchars($id['teach_ID']) ?>" />
 
 			<div class = "form-group">
 				<label>Student's First Name</label>

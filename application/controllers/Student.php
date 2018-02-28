@@ -25,6 +25,7 @@
             $this->form_validation ->set_rules('password', 'Password', 'required');
             $this->form_validation ->set_rules('password2', 'Confirm Password', 'matches[password]');
             $this->form_validation ->set_rules('AVG_Grade', 'AVG_Grade', 'required');
+            $this->form_validation ->set_rules('teach_ID', 'teach_ID');
 
             if($this->form_validation->run()=== FALSE){
                 $this -> load-> view('templates/header');
@@ -34,10 +35,12 @@
             }else{
 
                
-                
                 // Encrypt password
                 $enc_password = md5($this -> input ->post('password'));
-                $this -> Student_model -> register($enc_password);
+
+                $teacher_info = $this -> session -> get_userdata();
+                $teach_ID = $teacher_info['teach_ID'];
+                $this -> Student_model -> register($enc_password, $teach_ID);
 
                 //set message
              $this->session->set_flashdata('student_user_registered','The student has been added and can now login.');

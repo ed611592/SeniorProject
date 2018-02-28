@@ -71,7 +71,8 @@ INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Su
 'I just live with my mom! / I just live with my dad!', 
 'I live with my mom and dad!', 
 'I live with a step mom / I live with a step dad!', 
-'I live with my mom and someone else / I live with my dad and someone else!', '', 1);
+'I live with my mom and someone else / I live with my dad and someone else!', 'I just got a call from my friend, Simon. He said someone has stolen his nut collection. I need your help to solve the mystery. But first, I want to ask you a few questions to make sure you qualify for the job.
+', 1);
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
 (2, 'I have 8 siblings! That’s a lot right? How many siblings do you have?', 
 'I don’t have any siblings!', 
