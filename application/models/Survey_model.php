@@ -6,8 +6,8 @@
 			$this -> load -> database();
 		}
 
-		public function get_survey(){
-			$query = $this-> db -> query("SELECT * FROM Question WHERE Surv_ID = 1");
+		public function get_survey($id = 1){
+			$query = $this-> db -> query("SELECT * FROM Question WHERE Surv_ID = $id");
 			return $query-> result_array();
 		}
 	}
