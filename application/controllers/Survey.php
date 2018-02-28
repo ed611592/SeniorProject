@@ -24,4 +24,23 @@
             $this->load->view('templates/footer');
         }
 
+        public function add_response(){
+
+        	$this->form_validation ->set_rules('answer', 'answer');
+            $this->form_validation ->set_rules('q_ID', 'Q_ID');
+            $this->form_validation ->set_rules('surv_ID', 'Surv_ID');
+ 
+
+            if($this->form_validation->run()=== FALSE){
+                $this -> load-> view('templates/header');
+                $this -> load-> view('student/register', $data);
+                $this -> load-> view('templates/footer');
+
+            }else{
+
+            	
+
+              }
+          } 
+
 	}

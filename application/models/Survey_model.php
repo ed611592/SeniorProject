@@ -10,4 +10,5 @@
 			$query = $this-> db -> query("SELECT * FROM Question WHERE Surv_ID = $id");
 			return $query-> result_array();
 		}
+
 	}
