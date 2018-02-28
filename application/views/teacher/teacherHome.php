@@ -21,7 +21,7 @@
 
 	<center>
 	<p>
-        <a type="button" class="btn btn-lg btn-success" href ="<?php echo base_url();?>teacher/register">Add Students</a>
+        <a type="button" class="btn btn-lg btn-success" href ="<?php echo base_url();?>student/register">Add Students</a>
         <button type="button" class="btn btn-lg btn-success">View Results</button>
         <button type="button" class="btn btn-lg btn-success">Add Survey</button>
       </p>

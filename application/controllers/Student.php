@@ -84,7 +84,7 @@
 
                     $this -> session -> set_flashdata('user_loggedin','You are now logged in');
 
-                    redirect('StudentHome');
+                    redirect('student/view/studentHome');
 
                 }else{
                        

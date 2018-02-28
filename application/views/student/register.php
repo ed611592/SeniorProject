@@ -4,14 +4,18 @@
 
 <!-- Main Custom Styles -->
     <link href="<?php echo base_url();?>/assets/css/mainCss.css" rel="stylesheet">
-
-
+<?php 
+$id = $this -> session -> get_userdata();
+echo $id['teach_ID'];
+?>
 
 <?php echo form_open('Student/register'); ?>
 
  <body id= "teacher">
 	<div class = "row">
 		<div class = 'col-md-4 col-md-offset-4'>
+			<input type="hidden" class = "form-control" name = "teach_ID" value="<?php $id ?>" />
+
 			<div class = "form-group">
 				<label>Student's First Name</label>
 				<input type = "text" class = "form-control" name = "fname" placeholder = "First Name">
@@ -36,7 +40,7 @@
 				<label>Confirm Student's Password</label>
 				<input type = "password" class = "form-control" name = "password2" placeholder = "Confirm Password">
 			</div>
-			
+
 			<div class = "form-group">
 				<label>Student's Average Grade</label>
 				<input type = "number" class = "form-control" name = "AVG_Grade" placeholder = "Average Grade">
