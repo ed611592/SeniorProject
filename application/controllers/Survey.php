@@ -27,8 +27,9 @@
         public function add_response(){
 
         	$this->form_validation ->set_rules('answer', 'answer');
-            $this->form_validation ->set_rules('q_ID', 'Q_ID');
-            $this->form_validation ->set_rules('surv_ID', 'Surv_ID');
+            $this->form_validation ->set_rules('Q_ID', 'Q_ID');
+            $this->form_validation ->set_rules('Surv_ID', 'Surv_ID');
+            $this->form_validation ->set_rules('S_ID', 'S_ID');
  
 
             if($this->form_validation->run()=== FALSE){
@@ -37,7 +38,7 @@
                 $this -> load-> view('templates/footer');
 
             }else{
-
+                $this -> Survey_model -> add_response();
             	
 
               }
