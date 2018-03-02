@@ -23,7 +23,7 @@ DOCTYPE html>
     <link href="mainCss.css" rel="stylesheet">
 
     <!-- Student Custom Styles -->
-    <link href="assets/css/UserCss.css" rel="stylesheet">
+    <link href="assets/css/userCss.css" rel="stylesheet">
 
 
 

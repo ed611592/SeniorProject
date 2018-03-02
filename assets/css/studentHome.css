@@ -1,3 +1,7 @@
+body{
+  text-shadow: none;
+}
+
 #chipStory{
 border: 3px solid black;
 width: 500px;
@@ -11,25 +15,24 @@ font-size: 25px;
 	border: 3px dotted black;
 	padding: 15px;
 	position: absolute;
-	height: 400px;
+	height: 300px;
 	width: 550px;
 	float: right;
 	/*Margin numbers: top right bottom left*/
-  	margin-top: 0px;
-  	margin-left: 600px;
-  	text-shadow: none;
-
-	text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -1px black;
+  margin-top: 0px;
+  margin-left: 600px;
+	/*text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -1px black;*/
 }
 
 #cloud{
 	
-	width: 310px;
-	height: 210px;
+	width: 210px;
+	height: 110px;
 	background-image: url("../../assets/images/clouds.png");
-  	background-repeat: no-repeat;
-  	background-size: 300px 200px;
-  	margin-bottom: 100px;
+  background-repeat: no-repeat;
+  background-size: 200px 100px;
+  margin-bottom: 100px;
+  position: absolute;
 }
 
 .list-group{

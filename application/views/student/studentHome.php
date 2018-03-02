@@ -48,9 +48,9 @@
     		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
     	</div>
 
-      <div id=cloud>
+      <!--<div id=cloud>
 
-      </div>
+      </div>-->
 
       <div id ="chipStory">
         <center>
