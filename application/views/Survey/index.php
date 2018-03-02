@@ -36,7 +36,7 @@ $data = $this -> session -> get_userdata();
 
 ?>
 
-<?php echo form_open('Survey/add_response'); ?>
+<!--<?php echo form_open('Survey/add_response'); ?> -->
 
 <form method="POST">
   <input type="hidden" name="counter" value="<?php echo $_SESSION['counter']; ?>"/>
@@ -82,5 +82,5 @@ $data = $this -> session -> get_userdata();
   </div>
 </form>
 
-<?php echo form_close(); ?>
+<!--<?php echo form_close(); ?> -->
 

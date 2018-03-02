@@ -23,7 +23,7 @@
             $this->load->view('Survey/'.$page, $data);
             $this->load->view('templates/footer');
         }
-
+/*
         public function add_response(){
 
         	$this->form_validation ->set_rules('answer', 'answer');
@@ -43,5 +43,5 @@
 
               }
           } 
-
+*/
 	}
