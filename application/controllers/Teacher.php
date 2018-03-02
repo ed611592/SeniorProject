@@ -9,6 +9,7 @@
             }
 
             $data['title'] = ucfirst($page);
+            $data['students'] = $this -> Teacher_model -> get_Class();
 
             $this->load->view('templates/header');
             $this->load->view('teacher/'.$page, $data);
@@ -42,8 +43,6 @@
             }
 
         }
-
-
          
 //Log in user
          public function login(){

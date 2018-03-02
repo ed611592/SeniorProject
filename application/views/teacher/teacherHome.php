@@ -1,7 +1,4 @@
 
-
-
-
 <!-- Student Custom Styles -->
     <link href="<?php echo base_url();?>/assets/css/UserCss.css" rel="stylesheet">
 
@@ -17,7 +14,6 @@
     		<h1>Hello Teacher!</h1>
     		<p class="lead">Welcome to your dashboard </p>
 </div>
-
 
 	<center>
 	<p>
@@ -37,24 +33,14 @@
 			</tr>
 		</thead>
 		<tbody>
+			<?php foreach($students as $student) : ?>
 			<tr>
-				<th scope="row">1</th>
-				<td>Mark</td>
-				<td>Otto</td>
-				<td> 90</td>
+				<th scope="row"><?php echo $student['S_ID'] ?></th>
+				<td><?php echo $student['fname'] ?></td>
+				<td><?php echo $student['lname'] ?></td>
+				<td> <?php echo $student['AVG_Grade'] ?></td>
 			</tr>
-			<tr>
-				<th scope="row">2</th>
-				<td>Jacob</td>
-				<td>Thornton</td>
-				<td> 76 </td>
-			</tr>
-			<tr>
-				<th scope="row">3</th>
-				<td>Larry</td>
-				<td>the Bird</td>
-				<td> 99</td>
-			</tr>
+			<?php endforeach; ?>
 		</tbody>
 	</table>
 	</div>

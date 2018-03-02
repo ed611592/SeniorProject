@@ -1,6 +1,16 @@
 <?php
 
 	class Teacher_model extends CI_Model{
+
+		public function __construct(){
+			parent::__construct();
+			$this -> load -> database();
+		}
+
+		public function get_Class($id = 1){
+			$query = $this-> db -> query("SELECT Student.S_ID, Student.fname, Student.lname, Student.AVG_Grade FROM Student WHERE teach_ID = $id");
+			return $query-> result_array();
+		}
 		public function register($enc_password){
 			//user data array
 			$data = array(
