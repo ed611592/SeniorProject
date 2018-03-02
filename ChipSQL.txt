@@ -67,86 +67,74 @@ INSERT INTO Student VALUES(3,'emily', 93, 1, 'emily',  'B02AE5AAEFE3F7090668DF03
 INSERT INTO Survey VALUES('Adventure 1', 1, '2018-1-11');
 
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
-(1, 'I’m from a town called Munksville, Chiptucky! Where are you from?', 
-'Paoli', 
-'Radnor', 
-'Bryn Mawr', 
-'Wayne', 'I just got a call from my friend, Simon. He said someone has stolen his nut collection. I need your help to solve the mystery. But first, I want to ask you a few questions to make sure you qualify for the job.
-', 1);
-INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
-(2, 'I live in a BIG log with my mommy and daddy chipmunks! How about you?', 
+(1, 'I live in a BIG log with my mommy and daddy chipmunks! How about you?', 
 'I just live with my mom! / I just live with my dad!', 
 'I live with my mom and dad!', 
 'I live with a step mom / I live with a step dad!', 
-'I live with my mom and someone else / I live with my dad and someone else!', 
-'', 1);
+'I live with my mom and someone else / I live with my dad and someone else!', 'I just got a call from my friend, Simon. He said someone has stolen his nut collection. I need your help to solve the mystery. But first, I want to ask you a few questions to make sure you qualify for the job.
+', 1);
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
-(3, 'When I go to school, my favorite classes are music class and woodshop! What is your favorite class?', 
-'Math', 
-'English/Reading', 
-'Science', 
-'History', 
-'Great! You qualified for the job! Let’s get started right away. Let’s ride our bikes over to Simon’s house. Oh, no! My bike’s chain is broken! Can you answer these two questions and help me to fix it?', 1);
-INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
-(4, 'My least favorite class is gym (I’m too small to play the games!). What’s your least favorite class', 
-'Math', 
-'English/Reading', 
-'Science', 
-'History', 
-'', 1);
-INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
-(5, 'I have 8 siblings! That’s a lot right? How many siblings do you have?', 
+(2, 'I have 8 siblings! That’s a lot right? How many siblings do you have?', 
 'I don’t have any siblings!', 
 'I have 1-2 siblings', 
 'I have 3 or more siblings', 
-'I have siblings and at least one of them is a step sibling or adopted', 
-'Awesome! It’s fixed. Now, off to Simon’s house!.....
-
-Oh no! Someone broke the bridge to Simon’s house! It must have been from the thief trying to make a quick escape. Let’s investigate the bridge. Hey! What’s that lying on the ground over there? Can you answer these questions so that we can find out what it is?
-', 1);
-INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
-(6, 'I really like going to school! It’s so much fun! What about you?', 
-'I like going to school every day!', 
-'I like going to school most days!', 
-'Sometimes I like going to school and sometimes I don’t', 
-'I never like going to school!', 
+'I have siblings and at least one of them is a step sibling', 
 '', 1);
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
-(7, 'I like most of the kids in my school but some people are really mean! What about your school? Do you get along with people?', 
+(3, 'I’m from a town called Munksville, Chiptucky! Where are you from?', 
+'Paoli', 
+'Radnor', 
+'Bryn Mawr', 
+'Wayne', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(4, 'When I go to school, my favorite classes are music class and woodshop! What is your favorite class?', 
+'Math', 
+'English/Reading', 
+'Science', 
+'History', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(5, 'My least favorite class is gym (I’m too small to play the games!). What’s your least favorite class', 
+'Math', 
+'English/Reading', 
+'Science', 
+'History', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(6, 'I like most of the kids in my school but some people are really mean! What about your school? Do you get along with people?', 
 'I like spending time with a lot of different kids at school', 
 'I like hanging out with some of the kids at school', 
 'I have trouble getting along with the kids at school', 
 'I like to spend time by myself at school', 
-'Ah-ha! It’s a red bandana. I wonder who this could belong to? 
-There’s my friend Simon! “Hi Simon!”
-“Hi Chip! Please help me! I can’t believe my whole nut collection is gone!”
-
-“Don’t worry Simon, we are on the case! We found this red bandana, does this look familiar to you?”
-“Actually yes! That belongs to someone in that group of kids in our class that teases me sometimes. I bet it was one of them! ”
-', 1);
+'', 1);
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
-(8, 'Remember how I said there are meanies at my school? Well… sometimes they bully me. Does that happen to you?', 
+(7, 'Remember how I said there are meanies at my school? Well… sometimes they bully me. Does that happen to you?', 
 'Yes, I feel like I get bullied almost every day', 
 'Yes, I feel like I get bullied a couple times a week', 
 'Yes, I feel like I get bullied every once in a while', 
 'No, I never feel bullied at school', 
 '', 1);
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
-(9, 'I’m a brown chipmunk, but some of my friends are more grey! What do you look like?', 
-'I’m a white (caucasian) person!', 
-'I’m a black / African American person!', 
-'I’m a Hispanic person!', 
-'I’m an Asian person / Pacific Islander', 
-'Let’s get off our bikes and walk around the bridge to go into Simon’s house to look for more clues. Wait! Look over there at Simon’s opened window! That must be how the thief snuck in.
-
-I see footprints on the windowsill. Let me think about what type of animal would leave this footprint...while we are thinking, can you answer these questions about you?
-', 1);
-INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
-(10, 'I wish I could play sports but, like I said, I’m too small. My family still does a lot though. My oldest brother, Chap,  plays a lot of sports and my older sister is in the chess club! What about you? Are you in any sports, clubs or any other activities?', 
+(8, 'I wish I could play sports but, like I said, I’m too small. My family still does a lot though. My oldest brother, Chap,  plays a lot of sports and my older sister is in the chess club! What about you? Are you in any sports, clubs or any other activities?', 
 'Yes, I’m in at least one club at school', 
 'Yes, I’m in at least one school activity', 
 'Yes, I’m in some clubs in school and some outside of school', 
 'No, I’m not in any school activities', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(9, 'I really like going to school! It’s so much fun! What about you?', 
+'I like going to school every day!', 
+'I like going to school most days!', 
+'Sometimes I like going to school and sometimes I don’t', 
+'I never like going to school!', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(10, 'I’m a brown chipmunk, but some of my friends are more grey! What do you look like?', 
+'I’m a white (caucasian) person!', 
+'I’m a black / African American person!', 
+'I’m a Hispanic person!', 
+'I’m an Asian person / Pacific Islander', 
 '', 1);
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
 (11, 'I don’t have a computer at home but that’s okay because my brothers, sisters and I like to play a lot of games outside.', 
@@ -154,42 +142,26 @@ INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Su
 'Yes I can usually get onto the computer/internet at home.', 
 'Sometimes I can get onto the computer/internet at home but sometimes I can’t.', 
 'No, I can’t get on the computer/internet at home.', 
-'I got it! This looks like the footprint of a fox. There is a Fox, named Foxy, in our class! It must have been her. But where could she have gone with Simon’s nut collection? Let’s take a look around. 
-
-Looks like there are three different pathways he could have taken. Can you answer a few more questions to help us figure out the next clue?
-', 1);
+'', 1);
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
-(12, 'I try to work really hard in school because I want to make my mom and dad happy and I like doing well in school! How do you feel about school', 
+(12, 'I try to work really hard in school because I want to make my mom and dad happy and I like doing well in school! How do you feel about school?', 
 'School is important to me. I work really hard and I do really well!', 
 'School is important to me. I work as hard as I can but I’m still struggling in school.', 
 'School isn’t important to me but I still do well!',
 'School isn’t important to me and I don’t do very well in school.', 
 '', 1);
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
-(13, 'Sometimes my homework is really hard! When that happens, it can be hard for me to finish it. Do you have trouble finishing your homework?', 
-'No, I never have trouble finishing my homework', 
-'Yes, sometimes I have trouble finishing my homework and sometimes I don’t', 
-'Yes, I have trouble finishing my homework a lot of the time', 
-'Yes, I always have trouble finishing my homework', 
-'', 1);
-INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
-(14, 'Sometimes it’s hard for me to fall asleep at night because I’m so excited for all the activities I get to do the next day! Do you ever have trouble sleeping?', 
+(13, 'Sometimes it’s hard for me to fall asleep at night because I’m so excited for all the activities I get to do the next day! Do you ever have trouble sleeping?', 
 'No, I never have trouble sleeping', 
 'Yes, sometimes I have trouble sleeping and sometimes I don’t', 
 'Yes, I have trouble sleeping a lot of the time', 
 'Yes, I always have trouble sleeping', 
-'I see something! In pathway 2, there seems to be at trail of nuts. Foxy must have gone that way after she left Simon’s house. Let’s see where this path leads us.
-
-It led us to Smithville, where all the fox’s in town live. But how will we figure out which den is Foxy’s? Can you answer another question to find the next clue?
-', 1);
-INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES (15, 'I’ve learned to be really patient because my siblings and I have to take turns doing a lot of things. What about you? How do you handle waiting for your turn?', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
+(14, 'I’ve learned to be really patient because my siblings and I have to take turns doing a lot of things. What about you? How do you handle waiting for your turn?', 
 'I never have trouble waiting my turn. I’m very patient', 
 'Sometimes I have trouble waiting my turn and sometimes I don’t', 
 'I have trouble waiting my turn a lot of the time', 
-'I always have trouble waiting my turn', '', 1);
-INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES (16, '', 
-'Yes, our house is bigger and nicer than most of my friends', 
-'Yes, our house is big and nice but some of my friends’ houses are bigger and nicer', 
-'Our house is nice but it is small', 
-'Our house is not big or nice', 
-'Look I see another red bandana! Remember we found one earlier? That must be where Foxy lives. That looks like a nice, cozy den!', 1);
+'I always have trouble waiting my turn', 
+'', 1);
+INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES (15, 'Sometimes my homework is really hard! When that happens, it can be hard for me to finish it. Do you have trouble finishing your homework?', 'No, I never have trouble finishing my homework', 'Yes, sometimes I have trouble finishing my homework and sometimes I don’t', 'Yes, I have trouble finishing my homework a lot of the time', 'Yes, I always have trouble finishing my homework', '', 1)
