@@ -23,7 +23,7 @@
             $this->load->view('Survey/'.$page, $data);
             $this->load->view('templates/footer');
         }
-
+/*
         public function add_response(){
             $this->load->database();
             echo 'Look at this!';
@@ -47,5 +47,5 @@
 
               }
           } 
-
+*/
 	}
