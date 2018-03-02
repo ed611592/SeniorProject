@@ -39,8 +39,6 @@ $id = $this -> session -> get_userdata();
     <!--<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>-->
     <a class="btn btn-lg btn-primary btn-block" type="submit" href="<?php echo base_url();?>student/login">Student</a>
     <a class="btn btn-lg btn-primary btn-block" type="submit" href="<?php echo base_url();?>teacher/login">Teacher</a>
-    <a class="btn btn-lg btn-primary btn-block" type="submit" href="<?php echo base_url();?>studentHome">Student Home</a>
-    <a class="btn btn-lg btn-primary btn-block" type="submit" href="<?php echo base_url();?>survey">Survey</a>
 
     
   </center>

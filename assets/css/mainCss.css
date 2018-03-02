@@ -1,26 +1,32 @@
 body {
-  padding-top: 50px;
-  background-color: #1bbee3;
+  padding-top: 80px;
+  background-color: #2fadff;
+  color:#adff2f;
+  text-shadow: 0 0 2.5px black;
+  font-weight: 1200;
 }
 
 .myNav {
-  background-color: #18abcc;
+  background-color: #0098fb;
+  border: none;
  }
+ /*#logout{
+  float:right;
+ }*/
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand{
-	color: #98DE0F;
+color:#adff2f;
 	font-weight: bold;
-	text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -1px black;
 	font-size: 15px;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus{
-	color:white;
+	color:black;
 	background-color: #1598b5;
 }
 
 .home {
-  padding: 40px 15px;
+  padding: 35px 15px;
   text-align: center;
 }
 

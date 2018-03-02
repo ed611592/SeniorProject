@@ -1,44 +1,44 @@
 
 body{
 	background: #c84664;
-	color: #e5e5e5;
-	text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -1px black;
+	/*color: #e5e5e5;
+	text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -1px black;*/
 }
 
 #teacher{
-background: #9b5448;
-color:#e5e5e5;
+background: #FFFF66;
+/*color:#e5e5e5;*/
   
 }
 .home{
 	
 	padding: 23px ;
-}
+
 }
 
 .myNav {
   background-color: #a9324e;
  }
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand{
-	color: #98DE0F;
+	color: #323232
+;
 	font-weight: bold;
-	text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -1px black;
 	font-size: 15px;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
 .navbar-inverse .navbar-nav > .active > a:focus{
-	color:white;
 	background-color: #88283E;
 }
 
 #teacher .myNav {
-  background-color: #8b4b40;
+  background-color: #ffff96;
+  
+  border-bottom: 3px dotted black;
  }
 
 #teacher .navbar-inverse .navbar-nav > #teacherLogIn .active > a,
 #teacher .navbar-inverse .navbar-nav > #teacherLogIn .active > a:hover,
 #teacher .navbar-inverse .navbar-nav > .active > a:focus{
-	color:white;
 	background-color: #7c4339;
 }

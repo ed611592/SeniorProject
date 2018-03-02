@@ -69,9 +69,9 @@
 
   			 <center>
            		<div class="checkbox">
-            			<label>
+            			<!--<label>
                 			<input type="checkbox" value="remember-me"> Remember me
-              		</label>
+              		</label>-->
             		</div>
 
   			   <button type = "submit" class = "btn btn-lg btn-primary btn-block">Sign in</button>
