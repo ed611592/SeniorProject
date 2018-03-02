@@ -1,6 +1,7 @@
 
 
 <?php
+
 if(!isset($_SESSION['counter'])) {
     $_SESSION['counter'] = 0;
 }
@@ -34,6 +35,8 @@ if(isset($_POST['reset'])) {
 <?php 
 $data = $this -> session -> get_userdata();
 
+
+
 ?>
 
 <?php echo form_open('Survey/add_response'); ?>
@@ -44,11 +47,10 @@ $data = $this -> session -> get_userdata();
 
   <img id = "chip" src = "assets/images/ChipStudent.png">
 
-  
 
     <div>
       <input type="radio" name="answer" id="option1" value="A" />
-      <label for="option1"><?php echo $survey[$_SESSION['counter']]['option1']; ?> </label>
+      <label for="option1"><?php echo $Survey[$_SESSION['counter']]['option1']; ?> </label>
     </div>
 
     <div>

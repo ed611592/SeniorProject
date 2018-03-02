@@ -25,6 +25,10 @@
         }
 
         public function add_response(){
+            $this->load->database();
+            echo 'Look at this!';
+
+            $data['title'] = 'Add a response to Survey';
 
         	$this->form_validation ->set_rules('answer', 'answer');
             $this->form_validation ->set_rules('Q_ID', 'Q_ID');
@@ -34,7 +38,7 @@
 
             if($this->form_validation->run()=== FALSE){
                 $this -> load-> view('templates/header');
-                $this -> load-> view('student/register', $data);
+                $this -> load-> view('Survey/index', $data);
                 $this -> load-> view('templates/footer');
 
             }else{
