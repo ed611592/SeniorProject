@@ -15,7 +15,7 @@
 
 			//user data array
 			$data = array(
-				'Student_Answer' => $this -> input->post('answer'),
+				'Student_Answer' => $this -> input->post('Student_Answer'),
 				'Q_ID' => $this -> input->post('Q_ID'),
 				'S_ID' => $this -> input ->post('S_ID'),
 				'Surv_ID' => $this -> input->post('Surv_ID')
@@ -25,4 +25,5 @@
 			return $this -> db -> insert('Responses', $data);
 		}
 
-	}
+		}
+
