@@ -1,17 +1,23 @@
-<h2><?= $title; ?></h2>
+<center><h2><?= $title; ?></h2></center>
+</br>
 
 <?php echo validation_errors(); ?>
 
 <!-- Main Custom Styles -->
-    <link href="<?php echo base_url();?>/assets/css/mainCss.css" rel="stylesheet">
+<link href="<?php echo base_url();?>/assets/css/mainCss.css" rel="stylesheet">
+<!-- User Custom Styles -->
+<link href="<?php echo base_url();?>/assets/css/userCss.css" rel="stylesheet">
+<!-- User Custom Styles -->
+<link href="<?php echo base_url();?>/assets/css/registrationCss.css" rel="stylesheet">
+
 <?php 
-$id = $this -> session -> get_userdata();
-echo $id['teach_ID'];
+	$id = $this -> session -> get_userdata();
+	//echo $id['teach_ID'];
 ?>
 
 <?php echo form_open('Student/register'); ?>
 
- <body id= "teacher">
+<body id= "teacher">
 	<div class = "row">
 		<div class = 'col-md-4 col-md-offset-4'>
 			<input type="hidden" class = "form-control" name = "teach_ID" value= "<?php echo htmlspecialchars($id['teach_ID']) ?>" />
@@ -47,6 +53,7 @@ echo $id['teach_ID'];
 			</div>
 		</div>
 	</div>
+	</br>
 	<center>
 		<button type = "submit" class = "btn btn-primary btn-block">Submit</button>
 	</center>

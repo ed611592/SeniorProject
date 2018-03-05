@@ -62,7 +62,7 @@
         <center>
           <h4> Start an investigation...</h4>
           <div class="list-group">
-            <a href="survey" class="list-group-item list-group-item-action">Initial Survey</a>
+            <a href="<?php echo base_url();?>survey" class="list-group-item list-group-item-action">Initial Survey</a>
             <a href="#!" class="list-group-item list-group-item-action">Story 2</a>
             <a href="#!" class="list-group-item list-group-item-action">Story 3</a>
           </div>
