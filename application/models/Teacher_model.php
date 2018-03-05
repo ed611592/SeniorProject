@@ -65,10 +65,4 @@
 
 		}
 
-		public function get_Students($id = 1){
-			$this -> load -> database();
-			$query = $this-> db -> query("SELECT * FROM Student WHERE teach_ID = $id");
-			return $query-> result_array();
-		}
-
 	}
