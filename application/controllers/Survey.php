@@ -24,9 +24,8 @@
             $this->load->view('templates/footer');
         }
 
-        public function add_response(){
+        public function takeSurvey(){
             $this->load->database();
-            echo 'Look at this!';
 
             $test['title'] = 'Survey';
 
@@ -52,7 +51,7 @@
 
             }else{
 
-               $this -> Survey_model -> add_response(); 
+               $this -> Survey_model -> takeSurvey(); 
                $this -> load-> view('templates/header');
                 $this -> load-> view('Survey/index', $data);
                 $this -> load-> view('templates/footer');

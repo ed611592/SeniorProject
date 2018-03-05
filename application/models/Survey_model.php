@@ -11,7 +11,7 @@
 			return $query-> result_array();
 		}
 
-		public function add_response(){
+		public function takeSurvey(){
 
 			//user data array
 			$data = array(
