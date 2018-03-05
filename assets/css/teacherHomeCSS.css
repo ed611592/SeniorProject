@@ -1,23 +1,29 @@
+.home{
+	border: 1px solid red;
+}
+
 #sidebar{
 	border: 1px solid red;
 	float: left;
 	height: 300px;
+	position: absolute;
+	margin-bottom: 500px;
 }
- table th {
-width: auto !important;
- }
+
 table{
 	margin-top: 30px;
 	border:1px solid black;
 	background: white;
 	color: black;
 	text-shadow: none;
-	width: 100px;
+	width: auto !important;
 	height: 200px;
 	float: right;
 
 }
-
+ table th {
+width: 200px;
+ }
 .btn{
 	width: 160px;
 }

@@ -34,9 +34,9 @@ $id = $this -> session -> get_userdata();
 ?>
 
 <!-- Css for all users -->
-<link href="assets/css/userCss.css" rel="stylesheet">
+<link href="<?php echo base_url();?>assets/css/userCss.css" rel="stylesheet">
 <!-- Css for Survey -->
-<link href="assets/css/surveyCss.css" rel="stylesheet">
+<link href="<?php echo base_url();?>assets/css/surveyCss.css" rel="stylesheet">
 
 <?php 
 $data = $this -> session -> get_userdata();
@@ -58,7 +58,7 @@ $data = $q->result_array();
   <h3 id = "story"> <?php echo($data[$_SESSION['counter']]['story']); ?></h3>
   <h3 id = "question"> <?php echo($data[$_SESSION['counter']]['Q_text']); ?></h3>
 
-  <img id = "chip" src = "assets/images/ChipStudent.png">
+  <img id = "chip" src = "<?php echo base_url();?>assets/images/ChipStudent.png">
 
 
     <div>
