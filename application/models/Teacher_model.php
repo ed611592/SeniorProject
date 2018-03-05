@@ -7,7 +7,7 @@
 			$this -> load -> database();
 		}
 
-		public function get_Class($id = 1){
+		public function get_Class($id){
 			$query = $this-> db -> query("SELECT Student.S_ID, Student.fname, Student.lname, Student.AVG_Grade FROM Student WHERE teach_ID = $id");
 			return $query-> result_array();
 		}

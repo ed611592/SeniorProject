@@ -8,8 +8,11 @@
                 show_404();
             }
 
+            $teacher = $this -> session -> get_userdata();
+            $id = $teacher['teach_ID'];
+
             $data['title'] = ucfirst($page);
-            $data['students'] = $this -> Teacher_model -> get_Class();
+            $data['students'] = $this -> Teacher_model -> get_Class($id);
 
             $this->load->view('templates/header');
             $this->load->view('teacher/'.$page, $data);
