@@ -77,7 +77,7 @@
       </div>
     </nav>
 
-    	<div class = "container">
+    	
 
         <!-- Flash messages -->
         <?php if($this-> session-> flashdata('user_registered')): ?>

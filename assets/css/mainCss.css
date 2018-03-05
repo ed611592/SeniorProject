@@ -28,6 +28,8 @@ color:#adff2f;
 .home {
   padding: 35px 15px;
   text-align: center;
+  width: 600px;
+  margin: auto;
 }
 
 .lead{
