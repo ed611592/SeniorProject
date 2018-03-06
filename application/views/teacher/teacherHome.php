@@ -1,6 +1,4 @@
 
-<!-- Student Custom Styles -->
-<link href="<?php echo base_url();?>/assets/css/UserCss.css" rel="stylesheet">
 
 <!-- Student Custom Styles -->
 <link href="<?php echo base_url();?>/assets/css/TeacherHomeCss.css" rel="stylesheet">
@@ -10,11 +8,16 @@
 
 
 	<div class = "container">
+		<div id="chipPic">
+		</div>
 		<div class="home">
 			<center>
 			<h1>Hello Teacher!</h1>
 			<p class="lead">Welcome to your dashboard </p>
 			</center>
+		</div>
+		<br>
+		<div id="chip2">
 		</div>
 
 
@@ -28,7 +31,7 @@
 			</div>
 		</center>
 
-		<div class ="containter" id = "studentTable">
+		<div id = "studentTable">
 			<table class="table table-striped">
 				<thead>
 					<tr>

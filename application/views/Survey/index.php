@@ -53,49 +53,52 @@ $data = $q->result_array();
 
 <!--<?php echo form_open('Survey/add_response'); ?> -->
 
-<form method="POST">
-  <input type="hidden" name="counter" value="<?php echo $_SESSION['counter']; ?>"/>
-  <h3 id = "story"> <?php echo($data[$_SESSION['counter']]['story']); ?></h3>
-  <h3 id = "question"> <?php echo($data[$_SESSION['counter']]['Q_text']); ?></h3>
+  <form method="POST">
+    <div id="container">
+    <input type="hidden" name="counter" value="<?php echo $_SESSION['counter']; ?>"/>
+    <h3 id = "story"> <?php echo($data[$_SESSION['counter']]['story']); ?></h3>
+    <h3 id = "question"> <?php echo($data[$_SESSION['counter']]['Q_text']); ?></h3>
 
-  <img id = "chip" src = "<?php echo base_url();?>assets/images/ChipStudent.png">
+    <img id = "chip" src = "<?php echo base_url();?>assets/images/ChipStudent.png">
 
 
-    <div>
-      <input type="radio" name="Student_Answer" id="option1" value="A" />
-      <label for="option1"><?php echo($data[$_SESSION['counter']]['option1']); ?> </label>
+      <div>
+        <input type="radio" name="Student_Answer" id="option1" value="A" />
+        <label for="option1"><?php echo($data[$_SESSION['counter']]['option1']); ?> </label>
+      </div>
+
+      <div>
+        <input type="radio" name="Student_Answer" id="option2" value="B" />
+        <label for="option1"><?php echo($data[$_SESSION['counter']]['option2']); ?> </label>
+      </div>
+
+      <div>
+        <input type="radio" name="Student_Answer" id="option3" value="C" />
+        <label for="option1"><?php echo($data[$_SESSION['counter']]['option3']); ?> </label>
+      </div>
+
+      <div>
+        <input type="radio" name="Student_Answer" id="option4" value="D" />
+        <label for="option1"><?php echo($data[$_SESSION['counter']]['option4']); ?> </label>
+      </div>
+
+      <input type="hidden" class = "form-control" name = "Q_ID" value= "<?php echo($data[$_SESSION['counter']]['Q_ID']); ?>" />
+
+      <input type="hidden" class = "form-control" name = "Surv_ID" value= "<?php echo($data[$_SESSION['counter']]['Surv_ID']); ?>" />
+
+       <input type="hidden" class = "form-control" name = "S_ID" value= "<?php echo htmlspecialchars($id['S_ID']) ?>" />
+
+
+
+    <div id = buttons>
+      
+        <input type="submit" name="button" value="Next" class = "btn red btn-lg btn-primary btn-block"/>
+        <input type="submit" name="reset" value="Reset" class = "btn btn-lg btn-primary btn-block"/>
+      
     </div>
-
-    <div>
-      <input type="radio" name="Student_Answer" id="option2" value="B" />
-      <label for="option1"><?php echo($data[$_SESSION['counter']]['option2']); ?> </label>
     </div>
+  </form>
 
-    <div>
-      <input type="radio" name="Student_Answer" id="option3" value="C" />
-      <label for="option1"><?php echo($data[$_SESSION['counter']]['option3']); ?> </label>
-    </div>
-
-    <div>
-      <input type="radio" name="Student_Answer" id="option4" value="D" />
-      <label for="option1"><?php echo($data[$_SESSION['counter']]['option4']); ?> </label>
-    </div>
-
-    <input type="hidden" class = "form-control" name = "Q_ID" value= "<?php echo($data[$_SESSION['counter']]['Q_ID']); ?>" />
-
-    <input type="hidden" class = "form-control" name = "Surv_ID" value= "<?php echo($data[$_SESSION['counter']]['Surv_ID']); ?>" />
-
-     <input type="hidden" class = "form-control" name = "S_ID" value= "<?php echo htmlspecialchars($id['S_ID']) ?>" />
-
-
-
-  <div id = buttons>
-    
-      <input type="submit" name="button" value="Next" class = "btn red btn-lg btn-primary btn-block"/>
-      <input type="submit" name="reset" value="Reset" class = "btn btn-lg btn-primary btn-block"/>
-    
-  </div>
-</form>
 
 <!--<?php echo form_close(); ?> -->
 

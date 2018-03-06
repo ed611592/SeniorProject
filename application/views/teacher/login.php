@@ -26,8 +26,6 @@
       <!-- Main Custom Styles -->
     <link href="<?php echo base_url();?>/assets/css/mainCss.css" rel="stylesheet">
 
-    <!-- Student Custom Styles -->
-    <link href="<?php echo base_url();?>/assets/css/userCss.css" rel="stylesheet">
 
     <!-- Sign-In Custom Styles -->
     <link href="<?php echo base_url();?>/assets/css/signInCss.css" rel="stylesheet">
@@ -47,7 +45,7 @@
   <center>
           <div  class = "Logo">
            
-              <img  src="<?php echo base_url();?>assets/images/ChipTeacher.png">
+              <img  src="<?php echo base_url();?>assets/images/ChipHome.jpeg">
               <h3> Chip The Pet Detective</h3>
             
           </div>
@@ -77,7 +75,7 @@
               </label>-->
             </div>
 
-            <a type="text" href ="<?php echo base_url();?>teacher/register">Don't have an account? Create Username.</a>
+            <a type="text"  style= "text-shadow: none; color: black" href ="<?php echo base_url();?>teacher/register">Don't have an account? Create Username.</a>
 
             <button type = "submit" class = "btn btn-lg btn-primary btn-block">Sign in</button>
 
