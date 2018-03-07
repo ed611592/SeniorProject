@@ -2,7 +2,7 @@
 <?php 
 require_once(__DIR__ . '/vendor/autoload.php');
 
-/*//this library works
+//this library works
 use MathPHP\Algebra;
 use Regression\Algorithm\LeastSquares;
 //$algorithm = new LeastSquares;
@@ -15,13 +15,13 @@ use Regression\src\Observations;
 $gcd = Algebra::gcd(8, 12);
 
 
-<<<<<<< HEAD
+
 use MCordingley\Regression\Observations;
 
 $observations = new Observations;
-=======
+
 use MCordingley\Regression\Algorithm\LeastSquares;
-//$algorithm = new LeastSquares;*/
+$algorithm = new LeastSquares;
 
 
 $id = $this -> session -> get_userdata();
