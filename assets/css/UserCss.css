@@ -5,16 +5,6 @@ body{
 	text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -1px black;*/
 }
 
-#teacher{
-background: #FFFF66;
-/*color:#e5e5e5;*/
-  
-}
-.home{
-	
-	padding: 23px ;
-
-}
 
 .myNav {
   background-color: #a9324e;
@@ -34,15 +24,3 @@ background: #FFFF66;
 	text-shadow: none;	
 }
 
-#teacher .myNav {
-	background-color: #ffff96;  
-	text-shadow: none;	
-	border-bottom: 3px dotted black;
- }
-
-#teacher .navbar-inverse .navbar-nav > .active > a,
-#teacher .navbar-inverse .navbar-nav > .active > a:hover,
-#teacher .navbar-inverse .navbar-nav > .active > a:focus{
-	background-color: #e4e400;
-	text-shadow: none;	
-}

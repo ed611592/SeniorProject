@@ -83,23 +83,23 @@
 
         <!-- Flash messages -->
         <?php if($this-> session-> flashdata('user_registered')): ?>
-            <?php echo '<p class = "alert alert-success">'.$this -> session -> flashdata('user_registered').'</p>'; ?>
+            <?php echo '<center><p class = "alert alert-success" style= "text-shadow: none; width: 200px">'.$this -> session -> flashdata('user_registered').'</p></center>'; ?>
 
         <?php endif; ?> 
 
         <?php if($this-> session-> flashdata('login_failed')): ?>
-            <?php echo '<p class = "alert alert-danger">'.$this -> session -> flashdata('login_failed').'</p>'; ?>
+            <?php echo '<center><p class = "alert alert-danger" style= "text-shadow: none; width: 200px">'.$this -> session -> flashdata('login_failed').'</p></center>'; ?>
 
         <?php endif; ?>  
 
          <?php if($this-> session-> flashdata('user_loggedin')): ?>
-            <?php echo '<p class = "alert alert-success">'.$this -> session -> flashdata('user_loggedin').'</p>'; ?>
+            <?php echo '<center><p class = "alert alert-success" style= "text-shadow: none; width: 200px">'.$this -> session -> flashdata('user_loggedin').'</p></center>'; ?>
 
         <?php endif; ?>  
 
 
          <?php if($this-> session-> flashdata('user_loggedout')): ?>
-            <?php echo '<p class = "alert alert-success">'.$this -> session -> flashdata('user_loggedout').'</p>'; ?>
+            <?php echo '<center><p class = "alert alert-success" style= "text-shadow: none; width: 200px;">'.$this -> session -> flashdata('user_loggedout').'</p></center>'; ?>
 
         <?php endif; ?>  
        

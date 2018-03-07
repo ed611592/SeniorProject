@@ -2,6 +2,7 @@ body{
   text-shadow: none;
 }
 
+
 #chipStory{
 border: 3px solid black;
 width: 500px;
@@ -14,25 +15,12 @@ font-size: 25px;
 #stories{
 	border: 3px dotted black;
 	padding: 15px;
-	position: absolute;
 	height: 300px;
 	width: 550px;
 	float: right;
 	/*Margin numbers: top right bottom left*/
   margin-top: 0px;
-  margin-left: 600px;
 	/*text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -1px black;*/
-}
-
-#cloud{
-	
-	width: 210px;
-	height: 110px;
-	background-image: url("../../assets/images/clouds.png");
-  background-repeat: no-repeat;
-  background-size: 200px 100px;
-  margin-bottom: 100px;
-  position: absolute;
 }
 
 .list-group{
@@ -41,35 +29,93 @@ font-size: 25px;
 }
 
 a.list-group-item, button.list-group-item {
-    height: 70px;
-    width: 500px;
+  height: 70px;
+  width: 500px;
 	color: black;
 
 }
 
+#topSpace{
+
+  /*border: 1px solid black;*/
+  width: 100%;
+  height: 240px;
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.home{
+
+  /*border: 1px solid black;*/
+ 
+}
+
 /*-------------------------------------ANIMATIONS----------------------------------*/
-#cloud {
+#chipPic, #chip2{
    
-    
-    position: relative;
-    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-    animation-name: example;
-    animation-duration: 2s;
-     animation-iteration-count: infinite;
+  /*border: 1px solid black;*/
+
+  /*Margin numbers: top right bottom left*/
+  margin: 0px 0px 0px 80px;
+  width: 210px;
+  height: 200px;
+  background-image: url("../../assets/images/glass.png");
+  background-repeat: no-repeat;
+  background-size: 200px 200px;
+  float: left;
+  position: relative;
+  z-index: 1;
+  /*////////////////////////////////////////////////////////*/
+  -webkit-animation-name: chip; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: chip;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+
+#chip2{
+  margin: 0px 80px 0px 0px;
+  float: right;
+
+  background-image: url("../../assets/images/glass2.png");
+  /*//////////////////////////////////////////////////*/
+  -webkit-animation-name: chipT; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  animation-name: chipT;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 /* Safari 4.0 - 8.0 */
-@-webkit-keyframes example {
+@-webkit-keyframes chip{
     0%   {left:0px; top:0px;}
    
-    50%  { top:1px;}
+    50%  { top:10px;}
   
-    100% {background-color:red; left:0px; top:0px;}
+    100% { left:0px; top:0px;}
 }
 
 /* Standard syntax */
-@keyframes example {
+@keyframes chip{
+    0%   { left:0px; top:0px;}
+   
+    50%  {  top:10px;}
+  
+    100% { left:0px; top:0px;}
+}
+
+ Safari 4.0 - 8.0 
+@-webkit-keyframes chipT {
+    0%   {left:0px; top:0px;}
+   
+    50%  { top:10px;}
+  
+    100% {left:0px; top:0px;}
+}
+
+ /*Standard syntax */
+@keyframes chipT {
     0%   { left:0px; top:0px;}
    
     50%  {  top:10px;}
