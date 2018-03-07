@@ -19,7 +19,7 @@
  
 
     <!-- Student Custom Styles -->
-    <link href="<?php echo base_url();?>/assets/css/UserCss.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>/assets/css/userCss.css" rel="stylesheet">
 
     <!-- Student Custom Styles -->
     <link href="<?php echo base_url();?>/assets/css/studentHome.css" rel="stylesheet">
@@ -43,10 +43,22 @@
 
     <div class="container">
 
-    	<div class="home">
-    		<h1>Hello Student!</h1>
-    		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-    	</div>
+      <!--Animations-->
+    
+    
+    <!---->
+      <div id ="topSpace">
+
+        <div id="chipPic"></div>
+      	
+        <div id="chip2"></div>
+        <div class="home">
+      		<h1>Hello Student!</h1>
+      		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>      	
+        </div>
+
+
+      </div>
 
       <!--<div id=cloud>
 

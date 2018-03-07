@@ -6,6 +6,9 @@
  <!-- Main Custom Styles -->
     <link href="<?php echo base_url();?>/assets/css/mainCss.css" rel="stylesheet">
 
+ <!-- Registration Custom Styles -->
+   <link href="<?php echo base_url();?>/assets/css/registrationCss.css" rel="stylesheet">
+
 
 
 <?php echo form_open('teacher/register'); ?>

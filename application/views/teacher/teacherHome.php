@@ -8,10 +8,14 @@
 
 
 	<div class = "container">
+		
+		<!--Animations-->
 		<div id="chipPic">
 		</div>
 		<div id="chip2">
 		</div>
+		<!---->
+
 		<div class="home">
 			<center>
 			<h1>Hello Teacher!</h1>

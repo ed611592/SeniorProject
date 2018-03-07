@@ -6,8 +6,6 @@
 <!-- Main Custom Styles -->
 <link href="<?php echo base_url();?>/assets/css/mainCss.css" rel="stylesheet">
 <!-- User Custom Styles -->
-<link href="<?php echo base_url();?>/assets/css/userCss.css" rel="stylesheet">
-<!-- User Custom Styles -->
 <link href="<?php echo base_url();?>/assets/css/registrationCss.css" rel="stylesheet">
 
 <?php 
@@ -17,7 +15,7 @@
 
 <?php echo form_open('Student/register'); ?>
 
-<body id= "teacher">
+<div class="container">
 	<div class = "row">
 		<div class = 'col-md-4 col-md-offset-4'>
 			<input type="hidden" class = "form-control" name = "teach_ID" value= "<?php echo htmlspecialchars($id['teach_ID']) ?>" />
@@ -58,5 +56,5 @@
 		<button type = "submit" class = "btn btn-primary btn-block">Submit</button>
 	</center>
 
-</body>
+</div>
 <?php echo form_close(); ?>
