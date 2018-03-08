@@ -61,9 +61,12 @@ $data = $q->result_array();
 
       <img id = "chip" src = "<?php echo base_url();?>assets/images/ChipStudent.png">
 
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 259e15103711c2bc5a1b63d4afbedeb475890928
     <div>
       <input type="radio" name="Student_Answer" id="option1" value="1" />
       <label for="option1"><?php echo($data[$_SESSION['counter']]['option1']); ?> </label>
@@ -83,9 +86,33 @@ $data = $q->result_array();
       <input type="radio" name="Student_Answer" id="option4" value="4" />
       <label for="option1"><?php echo($data[$_SESSION['counter']]['option4']); ?> </label>
     </div>
+<<<<<<< HEAD
 
 
 
+=======
+
+      <div>
+        <input type="radio" name="Student_Answer" id="option1" value="A" />
+        <label for="option1"><?php echo($data[$_SESSION['counter']]['option1']); ?> </label>
+      </div>
+
+      <div>
+        <input type="radio" name="Student_Answer" id="option2" value="B" />
+        <label for="option1"><?php echo($data[$_SESSION['counter']]['option2']); ?> </label>
+      </div>
+
+      <div>
+        <input type="radio" name="Student_Answer" id="option3" value="C" />
+        <label for="option1"><?php echo($data[$_SESSION['counter']]['option3']); ?> </label>
+      </div>
+
+      <div>
+        <input type="radio" name="Student_Answer" id="option4" value="D" />
+        <label for="option1"><?php echo($data[$_SESSION['counter']]['option4']); ?> </label>
+      </div>
+
+>>>>>>> 259e15103711c2bc5a1b63d4afbedeb475890928
       <input type="hidden" class = "form-control" name = "Q_ID" value= "<?php echo($data[$_SESSION['counter']]['Q_ID']); ?>" />
 
       <input type="hidden" class = "form-control" name = "Surv_ID" value= "<?php echo($data[$_SESSION['counter']]['Surv_ID']); ?>" />

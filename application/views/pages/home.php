@@ -3,25 +3,25 @@
 require_once(__DIR__ . '/vendor/autoload.php');
 
 //this library works
-use MathPHP\Algebra;
-use Regression\Algorithm\LeastSquares;
+//use MathPHP\Algebra;
+//use Regression\Algorithm\LeastSquares;
 //$algorithm = new LeastSquares;
-use Regression\src\Observations;
+//use Regression\src\Observations;
 //use Regression\Predictor\Linear;
 
 //$observations = new Observation;
 // Greatest common divisor (GCD)
 
-$gcd = Algebra::gcd(8, 12);
+//$gcd = Algebra::gcd(8, 12);
 
 
 
-use MCordingley\Regression\Observations;
+//use MCordingley\Regression\Observations;
 
-$observations = new Observations;
+//$observations = new Observations;
 
-use MCordingley\Regression\Algorithm\LeastSquares;
-$algorithm = new LeastSquares;
+//use MCordingley\Regression\Algorithm\LeastSquares;
+//$algorithm = new LeastSquares;
 
 
 $id = $this -> session -> get_userdata();
