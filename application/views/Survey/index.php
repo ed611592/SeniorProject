@@ -11,6 +11,10 @@ if(!isset($_SESSION['counter'])) {
 if(isset($_POST['button'])) {
     ++$_SESSION['counter'];
     ++$counter;
+
+    if ($_SESSION['counter'] >= 16) {
+      redirect('Survey/view/completed');
+  }
 }    
 
 // reset counter
@@ -20,17 +24,6 @@ if(isset($_POST['reset'])) {
 
 $id = $this -> session -> get_userdata();
 
-
-
-?>
-
-<?php echo "
-  <script>
-    function myFunction() {
-      alert('Going home...');
-      window.location.href='home'
-    }  
-  </script>"
 ?>
 
 <!-- Css for all users -->
