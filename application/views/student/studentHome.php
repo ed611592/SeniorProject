@@ -60,11 +60,11 @@
 
       </div>
 
-      <!--<div id=cloud>
-
-      </div>-->
+        
 
       <div id ="chipStory">
+        <img id = "chip" src = "<?php echo base_url();?>assets/images/ChipStudent.png">
+
         <center>
          <p> Hi! My name is Chip and I am a Chipmunk. I am in second grade at Woodland elementary. In my free time, I like to help my friends solve mysteries! Do you think you could help me out?
          </p>
