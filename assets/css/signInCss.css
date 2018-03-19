@@ -1,23 +1,16 @@
-.Logo > h3{
-
-border-bottom: 3px dotted black; black;
- width: 400px;
-
-}
-
 img{
   height: 150px;
 }
 
 
 .form-signin {
-  max-width: 330px;
+  max-width: 40%;
   padding: 5px;
   margin: 0 auto;
 }
 .form-signin .form-signin-heading,
 .form-signin .checkbox {
-  margin-bottom: 10px;
+  margin-bottom: 2%;
 }
 .form-signin .checkbox {
   font-weight: normal;
@@ -26,16 +19,15 @@ img{
   position: relative;
   height: auto;
   -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-  padding: 10px;
-  font-size: 16px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 2%;
+  font-size: 1.5em;
 }
 .form-signin .form-control:focus {
   z-index: 2;
 }
 .form-signin input[type="email"] {
-  margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }

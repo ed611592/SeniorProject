@@ -12,7 +12,7 @@ $id = $this -> session -> get_userdata();
         <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
   </div>
   <center>
-    <img src = "assets/images/ChipHome.jpeg">
+    <img id="chip" src = "assets/images/ChipHome.jpeg">
     <br>
     <br>
     <!--<button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>-->
