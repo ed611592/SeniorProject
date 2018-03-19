@@ -5,11 +5,14 @@ body{
 
 #chipStory{
 border: 3px solid black;
-width: 500px;
-height: 250px;	
+width: 550px;
+height: 500px;	
 float: left;
 padding: 10px;
-font-size: 25px;
+font-size: 15px;
+background-image: url("../../assets/images/SpeechBubble2.png");
+background-repeat: no-repeat;
+background-size: 500px 500px;
 }
 
 #stories{
