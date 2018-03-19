@@ -1,5 +1,5 @@
 body {
-  padding-top: 80px;
+  padding-top: 5.8%;
   background-color: #2fadff;
   color:#adff2f;
   text-shadow: 0 0 2.5px black;
@@ -9,14 +9,17 @@ body {
 .myNav {
   background-color: #0098fb;
   border: none;
+  position: fixed;
  }
+
  /*#logout{
   float:right;
  }*/
+
 .navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand{
-color:#adff2f;
+  color:#adff2f;
 	font-weight: bold;
-	font-size: 15px;
+	font-size: 1em;
 }
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
@@ -26,9 +29,10 @@ color:#adff2f;
 }
 
 .home {
-  padding: 35px 15px;
+  /*border: 1px solid red;*/
   text-align: center;
-  width: 600px;
+  width: 50%;
+  height: 20%;
   margin: auto;
 }
 
@@ -38,7 +42,8 @@ color:#adff2f;
 
 #chip{
   border: 4px solid black;
-  padding: 10px;
+  margin: 1%;
+  padding: 1%;
   border-radius: 50%;
 }
 

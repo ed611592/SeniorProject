@@ -13,13 +13,19 @@ font-size: 15px;
 background-image: url("../../assets/images/SpeechBubble2.png");
 background-repeat: no-repeat;
 background-size: 500px 500px;
+width: 45%;
+height: 45%;	
+float: left;
+padding: 1.4%;
+font-size: 1.7em;
+
 }
 
 #stories{
 	border: 3px dotted black;
-	padding: 15px;
-	height: 300px;
-	width: 550px;
+	padding: 1.5%;
+	height: 45%;
+	width: 47%;
 	float: right;
 	/*Margin numbers: top right bottom left*/
   margin-top: 0px;
@@ -32,8 +38,8 @@ background-size: 500px 500px;
 }
 
 a.list-group-item, button.list-group-item {
-  height: 70px;
-  width: 500px;
+  height: 25%;
+  width: 90%;
 	color: black;
 
 }
