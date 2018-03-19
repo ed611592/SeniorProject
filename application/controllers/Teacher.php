@@ -94,9 +94,6 @@
 
                 }
 
-                //set message
-              //  $this -> session -> set_flashdata('teacher_registered', 'You are now registered and can log in');
-
               
             }
 

@@ -1,3 +1,5 @@
+<?php $student = $this -> session -> get_userdata(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,8 +55,8 @@
       	
         <div id="chip2"></div>
         <div class="home">
-      		<h1>Hello Student!</h1>
-      		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>      	
+      		<h1>Hello <?php echo htmlspecialchars($student['username']) ?></h1>
+      		<p class="lead">Let's start an adventure! </p>      	
         </div>
 
 

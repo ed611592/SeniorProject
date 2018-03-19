@@ -1,5 +1,6 @@
 body{
   text-shadow: none;
+
 }
 
 
@@ -12,6 +13,7 @@ width: 47%;
 height: 55%;	
 float: left;
 margin-left: 20%;
+margin-top: -5%;
 
 
 padding: 1.4%;
@@ -31,12 +33,17 @@ text-align: center;
 #stories{
 	border: 3px dotted black;
 	padding: 1.5%;
-	height: 45%;
+	height: 60%;
 	width: 30%;
 	float: right;
 	/*Margin numbers: top right bottom left*/
   margin-top: 10%;
 	/*text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -1px black;*/
+}
+
+#stories h4{
+  color: white;
+
 }
 
 .list-group{
@@ -64,15 +71,15 @@ a.list-group-item, button.list-group-item {
 #chip{
   border: none;
   float: left;
-  height: 300px;
-  width: 300px;
-  margin-top: 20%;
-  margin-left: -50%;
+  height: 100%;
+  width: 70%;
+  margin-top: 40%;
+  margin-left: -60%;
 
 }
 
 .home{
-
+color: white;
 
   /*border: 1px solid black;*/
  
