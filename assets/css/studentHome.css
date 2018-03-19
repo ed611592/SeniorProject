@@ -4,19 +4,34 @@ body{
 
 
 #chipStory{
-border: 3px solid black;
-width: 45%;
-height: 45%;	
+
+background-image: url("../../assets/images/SpeechBubble2.png");
+background-repeat: no-repeat;
+background-size: 100% 100%;
+width: 50%;
+height: 55%;	
 float: left;
+margin-left: 20%;
+
 padding: 1.4%;
-font-size: 1.7em;
+
+text-align: center;
+
+}
+
+#chipStory p{
+padding:3%;
+margin-top: 10%;
+font-size: 1.0em;
+width:60%;
+text-align: center;
 }
 
 #stories{
 	border: 3px dotted black;
 	padding: 1.5%;
 	height: 45%;
-	width: 47%;
+	width: 30%;
 	float: right;
 	/*Margin numbers: top right bottom left*/
   margin-top: 0px;
