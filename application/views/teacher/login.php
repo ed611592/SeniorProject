@@ -11,7 +11,8 @@
   </div>
 
   <h2 style="margin-bottom: -1%; margin-top: 1%"> Hello Teacher! </h2>
-  <?php echo form_open('student/login'); ?>
+
+  <?php echo form_open('teacher/login'); ?>
     <div class = "row">
       <div class = "form-signin">
         <h2 class = "form-signin-heading"><?php echo $title; ?></h2>
@@ -26,6 +27,7 @@
         </div>
 
 
+         <a type="text" href ="<?php echo base_url();?>teacher/register">Don't have an account? Create Username.</a>
         <!--<div class="checkbox">
           <label>
           <input type="checkbox" value="remember-me"> Remember me
