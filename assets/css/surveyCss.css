@@ -10,28 +10,31 @@ form{
 
 
 #question{
-	/*border: 5px solid black;*/
+	border: 1px solid black;
 	float: left;
-	
 	width: 1100px;
-	height: 250px;
+	height: 220px;
 	font-size: 1.5em;
-  	font-weight: 300;
   	/*Margin numbers: top right bottom left*/
-  	margin: 28px 0px 0px 70px;
+  	margin: 28px 0px 0px 0px;
   	padding: 35px;
   	text-align: center;
   	background-image: url("../../assets/images/speechBubble.png");
   	background-repeat: no-repeat;
   	background-size: 1100px 200px;
-
   	
 }
+
+#answer{
+	border: 3px solid green;
+}
 #chip{
+	border: 1px solid black;
 	height: 220px;
-	border: none;
 	float:left;
 	margin-left: 95px;
+	position: relative;
+
 
 }
 
@@ -49,7 +52,6 @@ a.list-group-item, button.list-group-item {
     width: 500px;
 
 }
-
 #buttons{
 	height: 100px;
 	width: 100px;
