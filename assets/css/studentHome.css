@@ -1,7 +1,13 @@
 body{
   text-shadow: none;
+  border: 10px dotted black;
+  margin: 4%;
+
 }
 
+.container{
+ 
+}
 
 #chipStory{
 
@@ -9,9 +15,11 @@ background-image: url("../../assets/images/SpeechBubble2.png");
 background-repeat: no-repeat;
 background-size: 100% 100%;
 width: 50%;
-height: 55%;	
+height: 60%;	
 float: left;
 margin-left: 20%;
+margin-top: -5%;
+
 
 padding: 1.4%;
 
@@ -21,26 +29,35 @@ text-align: center;
 
 #chipStory p{
 padding:3%;
-margin-top: 10%;
-font-size: 1.0em;
-width:60%;
+margin-top: 3%;
+font-size: 1.3em;
+margin-left: -20%;
+width:70%;
 text-align: center;
 }
 
 #stories{
-	border: 3px dotted black;
+	
 	padding: 1.5%;
-	height: 45%;
-	width: 30%;
+	height: 70%;
+	width: 40%;
 	float: right;
 	/*Margin numbers: top right bottom left*/
-  margin-top: 0px;
+  margin-top: -8%;
+  margin-right: -5%;
 	/*text-shadow: -.5px 0 black, 0 .5px black, .5px 0 black, 0 -1px black;*/
+}
+
+#stories h4{
+  color: white;
+  font-size: 30px;
+
 }
 
 .list-group{
 	margin: 0px;
 	border: none;
+  font-size: 25px;
 }
 
 a.list-group-item, button.list-group-item {
@@ -54,12 +71,25 @@ a.list-group-item, button.list-group-item {
 
   /*border: 1px solid black;*/
   width: 100%;
-  height: 240px;
-  position: relative;
-  margin-bottom: 15px;
+  height: 175px;
+  
+  margin-top:-5%;
+
+
+}
+
+#chip{
+  border: none;
+  float: left;
+  height: 110%;
+  width: 65%;
+  margin-top: 40%;
+  margin-left: -45%;
+
 }
 
 .home{
+color: white;
 
   /*border: 1px solid black;*/
  

@@ -38,14 +38,12 @@
                 // Encrypt password
                 $enc_password = md5($this -> input ->post('password'));
 
-                $teacher_info = $this -> session -> get_userdata();
-                $teach_ID = $teacher_info['teach_ID'];
                 $this -> Student_model -> register($enc_password, $teach_ID);
 
                 //set message
              $this->session->set_flashdata('student_user_registered','The student has been added and can now login.');
 
-                redirect('home');
+                redirect('teacher/view/teacherHome');
                 
             }
 

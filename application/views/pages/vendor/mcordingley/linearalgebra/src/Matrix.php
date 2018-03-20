@@ -384,6 +384,7 @@ class Matrix implements ArrayAccess
         $WT = $W->transpose();
         $X = $W->multiplyMatrix($CT);
         $S = $D->subtractMatrix($X);
+        //having problem here. when it passes $S then it can't find 0,0?
         $Sinv = $this->recursiveSolveInverse($S);
         $V = $Sinv;
         $Y = $Sinv->multiplyMatrix($W);

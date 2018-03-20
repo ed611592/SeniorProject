@@ -58,5 +58,17 @@
               }
           }
            
+        public function done($page = 'completed')
+        {
+            if(!file_exists(APPPATH.'views/Survey/'.$page.'.php')){
+                show_404();
+            }
+
+            $data['title'] = ucfirst($page);
+
+            $this->load->view('templates/header');
+            $this->load->view('Survey/'.$page, $data);
+            $this->load->view('templates/footer');
+        }
 
 	}

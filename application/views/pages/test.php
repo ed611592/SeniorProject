@@ -1,12 +1,6 @@
-<?php 
-
-echo 'hi'; 
-
+<?php  
 
 require_once(__DIR__ . '/vendor/autoload.php');
-
-
-
 
 use MCordingley\Regression\Observations;
 use MCordingley\Regression\Observation;
@@ -23,7 +17,6 @@ $obs2 = new Observation($arraytest, $outcometest);
 $obs3 = new Observation($arraytest, $outcometest);
 $obs4 = new Observation($arraytest, $outcometest);
 
-
 $data = array
   (
   $obs1, $obs2, $obs3, $obs4
@@ -36,6 +29,7 @@ foreach ($data as $datum) {
     $observations->add(array_merge([1.0], $datum->getFeatures()), $datum->getOutcome());
 }
 
+print_r($observations -> getFeatures());
 
 $algorithm = new LeastSquares;
 $coefficients = $algorithm->regress($observations);

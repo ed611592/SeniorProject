@@ -1,3 +1,5 @@
+<?php $student = $this -> session -> get_userdata(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -53,18 +55,18 @@
       	
         <div id="chip2"></div>
         <div class="home">
-      		<h1>Hello Student!</h1>
-      		<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>      	
+      		<h1>Hello <?php echo htmlspecialchars($student['username']) ?></h1>
+      		<p class="lead">Let's start an adventure! </p>      	
         </div>
 
 
       </div>
 
-      <!--<div id=cloud>
-
-      </div>-->
+        
 
       <div id ="chipStory">
+        <img id = "chip" src = "<?php echo base_url();?>assets/images/ChipStudent.png">
+
         <center>
          <p> Hi! My name is Chip and I am a Chipmunk. I am in second grade at Woodland elementary. In my free time, I like to help my friends solve mysteries! Do you think you could help me out?
          </p>
@@ -72,11 +74,11 @@
       </div>
       <div id="stories">
         <center>
-          <h4> Start an investigation...</h4>
+          <h4> Choose one to start an investigation...</h4>
           <div class="list-group">
             <a href="<?php echo base_url();?>survey/takeSurvey" class="list-group-item list-group-item-action">Initial Survey</a>
-            <a href="#!" class="list-group-item list-group-item-action">Story 2</a>
-            <a href="#!" class="list-group-item list-group-item-action">Story 3</a>
+            <a href="#!" class="list-group-item list-group-item-action disabled">Story 2</a>
+            <a href="#!" class="list-group-item list-group-item-action disabled">Story 3</a>
           </div>
         </center>
       </div>
