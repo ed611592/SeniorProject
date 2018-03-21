@@ -27,7 +27,7 @@
         </div>
 
 
-         <a type="text" href ="<?php echo base_url();?>teacher/register">Don't have an account? Create Username.</a>
+         <a type="text" style= "text-shadow: none; font-weight: bold;"href ="<?php echo base_url();?>teacher/register">Don't have an account? Create Username.</a>
         <!--<div class="checkbox">
           <label>
           <input type="checkbox" value="remember-me"> Remember me

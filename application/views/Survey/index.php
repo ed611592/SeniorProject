@@ -45,14 +45,15 @@ $data = $q->result_array();
 ?>
 
 <!--<?php echo form_open('Survey/add_response'); ?> -->
-
+<h1 id = "title">The Case of the Missing Nuts</h1>
 <div class="container">
   <form method="POST">
       <input type="hidden" name="counter" value="<?php echo $_SESSION['counter']; ?>"/>
       <h3 id = "story"> <?php echo($data[$_SESSION['counter']]['story']); ?></h3>
       <h3 id = "question"> <?php echo($data[$_SESSION['counter']]['Q_text']); ?></h3>
+  <!--    <img id = "bubble" src = "<?php echo base_url();?>assets/images/speechBubble.png"> -->
 
-      <img id = "chip" src = "<?php echo base_url();?>assets/images/ChipStudent.png">
+      <img id = "chip" src = "<?php echo base_url();?>assets/images/SecretSquirrel2.png">
 
     <div id= "answer">
       <div>
@@ -87,8 +88,8 @@ $data = $q->result_array();
 
       <div id = buttons>
 
-        <input type="submit" name="button" value="Next" class = "btn red btn-lg btn-primary btn-block"/>
-        <input type="submit" name="reset" value="Reset" class = "btn btn-lg btn-primary btn-block"/>
+        <input type="submit" name="button" value="Next Question" class = "btn red btn-lg btn-primary btn-block" style="background-color:purple; border:none;"/>
+        <input type="submit" name="reset" value="Start Again" style="background-color:purple; border:none;" class = "btn btn-lg btn-primary btn-block"/>
 
       </div>
    

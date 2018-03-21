@@ -1,3 +1,9 @@
+body{
+  text-shadow: none;
+  border: 10px dotted black;
+  margin: 4%;
+
+}
 
 form{
 	/*border: 1px solid black;*/
@@ -6,33 +12,57 @@ form{
 	float: left;
 
 }
+#title{
+	margin-left: 15%;
+	margin-top: -3%;
+	font-size:5em;
+	font-family: Apple Chancery, cursive;
+}
 
+#story{
+	width: 50%;
+	margin-top:3%;
+	margin-left: 50%;
+	
+	font-size: 1.5em;
+	
 
+}
 
 #question{
-	border: 1px solid black;
+
 	float: left;
-	width: 1100px;
-	height: 220px;
+	width: 70%;
+	height: 20%;
 	font-size: 1.5em;
-  	/*Margin numbers: top right bottom left*/
-  	margin: 28px 0px 0px 0px;
-  	padding: 35px;
+  	
+  	margin-top: 1%;
+  	margin-left: 45%;
+  	
   	text-align: center;
-  	background-image: url("../../assets/images/speechBubble.png");
-  	background-repeat: no-repeat;
-  	background-size: 1100px 200px;
+ 
+}
+
+#bubble{
+	width: 83%;
+	height: 95%;
+	margin-top: -45%;
+	margin-left: 10%;
   	
 }
 
 #answer{
-	border: 3px solid green;
+	
+	font-size: 1.5em;
+	margin-left: 50%;
 }
 #chip{
-	border: 1px solid black;
-	height: 220px;
+	border: none;
+	height: 100%;
+	width: 35%;
 	float:left;
-	margin-left: 95px;
+	margin-left: -5%;
+	margin-top: -25%;
 	position: relative;
 
 
@@ -53,19 +83,19 @@ a.list-group-item, button.list-group-item {
 
 }
 #buttons{
-	height: 100px;
-	width: 100px;
+	height: 20%;
+	width: 10%;
 	color:black;
 	float left;
-	margin-left: 960px;
-	margin-top: 280px;
+	margin-left: 70%;
+	margin-top: 0%;
 	padding: 0px;
 	position: absolute;
 
 }
 
 .btn{
-	color:black;
+	color:white;
 	float left;
 	margin: 0px;
 	;
