@@ -13,6 +13,7 @@ if(isset($_POST['button'])) {
     ++$counter;
 
     if ($_SESSION['counter'] >= 16) {
+      $_SESSION['counter'] = 0;
       redirect('Survey/view/completed');
   }
 }    
@@ -21,6 +22,39 @@ if(isset($_POST['button'])) {
 if(isset($_POST['reset'])) {
     $_SESSION['counter'] = 0;
 }
+
+if ($_SESSION['counter'] == 0 || $_SESSION['counter'] == 1) {
+  $image = "1.gif";
+}
+
+elseif ($_SESSION['counter'] == 2 || $_SESSION['counter'] == 3) {
+  $image = "chain.png";
+}
+
+elseif ($_SESSION['counter'] == 4 || $_SESSION['counter'] == 5) {
+  $image = "bridge-scene.png";
+}
+
+elseif ($_SESSION['counter'] == 6 || $_SESSION['counter'] == 7) {
+  $image = "redbandana.png";
+}
+
+elseif ($_SESSION['counter'] == 8 || $_SESSION['counter'] == 9) {
+  $image = "footprints.png";
+}
+
+elseif ($_SESSION['counter'] == 10 || $_SESSION['counter'] == 11 || $_SESSION['counter'] == 12) {
+  $image = "paths.png";
+}
+
+elseif ($_SESSION['counter'] == 13 || $_SESSION['counter'] == 14) {
+  $image = "nuttrail.png";
+}
+
+elseif ($_SESSION['counter'] == 15) {
+  $image = "fox.gif";
+}
+
 
 $id = $this -> session -> get_userdata();
 
@@ -92,6 +126,8 @@ $data = $q->result_array();
         <input type="submit" name="reset" value="Start Again" style="background-color:purple; border:none;" class = "btn btn-lg btn-primary btn-block"/>
 
       </div>
+
+      <img SRC="<?php echo base_url();?>assets/images/story/<?php echo $image ?>">
    
   </form>
  </div>
