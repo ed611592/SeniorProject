@@ -1,3 +1,10 @@
+<script type="text/javascript">
+	$(document).ready(function () {
+		$('#sidebarCollapse').on('click', function () {
+			$('#sidebar').toggleClass('active');
+		});
+	});
+ </script>
 
 
 <!-- Student Custom Styles -->
@@ -6,19 +13,20 @@
 
 <body id="teacher">
 
+
+
 	<div class="wrapper">
 
-	    <nav id="sidebar">
-	        <!-- Sidebar Header -->
+	    <nav id="sidebar" class="active" >
+	        
+	        <!-- Sidebar Header
 	        <div class="sidebar-header">
 	        	<center>
-	            	<h3>Chip The Pet Detective</h3>
+	            	<a href="#" data-toggle="collapse" aria-expanded="false" id ="sideHead">Chip</a>
 	        	</center>
-	        </div>
+	        </div> -->
 
-	        <br>
-	        <br>
-	        <br>
+			
 
 	        <!-- Sidebar Links -->
 	        <ul class ="list-group">
@@ -31,11 +39,15 @@
 	</div>
 
 	<div class = "container">
+		<button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn" style ="width: 12%; height: 4%">
+        		<i class="glyphicon glyphicon-align-left"></i>
+        		Toggle Sidebar
+    		</button>
 		
 		<!--Animations-->
 		<div id="chipPic">
 		</div>
-		<div id="chip2">
+		<!--<div id="chip2">
 		</div>
 		<!---->
 

@@ -1,5 +1,5 @@
 body{
-	background-color: #F5F5F5;
+	background-color: #c9e9ff;
 	color: #ffc196;
 	text-shadow:
    -1px -1px 0 #000,  
@@ -14,8 +14,8 @@ body{
 .myNav{
 	/*border: 3px solid red;*/
 	position: fixed;
-	z-index: -1;
-	background: #c9e9ff;
+	z-index: 1;
+	background-color: #F5F5F5;
 	border-bottom: 1px solid black;
 }
 
@@ -23,7 +23,7 @@ body{
 	/*border: 1px solid red;*/
 	margin: auto;
 }
-
+/*------------------Sidebar--------------------*/
 .wrapper {
     /*border: 1px dotted black;*/
     display: flex;
@@ -32,21 +32,50 @@ body{
     width: 13%;
     position: absolute;
     margin-top: -5.8%;
-    z-index: 1;
+    z-index: 2;
 }
 
 #sidebar {
     min-width: 100%;
     max-width: 100%;
-    background: #c9e9ff;
+
+	background-color: #F5F5F5;
+    
     /*background:#0098fb*/
     border-right: 1px solid black;
 }
 
 #sidebar.active {
-    margin-left: -250px;
+    margin-left: -100%;
 }
 
+
+#sideHead[data-toggle="collapse"] {
+    position: relative;
+}
+
+#sideHead[aria-expanded="false"]::before, #sideHead[aria-expanded="true"]::before {
+    content: '\e259';
+    display: block;
+    position: absolute;
+    right: 20px;
+    font-family: 'Glyphicons Halflings';
+    font-size: 0.6em;
+}
+
+#sideHead[aria-expanded="true"]::before {
+    content: '\e260';
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -100%;
+    }
+    #sidebar.active {
+        margin-left: 0%;
+    }
+}
+/*----------------------------------------------------*/
 .list-group-item{
 	background: none;
 	border: none;
@@ -57,8 +86,8 @@ body{
 	width: 65%;
 	height: 40%;
 }
-table{
 
+table{
 	border:2px solid black;
 	margin: 0px auto;
 	background: white;
@@ -67,7 +96,6 @@ table{
 	/*width: auto !important;*/
 	height: 100%;
 	float: left;
-
 }
 
 table th {
@@ -149,4 +177,3 @@ a:hover{
   
     100% { left:0px; top:0px;}
 }
-
