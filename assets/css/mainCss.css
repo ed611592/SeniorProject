@@ -2,8 +2,7 @@ body {
   padding-top: 5.8%;
   background-color: #2fadff;
   color:#adff2f;
-  text-shadow: 0 0 2.5px black;
-  font-weight: 1200;
+  text-shadow: 1 1 2.5px black;
 }
 
 .myNav {
@@ -26,6 +25,7 @@ body {
 .navbar-inverse .navbar-nav > .active > a:focus{
 	color:black;
 	background-color: #1598b5;
+  text-shadow: none;
 }
 
 .home {

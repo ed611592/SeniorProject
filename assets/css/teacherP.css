@@ -1,7 +1,3 @@
-.container{
-	/*border: 1px solid green;*/
-}
-
 .home{
 	/*border: 1px solid red;*/
 	margin: auto;
@@ -10,27 +6,15 @@
 #sidebar{
 	/*border: 1px solid red;*/
 	float: left;
-	height: 100%;
-	background: #0098fb;
-	position: relative;
+	height: 300px;
 }
 
-.list-group-item{
-	background: none;
-	border: none;
-}
-
-#studentTable{
-	border: 3px solid red;
-	width: 500px;
-	height: 200px;
-}
 table{
 
-	border:1px solid black;
 	margin: 0px auto;
-	
+	margin-top: 30px;
 	margin-left: 70px;
+	/*border:1px solid black;*/
 	background: white;
 	color: black;
 	text-shadow: none;
@@ -39,20 +23,20 @@ table{
 	float: left;
 
 }
-
-table th {
-	width: 200px;
-}
+ table th {
+width: 200px;
+ }
 .btn{
 	width: 160px;
 }
 
-.myNav{
-	/*border: 3px solid red;*/
-}
+ .myNav navbar navbar-inverse navbar-fixed-top{
+ 	border: 1px solid red;
+ }
+
 /*-------------------------------------ANIMATIONS----------------------------------*/
-#chipPic, #chip2{
-   	/*border: 1px solid red;*/
+#chipPic{
+   
 	width: 210px;
 	height: 200px;
 	background-image: url("../../assets/images/chip.png");
@@ -61,22 +45,34 @@ table th {
 	position: absolute;
 	margin-top: 55px;
 	margin-left: 365px;
+	border: none;
 	z-index: 1;
-	/*-webkit-animation-name: chip; /* Safari 4.0 - 8.0 
+	-webkit-animation-name: chip; /* Safari 4.0 - 8.0 */
 	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
 	animation-name: chip;
 	animation-duration: 2s;
-	animation-iteration-count: infinite;*/
+	animation-iteration-count: infinite;
 }
 
 
 #chip2{
    
+	width: 210px;
+	height: 200px;
 	float: right;
 	background-image: url("../../assets/images/chip2.png");
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+	position: absolute;
+	margin-top: 55px;
 	margin-left: 1000px;
 	z-index: 1;
-}
+	-webkit-animation-name: chipT; /* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+	animation-name: chipT;
+	animation-duration: 2s;
+	animation-iteration-count: infinite;
+	}
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes chip{
