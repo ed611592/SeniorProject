@@ -32,7 +32,7 @@ elseif ($_SESSION['counter'] == 2 || $_SESSION['counter'] == 3) {
 }
 
 elseif ($_SESSION['counter'] == 4 || $_SESSION['counter'] == 5) {
-  $image = "bridge.scene.png";
+  $image = "bridge-scene.png";
 }
 
 elseif ($_SESSION['counter'] == 6 || $_SESSION['counter'] == 7) {
@@ -44,15 +44,15 @@ elseif ($_SESSION['counter'] == 8 || $_SESSION['counter'] == 9) {
 }
 
 elseif ($_SESSION['counter'] == 10 || $_SESSION['counter'] == 11 || $_SESSION['counter'] == 12) {
-  $image = "paths.gif";
+  $image = "paths.png";
 }
 
 elseif ($_SESSION['counter'] == 13 || $_SESSION['counter'] == 14) {
-  $image = "den.png";
+  $image = "nuttrail.png";
 }
 
 elseif ($_SESSION['counter'] == 15) {
-  $image = "foxy.png";
+  $image = "fox.gif";
 }
 
 
