@@ -15,6 +15,11 @@ use MCordingley\Regression\Tests\LeastSquaresFeatures;
 $observations = new Observations;
 //******NEED TO HAVE AT LEAST ONE MORE OBSERVATION THAN FEATURE
 //this is each student's answers to questions
+//if the student has the teacher's ID, then get all the students answers and make an array; then add that array to the features array
+foreach ($variable as $key => $value) {
+    # code...
+}
+
 $features = [
         [1, 2, 3, 1],
         [1, 1, 2, 3],
