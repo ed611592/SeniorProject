@@ -14,10 +14,13 @@
             $data['title'] = ucfirst($page);
             $data['students'] = $this -> Teacher_model -> get_Class($id);
 
+
             $this->load->view('templates/header');
             $this->load->view('teacher/'.$page, $data);
             $this->load->view('templates/footer');
         }
+
+
 
 //Register Teacher User
         public function register(){
@@ -81,7 +84,7 @@
 
                     $this -> session -> set_userdata($user_data);
 
-                    $this -> session -> set_flashdata('user_loggedin','You are now logged in');
+                 //   $this -> session -> set_flashdata('user_loggedin','You are now logged in');
 
                     redirect('teacher/view/teacherHome');
 

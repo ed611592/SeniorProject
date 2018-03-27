@@ -1,0 +1,12 @@
+language: php
+
+php:
+  - 7.0
+  - 7.1
+  - nightly
+
+install: composer install
+
+addons:
+  code_climate:
+    repo_token: 1596e8512438166182bdbac274f3ff421abb1fcb25e0b6e104ec1014238a5516
