@@ -12,11 +12,11 @@ body{
     float: left;
     position: relative;
 }
-}
+
 form{
     /*border: 1px solid black;*/
     height: 90%;
-    width: 55%;
+    width: 60%;
     float: left;
     position: relative;
 }
@@ -39,8 +39,8 @@ form{
 	width: 70%;
 	height: 20%;
 	font-size: 1.5em;
-  	margin-top: 1%;
-  	margin-left: 45%;
+  	margin-top: 5%;
+  	margin-left: 1%;
   	text-align: center;
 }
 
@@ -53,11 +53,9 @@ form{
 }
 
 #answer{
-	
 	font-size: 1.5em;
-	margin-left: 50%;
-	margin-top: 10%;
-	position: absolute;
+    margin-top: 25%;
+    position: relative;
 }
 
 .list-group{
@@ -85,11 +83,10 @@ a.list-group-item, button.list-group-item {
 
 #buttons{
 	height: 20%;
-	width: 10%;
-	color: black;
-	margin-left: 70%;
-	margin-top: 27%;
-	padding: 0px;
+    width: 25%;
+    color: black;
+    padding: 0px;
+    float: left;
 }
 
 .btn{
