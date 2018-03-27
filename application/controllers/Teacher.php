@@ -84,7 +84,7 @@
 
                     $this -> session -> set_userdata($user_data);
 
-                 //   $this -> session -> set_flashdata('user_loggedin','You are now logged in');
+                   $this -> session -> set_flashdata('user_loggedin','You are now logged in');
 
                     redirect('teacher/view/teacherHome');
 
@@ -110,7 +110,7 @@
             $this -> session -> unset_userdata('username');
 
             //this isn't working either
-            $this -> session ->set_flashdata('user_loggedout', 'You are now logged out');
+           // $this -> session ->set_flashdata('user_loggedout', 'You are now logged out');
 
             redirect('home');
         }

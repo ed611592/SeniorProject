@@ -16,6 +16,12 @@
 			$query = $this -> db -> query("SELECT Responses.Student_Answer, Responses.value, Responses.Q_ID, Responses.S_ID, Responses.R_ID, Responses.Surv_ID FROM Responses WHERE S_ID = $id");
 			return $query -> result_array();
 		}
+
+		public function get_Grade($id){
+			$query = $this-> db -> query("SELECT Student.AVG_Grade FROM Student WHERE S_ID = $id");
+			return $query -> result_array();
+		}
+
 		public function register($enc_password){
 			//user data array
 			$data = array(
