@@ -1,5 +1,4 @@
 
-
 <?php
 $counter =1;
 if(!isset($_SESSION['counter'])) {
@@ -120,6 +119,8 @@ $data = $q->result_array();
 
 
 
+      <img  id = "storyPic" src="../assets/images/story/<?php echo $image ?>">
+
       <div id = buttons>
 
         <input type="submit" name="button" value="Next Question" class = "btn red btn-lg btn-primary btn-block" style="background-color:purple; border:none;"/>
@@ -127,9 +128,7 @@ $data = $q->result_array();
 
       </div>
 
-      <img SRC="<?php echo base_url();?>assets/images/story/<?php echo $image ?>">
    
   </form>
  </div>
 <!--<?php echo form_close(); ?> -->
-

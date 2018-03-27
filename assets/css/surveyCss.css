@@ -23,7 +23,6 @@ form{
 	width: 50%;
 	margin-top:3%;
 	margin-left: 50%;
-	
 	font-size: 1.5em;
 	
 
@@ -55,6 +54,8 @@ form{
 	
 	font-size: 1.5em;
 	margin-left: 50%;
+	margin-top: 10%;
+	position: absolute;
 }
 #chip{
 	border: none;
@@ -62,7 +63,7 @@ form{
 	width: 35%;
 	float:left;
 	margin-left: -5%;
-	margin-top: -25%;
+	margin-top: -20%;
 	position: relative;
 
 
@@ -82,21 +83,28 @@ a.list-group-item, button.list-group-item {
     width: 500px;
 
 }
+
+#storyPic{
+	position: absolute;
+    border: 1px solid black;
+    height: 30%;
+    width: 23%;
+    margin-left: 58%;
+    margin-top: 5%;
+}
+}
 #buttons{
 	height: 20%;
 	width: 10%;
-	color:black;
-	float left;
+	color: black;
 	margin-left: 70%;
-	margin-top: 0%;
+	margin-top: 27%;
 	padding: 0px;
-	position: absolute;
-
 }
 
 .btn{
 	color:white;
 	float left;
 	margin: 0px;
-	;
+	
 }
