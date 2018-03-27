@@ -60,6 +60,11 @@ a.list-group-item, button.list-group-item {
 #topSpace{
   /*border: 1px solid black;*/
   width: 100%;
+<<<<<<< HEAD
+=======
+  height: 175px;
+  
+>>>>>>> e45b66c7ee39ef33398dd8e51c698b7dffc27184
   margin-top:-5%;
 }
 

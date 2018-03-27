@@ -14,26 +14,48 @@ use MCordingley\Regression\Tests\LeastSquaresFeatures;
 
 $observations = new Observations;
 //******NEED TO HAVE AT LEAST ONE MORE OBSERVATION THAN FEATURE
-
+$features = array();
+$outcomes = array();
+$student_answers = array();
+$students_total = 0;
+$students_done = 0;
  foreach($students as $student){
     $id = $student['S_ID'];
-
+    $students_total= $students_total +1;
+    //gets all the answers for one student
     $answers = $this -> Teacher_model -> get_Answers($id);
-    $person1 = $answers[0];
-    $test = $person1['Student_Answer'];
-    print($test);
-    /*
-    foreach($answers as $ans){
-        $test =$ans['Responses.R_ID'];
+    $get_grade = $this -> Teacher_model -> get_Grade($id);
+    $grade_array = $get_grade[0];
+    $grade = $grade_array['AVG_Grade'];
+    
+   // $grade = $AVG_grade['AVG_Grade'];
+   
 
-        echo $test;
+    foreach($answers as $ans){
+       array_push($student_answers, $ans['Student_Answer']);
     }
-    */
     
+    if(count($student_answers) > 0){
+        $students_done = $students_done + 1;
+        array_push($features, $student_answers); 
+        array_push($outcomes, $grade);
+    }
+    
+    
+    unset($student_answers);
+    $student_answers = array();
+
+
  }
-    
+print($students_done . " ");
+print($students_total . " ");
+$percent = round($students_done/$students_total, 3);
+print("The percent of students that have taken the survey: " . $percent*100 . "% ");
+
+  
 
 //this is each student's answers to questions
+
 $features = [
         [1, 2, 3, 1],
         [1, 1, 2, 3],
@@ -41,14 +63,20 @@ $features = [
         [1, 4, 2, 2],
         [1, 3, 4, 2]
     ];
+    
 //this is each student's grade
+   /*
 $outcomes = [
         80,
         90,
         50,
         85,
-        75
+        70
     ];
+    */
+
+ print_r($features);
+ print($outcomes[0]);    
 
 $observations = Observations::fromArray($features, $outcomes);   
 

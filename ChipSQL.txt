@@ -33,7 +33,7 @@ CREATE TABLE Student
 (
   S_ID INT NOT NULL AUTO_INCREMENT,
   fName VARCHAR(20) NOT NULL,
-  AVG_Grade INT NOT NULL,
+  AVG_Grade FLOAT NOT NULL,
   teach_ID INT NOT NULL,
   username VARCHAR(20) NOT NULL,
   password VARCHAR(50) NOT NULL,
@@ -44,8 +44,8 @@ CREATE TABLE Student
 
 CREATE TABLE Responses
 (
-  Student_Answer INT NOT NULL,
-  value INT NOT NULL,
+  Student_Answer FLOAT NOT NULL,
+  value FLOAT NOT NULL,
   Q_ID INT NOT NULL,
   S_ID INT NOT NULL,
   R_id INT NOT NULL AUTO_INCREMENT,
@@ -58,27 +58,35 @@ CREATE TABLE Responses
 
 INSERT INTO Teacher VALUES(1,'Jane Smith', 'Jane', '8D788385431273D11E8B43BB78F3AA41');
 
+<<<<<<< HEAD
+INSERT INTO Student VALUES(1,'Andy', 12, 1, 'Andy',  'DA41BCEFF97B1CF96078FFB249B3D66E', 'less');
+
+INSERT INTO Student VALUES(2,'Brandy', 93, 1, 'Brandy',  '6C29E9CC4042D972B15FF0304E636886', 'jackson-shorts');
+
+INSERT INTO Student VALUES(3,'Emily', 93, 1, 'Emily',  'B02AE5AAEFE3F7090668DF034B0F2324', 'demarco');
+=======
 INSERT INTO Student VALUES(1,'Andrew', 12, 1, 'Andrew',  'DA41BCEFF97B1CF96078FFB249B3D66E', 'Less');
 
 INSERT INTO Student VALUES(2,'Brandon', 93, 1, 'Brandon',  '6C29E9CC4042D972B15FF0304E636886', 'Jackson-Shorts');
 
 INSERT INTO Student VALUES(3,'Emily', 93, 1, 'Emily',  'B02AE5AAEFE3F7090668DF034B0F2324', 'Demarco');
+>>>>>>> ca824bdbca32bab401c6e78a2cd9b20e5c77e9f3
 
 INSERT INTO Survey VALUES('Adventure 1', 1, '2018-1-11');
 
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
 (1, 'I’m from a town called Munksville, Chiptucky! Where are you from?', 
-'Paoli', 
 'Radnor', 
 'Bryn Mawr', 
 'Wayne', 
+'Paoli', 
 'I just got a call from my friend, Simon. He said someone has stolen his nut collection. I need your help to solve the mystery. But first, I want to ask you a few questions to make sure you qualify for the job.', 1);
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
 (2, 'I live in a BIG log with my mommy and daddy chipmunks! How about you?', 
-'I just live with my mom! / I just live with my dad!', 
-'I live with my mom and dad!', 
-'I live with a step mom / I live with a step dad!',
+'I live with my mom and dad!',
 'I live with my mom and someone else / I live with my dad and someone else!', 
+'I just live with my mom! / I just live with my dad!', 
+'I live with a step mom / I live with a step dad!',
 '', 1);
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
 (3, 'When I go to school, my favorite classes are music class and woodshop! What is your favorite class?', 
@@ -129,10 +137,10 @@ There’s my friend Simon! “Hi Simon!”
 
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
 (8, 'Remember how I said there are meanies at my school? Well… sometimes they bully me. Does that happen to you?', 
-'Yes, I feel like I get bullied almost every day', 
+'No, I never feel bullied at school',
+'Yes, I feel like I get bullied every once in a while',
 'Yes, I feel like I get bullied a couple times a week', 
-'Yes, I feel like I get bullied every once in a while', 
-'No, I never feel bullied at school', 
+'Yes, I feel like I get bullied almost every day',
 '', 1);
 
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
@@ -148,9 +156,9 @@ I see footprints on the windowsill. Let me think about what type of animal would
 
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
 (10, 'I wish I could play sports but, like I said, I’m too small. My family still does a lot though. My oldest brother, Chap,  plays a lot of sports and my older sister is in the chess club! What about you? Are you in any sports, clubs or any other activities?', 
+'Yes, I’m in some clubs in school and some outside of school',
 'Yes, I’m in at least one club at school', 
 'Yes, I’m in at least one school activity', 
-'Yes, I’m in some clubs in school and some outside of school', 
 'No, I’m not in any school activities', 
 '', 1);
 
@@ -201,9 +209,4 @@ INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Su
 'Yes, our house is big and nice but some of my friends’ houses are bigger and nicer', 
 'Our house is nice but it is small', 
 'Our house is not big or nice', 
-'Look I see another red bandana! Remember we found one earlier? That must be where Foxy lives. That looks like a nice, cozy den!', 1);
-
-
-
-
-
+'Look I see another red bandana! Remember we found one earlier? That must be where Foxy lives. That looks like a nice, cozy den! Hopefully this can help us solve the mystery...We should knock on the door knock on the door.', 1);
