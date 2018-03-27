@@ -87,11 +87,11 @@
 
 <?php endif; ?>  
 
-<?php if($this-> session-> flashdata('user_loggedin')): ?>
+<!--<?php if($this-> session-> flashdata('user_loggedin')): ?>
   
   <?php echo '<center><p class = "alert alert-success" style= "text-shadow: none; width: 200px">'.$this -> session -> flashdata('user_loggedin').'</p></center>'; ?>
 
-<?php endif; ?>  
+<?php endif; ?> -->
 
 
 <?php if($this-> session-> flashdata('user_loggedout')): ?>
