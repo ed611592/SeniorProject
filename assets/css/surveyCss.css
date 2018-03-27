@@ -6,8 +6,8 @@ body{
 }
 
 #chip{
-	border: none;
-    height: 75%;
+	/*border: 1px solid black;*/
+    height: 65%;
     width: 35%;
     float: left;
     position: relative;
@@ -15,70 +15,53 @@ body{
 
 form{
     /*border: 1px solid black;*/
-    height: 90%;
+    height: 100%;
     width: 60%;
     float: left;
     position: relative;
 }
 #title{
 	margin-left: 15%;
-	margin-top: -3%;
-	font-size:5em;
-	font-family: Apple Chancery, cursive;
+    margin-top: -7%;
+    font-size: 5em;
+    font-family: Apple Chancery, cursive;
 }
 
 #story{
+	/*border: 1px solid black;*/
     width: 100%;
-    margin-top: 3%;
+    margin-top: 1%;
     margin-left: 1%;
     font-size: 1.5em;
 }
 
 #question{
-	float: left;
-	width: 70%;
-	height: 20%;
-	font-size: 1.5em;
-  	margin-top: 5%;
-  	margin-left: 1%;
-  	text-align: center;
+	/*border: 1px solid black;*/
+    float: left;
+    width: 70%;
+    height: 20%;
+    font-size: 1.5em;
+    margin-top: .5%;
+    margin-left: 1%;
+    text-align: center;
 }
 
-#bubble{
-	width: 83%;
-	height: 95%;
-	margin-top: -45%;
-	margin-left: 10%;
-  	
-}
 
 #answer{
-	font-size: 1.5em;
-    margin-top: 25%;
+	/*border: 1px solid black;*/
+    font-size: 1.5em;
     position: relative;
+    float: left;
+    width: 100%;
 }
 
-.list-group{
-	border: 2px dotted black;
-	width: 505px;
-	float: left;
-	/*Margin numbers: top right bottom left*/
-  	margin-left: 45px;
-  	text-shadow: none;
-}
-
-a.list-group-item, button.list-group-item {
-    height: 70px;
-    width: 500px;
-
-}
 
 #storyPic{
-    /*border: 1px solid black;*/
+	/*border: 1px solid black;*/
 	position: relative;
     height: 25%;
     width: 25%;
-    margin-top: 5%;
+    left: 25%;
 }
 
 #buttons{
