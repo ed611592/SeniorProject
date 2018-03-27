@@ -80,13 +80,14 @@ $data = $q->result_array();
 <!--<?php echo form_open('Survey/add_response'); ?> -->
 <h1 id = "title">The Case of the Missing Nuts</h1>
 <div class="container">
+
+  <img id = "chip" src = "<?php echo base_url();?>assets/images/SecretSquirrel2.png">
   <form method="POST">
       <input type="hidden" name="counter" value="<?php echo $_SESSION['counter']; ?>"/>
       <h3 id = "story"> <?php echo($data[$_SESSION['counter']]['story']); ?></h3>
       <h3 id = "question"> <?php echo($data[$_SESSION['counter']]['Q_text']); ?></h3>
   <!--    <img id = "bubble" src = "<?php echo base_url();?>assets/images/speechBubble.png"> -->
 
-      <img id = "chip" src = "<?php echo base_url();?>assets/images/SecretSquirrel2.png">
 
     <div id= "answer">
       <div>

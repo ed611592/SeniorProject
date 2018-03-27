@@ -17,7 +17,7 @@
 
 	<div class="wrapper">
 
-	    <nav id="sidebar" class="active" >
+	    <nav id="sidebar" >
 	        
 	        <!-- Sidebar Header
 	        <div class="sidebar-header">
@@ -47,9 +47,6 @@
 		<!--Animations-->
 		<div id="chipPic">
 		</div>
-		<!--<div id="chip2">
-		</div>
-		<!---->
 
 		<div class="home">
 			<center>
