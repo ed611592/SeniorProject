@@ -5,6 +5,13 @@ body{
 
 }
 
+#title{
+	margin-left: 15%;
+    margin-top: -7%;
+    font-size: 5em;
+    font-family: Apple Chancery, cursive;
+}
+
 #chip{
 	/*border: 1px solid black;*/
     height: 65%;
@@ -19,12 +26,7 @@ form{
     width: 60%;
     float: left;
     position: relative;
-}
-#title{
-	margin-left: 15%;
-    margin-top: -7%;
-    font-size: 5em;
-    font-family: Apple Chancery, cursive;
+    left: 1%;
 }
 
 #story{
@@ -39,9 +41,8 @@ form{
 	/*border: 1px solid black;*/
     float: left;
     width: 70%;
-    height: 20%;
+    height: 10%;
     font-size: 1.5em;
-    margin-top: .5%;
     margin-left: 1%;
     text-align: center;
 }
@@ -58,9 +59,9 @@ form{
 
 #storyPic{
 	/*border: 1px solid black;*/
-	position: relative;
-    height: 25%;
-    width: 25%;
+    position: relative;
+    height: 45%;
+    width: 45%;
     left: 25%;
 }
 
@@ -70,11 +71,4 @@ form{
     color: black;
     padding: 0px;
     float: left;
-}
-
-.btn{
-	color:white;
-	float left;
-	margin: 0px;
-	
 }

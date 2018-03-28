@@ -48,8 +48,51 @@ body{
 
 .home{
 	/*border: 1px solid red;*/
-	margin: auto;
+    height: 30%;
+    position: relative;
+
 }
+
+#homeText{
+    position: relative;
+    top: 25%;
+}
+
+/*-------------------------------------ANIMATIONS----------------------------------*/
+#chipPic{
+    /*border: 1px solid red;*/
+    width: 30%;
+    height: 100%;
+    background-image: url(../../assets/images/chip.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    z-index: 1;
+    animation-name: chip;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    float: left;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes chip{
+    0%   {left:0px; top:0px;}
+   
+    50%  { top:10px;}
+  
+    100% { left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes chip{
+    0%   { left:0px; top:0px;}
+   
+    50%  {  top:10px;}
+  
+    100% { left:0px; top:0px;}
+}
+/*---------------------------------------------*/
+
 /*------------------Sidebar--------------------*/
 .wrapper {
     /*border: 1px dotted black;*/
@@ -103,6 +146,9 @@ body{
     }
 }
 /*----------------------------------------------------*/
+
+/*------------------Table-----------------------------*/
+
 .list-group-item{
 	background: none;
 	border: none;
@@ -140,67 +186,4 @@ a{
 a:hover{
 	color: black;
 }
-
-/*-------------------------------------ANIMATIONS----------------------------------*/
-#chipPic, #chip2{
-   	/*border: 1px solid red;*/
-	width: 210px;
-	height: 200px;
-	background-image: url("../../assets/images/chip.png");
-	background-repeat: no-repeat;
-	background-size: 200px 200px;
-	position: absolute;
-	margin-top: 55px;
-	margin-left: 365px;
-	z-index: 1;
-	/*-webkit-animation-name: chip; /* Safari 4.0 - 8.0 
-	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
-	animation-name: chip;
-	animation-duration: 2s;
-	animation-iteration-count: infinite;*/
-}
-
-
-#chip2{
-   
-	float: right;
-	background-image: url("../../assets/images/chip2.png");
-	margin-left: 1000px;
-	z-index: 1;
-}
-
-/* Safari 4.0 - 8.0 */
-@-webkit-keyframes chip{
-    0%   {left:0px; top:0px;}
-   
-    50%  { top:10px;}
-  
-    100% { left:0px; top:0px;}
-}
-
-/* Standard syntax */
-@keyframes chip{
-    0%   { left:0px; top:0px;}
-   
-    50%  {  top:10px;}
-  
-    100% { left:0px; top:0px;}
-}
-
- Safari 4.0 - 8.0 
-@-webkit-keyframes chipT {
-    0%   {left:0px; top:0px;}
-   
-    50%  { top:10px;}
-  
-    100% {left:0px; top:0px;}
-}
-
- /*Standard syntax */
-@keyframes chipT {
-    0%   { left:0px; top:0px;}
-   
-    50%  {  top:10px;}
-  
-    100% { left:0px; top:0px;}
-}
+/*----------------------------------------------------------------------------------*/

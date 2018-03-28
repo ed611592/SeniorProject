@@ -44,15 +44,16 @@
         		Toggle Sidebar
     		</button>
 		
-		<!--Animations-->
-		<div id="chipPic">
-		</div>
+		
 
 		<div class="home">
-			<center>
-			<h1>Hello Teacher!</h1>
-			<p class="lead">Welcome to your dashboard </p>
-			</center>
+			<!--Animations-->
+			<div id="chipPic"></div>
+
+			<div id = "homeText">
+				<h1>Hello Teacher!</h1>
+				<p class="lead">Welcome to your dashboard </p>
+			</div>
 		</div>
 		<br>
 		<br>
