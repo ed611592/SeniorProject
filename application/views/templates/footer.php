@@ -1,3 +1,4 @@
+ 	<div id="chart-1"><!-- FusionCharts will render here--></div>
 			
 			<!-- Bootstrap core JavaScript
 		================================================== -->

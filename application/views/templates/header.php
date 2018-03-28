@@ -18,6 +18,12 @@
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
+  <!-- Fusion Charts -->
+  <script src="fusioncharts.js"></script>
+  <script type="text/javascript" src = "<?php echo base_url();?>/fusioncharts-suite-xt/js/fusioncharts.js"></script>
+
+  <script type="text/javascript" src="<?php echo base_url();?>/fusioncharts-suite-xt/js/themes/fusioncharts.theme.ocean.js"></script>
+
 
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
