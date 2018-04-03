@@ -16,7 +16,7 @@ if(isset($_POST['button'])) {
       redirect('Survey/view/completed');
   }
 }    
-
+print($_SESSION['counter']);
 // reset counter
 if(isset($_POST['reset'])) {
     $_SESSION['counter'] = 0;

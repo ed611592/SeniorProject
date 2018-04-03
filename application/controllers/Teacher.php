@@ -1,6 +1,9 @@
 
 <?php
+   
+
     class Teacher extends CI_Controller {
+
 
         public function view($page = 'home')
         {
@@ -13,12 +16,57 @@
 
             $data['title'] = ucfirst($page);
             $data['students'] = $this -> Teacher_model -> get_Class($id);
+            
 
+            $this->load->model('Teacher_model'); 
+ 
+            $this->load->helper('string');
 
             $this->load->view('templates/header');
             $this->load->view('teacher/'.$page, $data);
             $this->load->view('templates/footer');
         }
+
+        public function index(){
+            $this -> load -> view('Chart_view');
+        }
+
+       public function getdata(){
+
+
+            $data = $this ->Teacher_model ->get_all_fruits();
+         
+      //data to json 
+        
+        $response->cols[] = array( 
+            "id" => "", 
+            "label" => "Topping", 
+            "pattern" => "", 
+            "type" => "string" 
+        ); 
+        $response->cols[] = array( 
+            "id" => "", 
+            "label" => "Total", 
+            "pattern" => "", 
+            "type" => "number" 
+        ); 
+        foreach($data as $cd) 
+            { 
+
+            $response->rows[]["c"] = array( 
+                array( 
+                    "v" => "$cd->fruits_name", 
+                    "f" => null 
+                ) , 
+                array( 
+                    "v" => (int)$cd->quantity, 
+                    "f" => null 
+                ) 
+            ); 
+            } 
+ 
+        echo json_encode($response); 
+        } 
 
 
 

@@ -1,47 +1,51 @@
-<script type="text/javascript" src = "<?php echo base_url();?>/fusioncharts-suite-xt/js/fusioncharts.js">
-    <?php 
-    include("fusioncharts.php");
 
-    $columnChart = new FusionCharts("column2d", "ex1" , 600, 400, "chart-1", "json", '{  
-           "chart":{  
-              "caption":"Harrys SuperMart",
-              "subCaption":"Top 5 stores in last month by revenue",
-              "numberPrefix":"$",
-              "theme":"ocean"
-           },
-           "data":[  
-              {  
-                 "label":"Bakersfield Central",
-                 "value":"880000"
-              },
-              {  
-                 "label":"Garden Groove harbour",
-                 "value":"730000"
-              },
-              {  
-                 "label":"Los Angeles Topanga",
-                 "value":"590000"
-              },
-              {  
-                 "label":"Compton-Rancho Dom",
-                 "value":"520000"
-              },
-              {  
-                 "label":"Daly City Serramonte",
-                 "value":"330000"
-              }
-           ]
-        }');
+<!DOCTYPE html> 
+  <head> 
+  <title>Google Chart and Codeigniter with MySQL</title> 
+    <!--Load the AJAX API--> 
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+    <script type="text/javascript"> 
+     
+    // Load the Visualization API and the piechart package. 
+    google.charts.load('current', {'packages':['corechart']}); 
+       
+    // Set a callback to run when the Google Visualization API is loaded. 
+    google.charts.setOnLoadCallback(drawChart); 
+       
+    function drawChart() { 
+      var jsonData = $.ajax({ 
+          url: "<?php echo base_url() . 'index.php/Teacher/getdata' ?>", 
+          dataType: "json", 
+          async: false 
+          }).responseText; 
+           
+      // Create our data table out of JSON data loaded from server. 
+      var data = new google.visualization.DataTable(jsonData); 
+ 
+      // Instantiate and draw our chart, passing in some options. 
+      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div')); 
+      chart.draw(data, {width: 400, height: 300, title: 'Favorite Subject of Students', color: 'Green' }); 
+    } 
+ 
+    </script> 
+<style> 
+h1 { 
+    text-align: center; 
+} 
+</style> 
+  </head> 
+ 
+  <body> 
+    <!--Div that will hold the pie chart--> 
+    <h1>Results</h1> 
+    <div id="chart_div"></div> 
+  </body> 
+</html>
+<br>
 
-        $columnChart->render();
 
 
-    ?>
-
-
-</script>
-
-  <script type="text/javascript" src="<?php echo base_url();?>/fusioncharts-suite-xt/js/themes/fusioncharts.theme.ocean.js"></script>
 <?php  
 $current_teacher = $this -> session -> get_userdata(); 
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -122,6 +126,8 @@ print("number of students with one parent: " . $s_one_parent . " ");
 $percent = round($students_done/$students_total, 3);
 print("The percent of students that have taken the survey: " . $percent*100 . "% ");
 
+
+
   
 
 //this is each student's answers to questions
@@ -176,5 +182,34 @@ print(round($tStatistics[3], 2) . " ");
 
 
 
-
 ?>
+
+<br>
+
+<h2 style="text-align: center;">Students that feel like they are getting bullied</h2>
+<div id = "studentTable">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach($students as $student) : ?>
+                            <?php $data['bullied'] = $this -> Teacher_model -> get_kids_bullied($student['S_ID']); 
+                            print_r($bullied[0]);
+                            ?>
+                            <?php if(!($bullied['Student_Answer']==1)) : ?>
+    
+                            <?php endif; ?>
+                            <tr>
+                                <th scope="row"><?php echo $student['fname'] ?></th>
+                                <td><?php echo $student['lname'] ?></td>
+                                
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>

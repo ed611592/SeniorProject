@@ -1,3 +1,4 @@
+
 <script type="text/javascript">
 	$(document).ready(function () {
 		$('#sidebarCollapse').on('click', function () {
@@ -34,6 +35,7 @@
 				<li class ="list-group-item"><a href="<?php echo base_url();?>teacher/view/results">View Results</a></li>
 				<li class ="list-group-item"><a href = "#">Add Survey</a></li>
 			</ul>
+
 	    </nav>
 
 	</div>
@@ -43,7 +45,7 @@
         		<i class="glyphicon glyphicon-align-left"></i>
         		Toggle Sidebar
     		</button>
-		
+    		
 		
 
 		<div class="home">

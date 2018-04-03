@@ -7,6 +7,20 @@
 			$this -> load -> database();
 		}
 
+		public function get_kids_bullied($S_ID){
+			$query = $this -> db -> query("SELECT Responses.Student_Answer,  Responses.Q_ID, Responses.S_ID FROM Responses WHERE Q_ID = 7 AND S_ID = $S_ID");
+			return $query -> result_array();
+		}
+
+		public function get_all_fruits(){
+			return $this->db->get('Fruits')->result();
+		}
+
+		public function get_fav_class($Q_id, $S_ID){
+			$query = $this -> db -> query("SELECT Responses.Student_Answer,  Responses.Q_ID, Responses.S_ID FROM Responses WHERE Q_ID = $Q_id AND S_ID = $S_ID");
+			return $query -> result_array();
+		}
+
 		public function get_Class($id){
 			$query = $this-> db -> query("SELECT Student.S_ID, Student.fname, Student.lname, Student.AVG_Grade, Student.teach_ID FROM Student WHERE teach_ID = $id");
 			return $query-> result_array();
