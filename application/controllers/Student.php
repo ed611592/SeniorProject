@@ -109,6 +109,8 @@
             $this -> session -> unset_userdata('S_ID');
             $this -> session -> unset_userdata('username');
 
+            session_unset();
+
           
           //  $this -> session ->set_flashdata('user_loggedout', 'You are now logged out');
 
