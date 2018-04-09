@@ -1,6 +1,6 @@
 body{
   text-shadow: none;
-  margin-top:10%;
+
   margin: 4%;
   background-image: url("../../assets/images/chalkboard.jpg");
   background-repeat: no-repeat;
@@ -16,15 +16,15 @@ body{
 }
 
 #chip{
-	/*border: 1px solid black;*/
-    height: 65%;
-    width: 35%;
+	border: 1px solid black;
+    height: 60%;
+    width: 30%;
     float: left;
     position: relative;
 }
 
 form{
-    /*border: 1px solid black;*/
+    border: 1px solid black;
     height: 100%;
     width: 60%;
     float: left;
@@ -33,19 +33,20 @@ form{
 }
 
 #story{
-	/*border: 1px solid black;*/
+	border: 1px solid black;
     width: 100%;
     margin-top: 1%;
     margin-left: 1%;
-    font-size: 1.5em;
+    font-size: 1.2em;
+    text-align: center;
 }
 
 #question{
-	/*border: 1px solid black;*/
+	border: 1px solid black;
     float: left;
     width: 70%;
-    height: 10%;
-    font-size: 1.5em;
+    height: 25%;
+    font-size: 1.2em;
     margin-left: 1%;
     text-align: center;
 }
@@ -53,7 +54,7 @@ form{
 
 #answer{
 	/*border: 1px solid black;*/
-    font-size: 1.5em;
+    font-size: 1.0em;
     position: relative;
     float: left;
     width: 100%;
@@ -61,7 +62,7 @@ form{
 
 
 #storyPic{
-	/*border: 1px solid black;*/
+	border: 1px solid black;
     position: relative;
     height: 45%;
     width: 45%;

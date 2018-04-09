@@ -125,7 +125,7 @@ $data = $q->result_array();
       <div id = buttons>
 
         <input type="submit" name="button" value="Next Question" class = "btn red btn-lg btn-primary btn-block" style="background-color:purple; border:none;"/>
-        <input type="submit" name="reset" value="Start Again" style="background-color:purple; border:none;" class = "btn btn-lg btn-primary btn-block"/>
+        
 
       </div>
 
