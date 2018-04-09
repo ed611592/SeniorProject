@@ -2,8 +2,9 @@
 body{
   text-shadow: none;
   border: 10px dotted black;
-  margin: 4%;
+  margin: 5.8%;
   overflow: hidden;
+  
 }
 
 #topSpace{
@@ -25,7 +26,7 @@ body{
 background-image: url("../../assets/images/SpeechBubble2.png");
 background-repeat: no-repeat;
 background-size: 100% 100%;
-width: 50%;
+width: 55%;
 height: 60%;	
 float: left;
 margin-left: 20%;
@@ -57,7 +58,8 @@ color: black;
 
 #stories h4{
   color: white;
-  font-size: 30px;
+  font-size: 25px;
+  margin-top: 24%;
 
 }
 
@@ -68,9 +70,10 @@ color: black;
 }
 
 a.list-group-item, button.list-group-item {
-  height: 25%;
+  height: 40%;
   width: 90%;
 	color: black;
+  margin-top: 7%;
 }
 
 #chip{

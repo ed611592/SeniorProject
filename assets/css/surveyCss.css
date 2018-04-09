@@ -1,7 +1,10 @@
 body{
   text-shadow: none;
-  border: 10px dotted black;
+  margin-top:10%;
   margin: 4%;
+  background-image: url("../../assets/images/chalkboard.jpg");
+  background-repeat: no-repeat;
+ background-size: 100% 100%;
 
 }
 
