@@ -69,6 +69,44 @@
         } 
 
 
+       public function getdata2(){
+
+
+        $data = $this ->Teacher_model ->get_all_fruits2();
+         
+      //data to json 
+        
+        $response2->cols[] = array( 
+            "id" => "", 
+            "label" => "Subject", 
+            "pattern" => "", 
+            "type" => "string" 
+        ); 
+        $response2->cols[] = array( 
+            "id" => "", 
+            "label" => "Total", 
+            "pattern" => "", 
+            "type" => "number" 
+        ); 
+        foreach($data as $cd) 
+            { 
+
+            $response2->rows[]["c"] = array( 
+                array( 
+                    "v" => "$cd->fruits_name", 
+                    "f" => null 
+                ) , 
+                array( 
+                    "v" => (int)$cd->quantity, 
+                    "f" => null 
+                ) 
+            ); 
+            } 
+ 
+        echo json_encode($response2); 
+        } 
+
+
 
 //Register Teacher User
         public function register(){

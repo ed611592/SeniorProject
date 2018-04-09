@@ -16,6 +16,10 @@
 			return $this->db->get('Fruits')->result();
 		}
 
+		public function get_all_fruits2(){
+			return $this->db->get('Fruits2')->result();
+		}
+
 		public function get_fav_class($Q_id, $S_ID){
 			$query = $this -> db -> query("SELECT Responses.Student_Answer,  Responses.Q_ID, Responses.S_ID FROM Responses WHERE Q_ID = $Q_id AND S_ID = $S_ID");
 			return $query -> result_array();
