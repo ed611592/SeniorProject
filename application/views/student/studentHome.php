@@ -74,7 +74,7 @@
       </div>
       <div id="stories">
         <center>
-          <h4> Start an Investigation</h4>
+          <h4> Click here to start an investigation:</h4>
           <div class="list-group">
             <a href="<?php echo base_url();?>survey/takeSurvey" class="list-group-item list-group-item-action">The Case of the Missing Nuts</a>
             <!--<a href="#!" class="list-group-item list-group-item-action disabled">Story 2</a>
