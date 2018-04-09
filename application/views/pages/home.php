@@ -9,7 +9,6 @@ $id = $this -> session -> get_userdata();
 
  <div class="home">
         <h1>Welcome To Chip's Adventure!</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
   </div>
   <center>
     <img id="chip" src = "assets/images/ChipHome.jpeg">
