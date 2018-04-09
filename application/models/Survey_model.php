@@ -16,6 +16,7 @@
 
 		public function takeSurvey(){
 			$data2 = array();
+			$data_least = array();
 			
 			//user data array
 			$data = array(
@@ -94,6 +95,77 @@
 				}
 				
 			}
+
+			//if the question is what is your least fav subject
+			if($_SESSION['counter'] == 3){
+
+				$test2 = $this->db->get('Fruits2')->result();
+				//math as favorite subject
+				if($data['Student_Answer'] == 1){
+					$test2 = $test2[0];
+				
+					$Math_total2 = $test2->quantity;
+				
+					$Math_total2 = $Math_total2 +1;
+				
+					
+					$data_least['fruits_name'] = 'Math';
+					$data_least['quantity'] = $Math_total2;
+		
+					$this->db->where('fruits_name', 'Math');
+					$this->db->update('Fruits2', $data_least);
+				}
+				//english/reading as favorite subject
+				if($data['Student_Answer'] == 2){
+					$test2 = $test2[1];
+				
+					$Eng_total2 = $test2->quantity;
+				
+					$Eng_total2 = $Eng_total2 +1;
+				
+					
+					$data_least['fruits_name'] = 'English/Reading';
+					$data_least['quantity'] = $Eng_total2;
+		
+					$this->db->where('fruits_name', 'English/Reading');
+					$this->db->update('Fruits2', $data_least);
+
+				}
+				//science as favorite subject
+				if($data['Student_Answer'] == 3){
+					$test2 = $test2[2];
+				
+					$Science_total2 = $test2->quantity;
+				
+					$Science_total2 = $Science_total2 +1;
+				
+					
+					$data_least['fruits_name'] = 'Science';
+					$data_least['quantity'] = $Science_total2;
+		
+					$this->db->where('fruits_name', 'Science');
+					$this->db->update('Fruits2', $data_least);
+					
+				}
+				//history as favorite subject
+				if($data['Student_Answer'] == 4){
+					$test2 = $test2[3];
+				
+					$History_total2 = $test2->quantity;
+				
+					$History_total2 = $History_total2 +1;
+				
+					
+					$data_least['fruits_name'] = 'History';
+					$data_least['quantity'] = $History_total2;
+		
+					$this->db->where('fruits_name', 'History');
+					$this->db->update('Fruits2', $data_least);
+					
+				}
+				
+			}
+
 			
 			
 			//insert student response
