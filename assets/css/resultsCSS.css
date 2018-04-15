@@ -10,9 +10,6 @@ body{
 
 #parents{
 	width: 20%;
-	height: 23%;
-	margin-left: 75%;
-	margin-top: -30%;
 	background-color: white;
 	font-size: 2em;
 	text-align:center;
@@ -24,8 +21,6 @@ body{
 #percent{
 	width: 20%;
 	height: 23%;
-	margin-left: 75%;
-	margin-top: 1%;
 	background-color: white;
 	font-size: 2em;
 	text-align:center;
@@ -34,48 +29,39 @@ body{
 }
 
 #chart_div{
-	margin-left: 5%;
-
+	border: 1px solid black;
+	width: 20%;
 
 }
 
 #chart_div2{
 	background-color: white;
 	width: 30%;
-	margin-left: 41%;
-	margin-top: -21%;
-
 
 }
 
 .table{
 	background-color: white;
 	width: 32.5%;
-	margin-left: 45%
-	margin-top:100%;
 	
 
 }
 #reg_nums{
-	margin-left: 55%;
-	margin-top: -4%;
+	border: 1px solid black;
 }
 #reg_stats{
-	margin-left: 55%;
+	border: 1px solid black;
 }
 	
 
 
 #bullied_title{
 	font-size: 1.2em;
-	margin-left: 12%;
 	color:black;
-	margin-top: 1%;
+	border: 1px solid black;
 }
 
 #reg_title{
 	font-size: 1.2em;
-	margin-left: 50%;
 	color:black;
-	margin-top: 3%;
 }
