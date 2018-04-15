@@ -29,7 +29,7 @@
 			
 			if($_SESSION['counter'] == 2){
 
-				$test = $this->db->get('Fruits')->result();
+				$test = $this->db->get('Fav_Subject')->result();
 				//math as favorite subject
 				if($data['Student_Answer'] == 1){
 					$test = $test[0];
@@ -39,11 +39,11 @@
 					$Math_total = $Math_total +1;
 				
 					
-					$data2['fruits_name'] = 'Math';
+					$data2['subj_name'] = 'Math';
 					$data2['quantity'] = $Math_total;
 		
-					$this->db->where('fruits_name', 'Math');
-					$this->db->update('Fruits', $data2);
+					$this->db->where('subj_name', 'Math');
+					$this->db->update('Fav_Subject', $data2);
 				}
 				//english/reading as favorite subject
 				if($data['Student_Answer'] == 2){
@@ -54,11 +54,11 @@
 					$Eng_total = $Eng_total +1;
 				
 					
-					$data2['fruits_name'] = 'English/Reading';
+					$data2['subj_name'] = 'English/Reading';
 					$data2['quantity'] = $Eng_total;
 		
-					$this->db->where('fruits_name', 'English/Reading');
-					$this->db->update('Fruits', $data2);
+					$this->db->where('subj_name', 'English/Reading');
+					$this->db->update('Fav_Subject', $data2);
 
 				}
 				//science as favorite subject
@@ -70,11 +70,11 @@
 					$Science_total = $Science_total +1;
 				
 					
-					$data2['fruits_name'] = 'Science';
+					$data2['subj_name'] = 'Science';
 					$data2['quantity'] = $Science_total;
 		
-					$this->db->where('fruits_name', 'Science');
-					$this->db->update('Fruits', $data2);
+					$this->db->where('subj_name', 'Science');
+					$this->db->update('Fav_Subject', $data2);
 					
 				}
 				//history as favorite subject
@@ -86,11 +86,11 @@
 					$History_total = $History_total +1;
 				
 					
-					$data2['fruits_name'] = 'History';
+					$data2['subj_name'] = 'History';
 					$data2['quantity'] = $History_total;
 		
-					$this->db->where('fruits_name', 'History');
-					$this->db->update('Fruits', $data2);
+					$this->db->where('subj_name', 'History');
+					$this->db->update('Fav_Subject', $data2);
 					
 				}
 				
@@ -99,7 +99,7 @@
 			//if the question is what is your least fav subject
 			if($_SESSION['counter'] == 3){
 
-				$test2 = $this->db->get('Fruits2')->result();
+				$test2 = $this->db->get('Least_Fav_Subject')->result();
 				//math as favorite subject
 				if($data['Student_Answer'] == 1){
 					$test2 = $test2[0];
@@ -109,11 +109,11 @@
 					$Math_total2 = $Math_total2 +1;
 				
 					
-					$data_least['fruits_name'] = 'Math';
+					$data_least['subj_name'] = 'Math';
 					$data_least['quantity'] = $Math_total2;
 		
-					$this->db->where('fruits_name', 'Math');
-					$this->db->update('Fruits2', $data_least);
+					$this->db->where('subj_name', 'Math');
+					$this->db->update('Least_Fav_Subject', $data_least);
 				}
 				//english/reading as favorite subject
 				if($data['Student_Answer'] == 2){
@@ -124,11 +124,11 @@
 					$Eng_total2 = $Eng_total2 +1;
 				
 					
-					$data_least['fruits_name'] = 'English/Reading';
+					$data_least['subj_name'] = 'English/Reading';
 					$data_least['quantity'] = $Eng_total2;
 		
-					$this->db->where('fruits_name', 'English/Reading');
-					$this->db->update('Fruits2', $data_least);
+					$this->db->where('subj_name', 'English/Reading');
+					$this->db->update('Least_Fav_Subject', $data_least);
 
 				}
 				//science as favorite subject
@@ -140,11 +140,11 @@
 					$Science_total2 = $Science_total2 +1;
 				
 					
-					$data_least['fruits_name'] = 'Science';
+					$data_least['subj_name'] = 'Science';
 					$data_least['quantity'] = $Science_total2;
 		
-					$this->db->where('fruits_name', 'Science');
-					$this->db->update('Fruits2', $data_least);
+					$this->db->where('subj_name', 'Science');
+					$this->db->update('Least_Fav_Subject', $data_least);
 					
 				}
 				//history as favorite subject
@@ -156,11 +156,11 @@
 					$History_total2 = $History_total2 +1;
 				
 					
-					$data_least['fruits_name'] = 'History';
+					$data_least['subj_name'] = 'History';
 					$data_least['quantity'] = $History_total2;
 		
-					$this->db->where('fruits_name', 'History');
-					$this->db->update('Fruits2', $data_least);
+					$this->db->where('subj_name', 'History');
+					$this->db->update('Least_Fav_Subject', $data_least);
 					
 				}
 				

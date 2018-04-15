@@ -90,6 +90,7 @@ $features = array();
 $outcomes = array();
 $student_answers = array();
 $bullied_array = array();
+$no_like_school = array();
 $students_total = 0;
 $students_done = 0;
 $s_one_parent = 0;
@@ -110,6 +111,8 @@ $s_one_parent = 0;
         $get_grade = $this -> Teacher_model -> get_Grade($id);
 
         $bullied = $this -> Teacher_model -> get_kids_bullied($id);
+
+        $no_like_school = $this -> Teacher_model -> get_kids_likeschool($id);
         
 
         //this figures out if a student is bullied
@@ -119,6 +122,13 @@ $s_one_parent = 0;
                 array_push($bullied_array, $student);
             }
 
+        }
+
+        if(!empty($no_like_school)){
+            $no_like_school = $no_like_school[0];
+            if($no_like_school['Student_Answer']==3 || $no_like_school['Student_Answer']==4){
+                array_push($no_like_school, $student);
+            }
         }
 
         //changes it from array to just grade
@@ -276,7 +286,7 @@ print("Q16:  " . round($tStatistics[15], 2) . " ");
 
 ?>
 
-<h3 id = "reg_title">These are the questions that are signficant for your class:</h3>
+<h3 id = "reg_title">After regression analysis, these are the questions that are significant for your class:</h3>
 <div id = "reg_stats">
 <?php
 $stat_array=array();
@@ -300,7 +310,7 @@ for($i =0;$i<16;$i++){
 <h2 id = "bullied_title" >Students that feel like they are getting bullied</h2>
 
 
-<div >
+            <div  id = "bulliedTB">
                 <table id ="TB" class="table">
                     <thead>
                         <tr> 
@@ -321,7 +331,41 @@ for($i =0;$i<16;$i++){
                     </tbody>
                 </table>
             </div>
-<h3 id = "reg_nums"><?php for($i =0; $i<sizeof($stat_array); $i++){
-        print("Q" . $stat_array[$i] . "  ");
-} ?></h3>
+<h4 id = "like_school" >Students that either do not like school or only like it sometimes</h4>
 
+
+            <div id = "like_schoolTB">
+                <table id ="TB" class="table">
+                    <thead>
+                        <tr> 
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach($no_like_school as $person) : ?>
+                            
+                            <tr>
+                                <th scope="row"><?php echo $person['fname'] ?></th>
+                                <td><?php echo $person['lname'] ?></td>
+                                
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+
+<div id = "regress">
+    
+<h4 id = "reg_nums"><?php for($i =0; $i<sizeof($stat_array); $i++){
+        print("Q" . $stat_array[$i] . "  ");
+} ?></h4>
+<div id = "reg_questions">
+<h4>What is your least favorite subject?</h4>
+<h4>Do you like going to school?</h4>
+<h4>Do you get along with other students?</h4>
+<h4>Do you work hard at school?</h4>
+</div>
+</div>
+<h1 id = "box"></h1>

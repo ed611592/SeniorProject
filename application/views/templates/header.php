@@ -1,4 +1,4 @@
-<html lang = "en">
+ <html lang = "en">
 
 <head>
   <meta charset="utf-8">
@@ -15,15 +15,14 @@
   <!-- Core CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
+
+
+
   <!-- jQuery CDN -->
   <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
 
   <!-- Fusion Charts -->
-  <script src="fusioncharts.js"></script>
-  <script type="text/javascript" src = "<?php echo base_url();?>/fusioncharts-suite-xt/js/fusioncharts.js"></script>
-
-  <script type="text/javascript" src="<?php echo base_url();?>/fusioncharts-suite-xt/js/themes/fusioncharts.theme.ocean.js"></script>
-
+  
 
 
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->

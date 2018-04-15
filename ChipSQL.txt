@@ -29,6 +29,22 @@ CREATE TABLE Question
   FOREIGN KEY (Surv_ID) REFERENCES Survey(Surv_ID)
 );
 
+CREATE TABLE Fav_Subject
+(
+  subj_ID INT NOT NULL AUTO_INCREMENT,
+  subj_name VARCHAR(200) NOT NULL,
+  quantity INT NOT NULL,
+  PRIMARY KEY (subj_ID)
+);
+
+CREATE TABLE Least_Fav_Subject
+(
+  subj_ID INT NOT NULL AUTO_INCREMENT,
+  subj_name VARCHAR(200) NOT NULL,
+  quantity INT NOT NULL,
+  PRIMARY KEY (subj_ID)
+);
+
 CREATE TABLE Student
 (
   S_ID INT NOT NULL AUTO_INCREMENT,
@@ -56,21 +72,32 @@ CREATE TABLE Responses
   FOREIGN KEY (Surv_ID) REFERENCES Survey(Surv_ID)
 );
 
+INSERT INTO `Least_Fav_Subject`(`subj_ID`, `subj_name`, `quantity`) VALUES (1,'Math',0);
+INSERT INTO `Least_Fav_Subject`(`subj_ID`, `subj_name`, `quantity`) VALUES (2,'English/Reading',0);
+INSERT INTO `Least_Fav_Subject`(`subj_ID`, `subj_name`, `quantity`) VALUES (3,'Science',0);
+INSERT INTO `Least_Fav_Subject`(`subj_ID`, `subj_name`, `quantity`) VALUES (4,'History',0);
+
+
+INSERT INTO `Fav_Subject`(`subj_ID`, `subj_name`, `quantity`) VALUES (1,'Math',0);
+INSERT INTO `Fav_Subject`(`subj_ID`, `subj_name`, `quantity`) VALUES (2,'English/Reading',0);
+INSERT INTO `Fav_Subject`(`subj_ID`, `subj_name`, `quantity`) VALUES (3,'Science',0);
+INSERT INTO `Fav_Subject`(`subj_ID`, `subj_name`, `quantity`) VALUES (4,'History',0);
+
 INSERT INTO Teacher VALUES(1,'Jane Smith', 'Jane', '8D788385431273D11E8B43BB78F3AA41');
 
-<<<<<<< HEAD
+
 INSERT INTO Student VALUES(1,'Andy', 12, 1, 'Andy',  'DA41BCEFF97B1CF96078FFB249B3D66E', 'less');
 
 INSERT INTO Student VALUES(2,'Brandy', 93, 1, 'Brandy',  '6C29E9CC4042D972B15FF0304E636886', 'jackson-shorts');
 
 INSERT INTO Student VALUES(3,'Emily', 93, 1, 'Emily',  'B02AE5AAEFE3F7090668DF034B0F2324', 'demarco');
-=======
+
 INSERT INTO Student VALUES(1,'Andrew', 12, 1, 'Andrew',  'DA41BCEFF97B1CF96078FFB249B3D66E', 'Less');
 
 INSERT INTO Student VALUES(2,'Brandon', 93, 1, 'Brandon',  '6C29E9CC4042D972B15FF0304E636886', 'Jackson-Shorts');
 
 INSERT INTO Student VALUES(3,'Emily', 93, 1, 'Emily',  'B02AE5AAEFE3F7090668DF034B0F2324', 'Demarco');
->>>>>>> ca824bdbca32bab401c6e78a2cd9b20e5c77e9f3
+
 
 INSERT INTO Survey VALUES('Adventure 1', 1, '2018-1-11');
 
