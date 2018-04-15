@@ -34,13 +34,13 @@
        public function getdata(){
 
 
-            $data = $this ->Teacher_model ->get_all_fruits();
+            $data = $this ->Teacher_model ->get_all_fav_subjects();
          
       //data to json 
         
         $response->cols[] = array( 
             "id" => "", 
-            "label" => "Topping", 
+            "label" => "Subject", 
             "pattern" => "", 
             "type" => "string" 
         ); 
@@ -55,7 +55,7 @@
 
             $response->rows[]["c"] = array( 
                 array( 
-                    "v" => "$cd->fruits_name", 
+                    "v" => "$cd->subj_name", 
                     "f" => null 
                 ) , 
                 array( 
@@ -72,7 +72,7 @@
        public function getdata2(){
 
 
-        $data = $this ->Teacher_model ->get_all_fruits2();
+        $data = $this ->Teacher_model ->get_all_least_fav_subjects();
          
       //data to json 
         
@@ -93,7 +93,7 @@
 
             $response2->rows[]["c"] = array( 
                 array( 
-                    "v" => "$cd->fruits_name", 
+                    "v" => "$cd->subj_name", 
                     "f" => null 
                 ) , 
                 array( 
