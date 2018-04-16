@@ -8,6 +8,9 @@
 <!-- User Custom Styles -->
 <link href="<?php echo base_url();?>/assets/css/registrationCss.css" rel="stylesheet">
 
+
+
+
 <?php 
 	$id = $this -> session -> get_userdata();
 	//echo $id['teach_ID'];

@@ -16,7 +16,7 @@ if(isset($_POST['button'])) {
       redirect('Survey/view/completed');
   }
 }    
-print($_SESSION['counter']);
+
 // reset counter
 if(isset($_POST['reset'])) {
     $_SESSION['counter'] = 0;
@@ -63,6 +63,8 @@ $id = $this -> session -> get_userdata();
 <link href="<?php echo base_url();?>assets/css/userCss.css" rel="stylesheet">
 <!-- Css for Survey -->
 <link href="<?php echo base_url();?>assets/css/surveyCss.css" rel="stylesheet">
+
+
 
 <?php 
 $data = $this -> session -> get_userdata();
