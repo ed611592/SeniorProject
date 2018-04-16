@@ -7,140 +7,144 @@ body{
     -.5px .5px 0 #000,
      .5px .5px 0 #000;
 }
-
-#parents{
-	width: 20%;
-<<<<<<< HEAD
-=======
-	height: 23%;
-	margin-left: 40%;
-	margin-top: -6%;
->>>>>>> 51053881299e18fa5ecbec5d708a94de03c4c78a
-	background-color: white;
-	font-size: 2em;
-	text-align:center;
-	color: #1E90FF;
-	border: 4px solid black;
-
-}
-#reg_questions{
-	margin-left: 70%;
+h1{
+	/*border: 1px solid black;*/
+	width: fit-content;
+	margin: auto;
 }
 
-#regress{
-
-}
-
-
-#percent{
-	width: 20%;
-	height: 23%;
-<<<<<<< HEAD
-=======
-	margin-left: 40%;
-	margin-top: 0%;
->>>>>>> 51053881299e18fa5ecbec5d708a94de03c4c78a
-	background-color: white;
-	font-size: 2em;
-	text-align:center;
-	color: #1E90FF;
-	border: 4px solid black;
-	
+#charts{
+	/*border: 1px solid black;*/
+	height: fit-content;
+	width: fit-content;
+	float: left;
 }
 
 #chart_div{
-<<<<<<< HEAD
-	border: 1px solid black;
-	width: 20%;
-=======
-	margin-left: 5%;
-	
-	
+	border: 2px solid black;
+	position: relative;
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 1%;
+    float: left;
+}
 
->>>>>>> 51053881299e18fa5ecbec5d708a94de03c4c78a
+#reg_stats{
+	/*border: 1px solid black;*/
+	position: relative;
+	width: 43%;
+	height: fit-content;
+	float: right;
 
+}
+
+#reg_title{
+	/*border: 1px solid black;*/
+	width: fit-content;
+    height: fit-content;
+	font-size: 1.5em;
+	text-align: center;
+	color: #ffc196;
+}
+
+#reg_nums{
+	/*border: 1px solid black;*/
+	text-align: center;
+}
+
+#reg_questions{
+	/*border: 1px solid black;*/
+}
+
+#regress{   
+	border: 3px solid black;
+    background: white;
+    padding: 1%;
+    width: 100%;
 }
 
 #chart_div2{
+    border: 2px solid black;
+	clear: left;
+	position: relative;
+	width: fit-content;
+    height: fit-content
 	background-color: white;
-	width: 30%;
-<<<<<<< HEAD
-=======
-	margin-left: 36%;
-	margin-top: 8%;
+    float: left;
+}
 
->>>>>>> 51053881299e18fa5ecbec5d708a94de03c4c78a
+#studentStats{
+	/*border: 1px solid black;*/
+	position: relative;
+	width: 20%;
+	height: fit-content;
+	margin-left: 2%;
+	float: left;
+}
 
+#parents{
+	border: 4px solid black;
+	position: relative;
+	width: 100%;
+	height: fit-content;
+	padding: 1%;
+	background-color: white;
+	font-size: 2em;
+	text-align:center;
+	color: #1E90FF;
+	float: left;1
+}
+
+#percent{
+	border: 4px solid black;
+	position: relative;
+	width: 100%;
+	height: fit-content;
+	padding: 1%;
+	background-color: white;
+	font-size: 2em;
+	text-align:center;
+	color: #1E90FF;
+	float: left;
+	clear: both;	
 }
 
 .table{
+	border: 3px solid black;
 	background-color: white;
-	width: 32.5%;
-<<<<<<< HEAD
-=======
-	margin-left: 48%
-	margin-top:100%;
->>>>>>> 51053881299e18fa5ecbec5d708a94de03c4c78a
-	
 }
-#reg_nums{
-<<<<<<< HEAD
-	border: 1px solid black;
+
+#bulliedTB{
+	/*border: 3px solid black;*/
+	width: 43%;
+	height: fit-content;
+	float: right;
+	margin-top: 2%;
+
 }
-#reg_stats{
-	border: 1px solid black;
-=======
-	margin-left: 75%;
-	margin-top: -30%;
+
+#bullied_title{
+	/*border: 1px solid black;*/
+	font-size: 1.2em;
+	height: fit-content;
 }
-#reg_stats{
-	margin-left: 75%;
+
+
+#like_schoolTB{
+	/*border: 1px solid black;*/
+	width: 43%;
+	height: fit-content;
+	float: right;
+	margin-top: 2%;
+}
+
+#like_school{
+	/*border: 1px solid black;*/
 }
 
 #box{
 	border: 4px solid black;
 	width: 36%;
 	height: 43%;
-	margin-left:63%;
-	margin-top: -15%;
 	background-color: white;
->>>>>>> 51053881299e18fa5ecbec5d708a94de03c4c78a
-}
-
-
-#bullied_title{
-	font-size: 1.2em;
-<<<<<<< HEAD
-	color:black;
-	border: 1px solid black;
-}
-
-#reg_title{
-	font-size: 1.2em;
-	color:black;
-=======
-	margin-left: 5%;
-
-	margin-top: -5%;
-}
-
-#bulliedTB{
-	margin-left: 4%;
-}
-#like_school{
-	margin-left: 70%;
-	margin-top: -2%;
-}
-
-#like_schoolTB{
-	margin-left: 70%;
-}
-
-#reg_title{
-	font-size: 1.5em;
-	margin-left: 62%;
-	text-align: center;
-	margin-top: -50%;
-	color: #ffc196;
->>>>>>> 51053881299e18fa5ecbec5d708a94de03c4c78a
 }
