@@ -85,21 +85,43 @@ INSERT INTO `Fav_Subject`(`subj_ID`, `subj_name`, `quantity`) VALUES (4,'History
 
 INSERT INTO Teacher VALUES(1,'Jane Smith', 'Jane', '8D788385431273D11E8B43BB78F3AA41');
 
+INSERT INTO Student VALUES(1,'Andy', 90, 1, 'Andy',  'DA41BCEFF97B1CF96078FFB249B3D66E', 'less');
 
-INSERT INTO Student VALUES(1,'Andy', 12, 1, 'Andy',  'DA41BCEFF97B1CF96078FFB249B3D66E', 'less');
+INSERT INTO Student VALUES(2,'Brandy', 65, 1, 'Brandy',  '6C29E9CC4042D972B15FF0304E636886', 'jackson-shorts');
 
-INSERT INTO Student VALUES(2,'Brandy', 93, 1, 'Brandy',  '6C29E9CC4042D972B15FF0304E636886', 'jackson-shorts');
+INSERT INTO Student VALUES(3,'Emily', 70, 1, 'Emily',  'B02AE5AAEFE3F7090668DF034B0F2324', 'demarco');
 
-INSERT INTO Student VALUES(3,'Emily', 93, 1, 'Emily',  'B02AE5AAEFE3F7090668DF034B0F2324', 'demarco');
+INSERT INTO Student VALUES(4,'Shara', 95, 1, 'Shara',  '683713f2c613cf8986b3f7dd1d5362f2', 'Lavin');
 
-INSERT INTO Student VALUES(1,'Andrew', 12, 1, 'Andrew',  'DA41BCEFF97B1CF96078FFB249B3D66E', 'Less');
+INSERT INTO Student VALUES(5,'Chad', 68, 1, 'Chad',  'e03653dedd6f4e142f4aca131995964f', 'Goodman');
 
-INSERT INTO Student VALUES(2,'Brandon', 93, 1, 'Brandon',  '6C29E9CC4042D972B15FF0304E636886', 'Jackson-Shorts');
+INSERT INTO Student VALUES(6,'Sally', 70, 1, 'Sally',  '3fa8b9cc38915ca488e412b59a8aaa79', 'Dunhill');
 
-INSERT INTO Student VALUES(3,'Emily', 93, 1, 'Emily',  'B02AE5AAEFE3F7090668DF034B0F2324', 'Demarco');
+INSERT INTO Student VALUES(7,'Shelly', 96, 1, 'Shelly',  'f7ba507db5b5b1150eabf5707f0334dd', 'Seashell');
 
+INSERT INTO Student VALUES(8,'Katy', 92, 1, 'Katy',  '3225d24edf6b0aecf7e58f22c4219d93', 'Bell');
 
-INSERT INTO Survey VALUES('Adventure 1', 1, '2018-1-11');
+INSERT INTO Student VALUES(9,'Hermione', 95, 1, 'Hermione',  '183ebb073bd063e1d40b34f0e0282621', 'Granger');
+
+INSERT INTO Student VALUES(10,'Lana', 80, 1, 'Lana',  '07eadbea3700b64f60e855ef80a6605b', 'OMally');
+
+INSERT INTO Student VALUES(11,'Eric', 88, 1, 'Eric',  '77dcd555f38b965d220a13a3bb080260', 'Foreman');
+
+INSERT INTO Student VALUES(12,'Ariel', 73, 1, 'Ariel',  '1f15ab596db50ec96e9b45ed76947c99', 'Mermaid');
+
+INSERT INTO Student VALUES(13,'Anna', 75, 1, 'Anna',  '97a9d330e236c8d067f01da1894a5438', 'Banana');
+
+INSERT INTO Student VALUES(14,'Drew', 78, 1, 'Drew',  '4744ccf98ed9fcec2a3224ebb13333ed', 'Draw');
+
+INSERT INTO Student VALUES(15,'Payton', 84, 1, 'Payton',  'f8a8f44f017f9db322f8ac95925a343d', 'Pennysworth');
+
+INSERT INTO Student VALUES(16,'Carissa', 87, 1, 'Carissa',  '6f7ed7e84db6b5a146eec0c3635a01be', 'Marissa');
+
+INSERT INTO Student VALUES(17,'Harry', 90, 1, 'Harry',  'db05833c29e688b5ab54d5e8608a72ec', 'Potter');
+
+INSERT INTO Student VALUES(18,'Luke', 82, 1, 'Luke',  'b21dfb148d20b1febdd8d86417f925c1', 'Skywalker');
+
+INSERT INTO Survey VALUES('Adventure', 1, '2018-1-11');
 
 INSERT INTO Question (Q_ID, Q_text, option1, option2, option3, option4, story,Surv_ID) VALUES
 (1, 'I’m from a town called Munksville, Chiptucky! Where are you from?', 
