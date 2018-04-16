@@ -1,76 +1,56 @@
- 
+
 
 <!DOCTYPE html> 
   <head> 
   <title>Teacher Results</title> 
+
+<head> 
+    <title>Teacher Results</title> 
+    <link href="<?php echo base_url();?>/assets/css/resultsCSS.css" rel="stylesheet">
+
     <!--Load the AJAX API--> 
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
     <script type="text/javascript">
 
-      
 
 
-     
     // Load the Visualization API and the piechart package. 
     google.charts.load('current', {'packages':['corechart']}); 
-       
+
     // Set a callback to run when the Google Visualization API is loaded. 
     google.charts.setOnLoadCallback(drawChart); 
     google.charts.setOnLoadCallback(drawChart2); 
-       
+
     function drawChart() { 
-      var jsonData = $.ajax({ 
-          url: "<?php echo base_url() . 'index.php/Teacher/getdata' ?>", 
-          dataType: "json", 
-          async: false 
-          }).responseText; 
+        var jsonData = $.ajax({ 
+        url: "<?php echo base_url() . 'index.php/Teacher/getdata' ?>", 
+        dataType: "json", 
+        async: false 
+        }).responseText; 
 
-      var jsonData2 = $.ajax({ 
-          url: "<?php echo base_url() . 'index.php/Teacher/getdata2' ?>", 
-          dataType: "json", 
-          async: false 
-          }).responseText; 
-           
-      // Create our data table out of JSON data loaded from server. 
-      var data = new google.visualization.DataTable(jsonData); 
-      var data2 = new google.visualization.DataTable(jsonData2); 
- 
-      // Instantiate and draw our chart, passing in some options. 
-      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div')); 
-      var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2')); 
+        var jsonData2 = $.ajax({ 
+        url: "<?php echo base_url() . 'index.php/Teacher/getdata2' ?>", 
+        dataType: "json", 
+        async: false 
+        }).responseText; 
 
-      chart.draw(data, {width: 380, height: 250, title: 'Favorite Subject of Students' }); 
+        // Create our data table out of JSON data loaded from server. 
+        var data = new google.visualization.DataTable(jsonData); 
+        var data2 = new google.visualization.DataTable(jsonData2); 
 
-      chart2.draw(data2, {width: 380, height: 250, title: 'Least Favorite Subject of Students' }); 
+        // Instantiate and draw our chart, passing in some options. 
+        var chart = new google.visualization.ColumnChart(document.getElementById('chart_div')); 
+        var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2')); 
 
-    } 
+        chart.draw(data, {width: 380, height: 250, title: 'Favorite Subject of Students' }); 
 
-   
-      
- 
+        chart2.draw(data2, {width: 380, height: 250, title: 'Least Favorite Subject of Students' }); 
+    }
+
     </script> 
-<style> 
-h1 { 
-    text-align: center;
-
-} 
-</style> 
-  </head> 
- 
-  <body> 
-    <!--Div that will hold the pie chart--> 
-    <h1>Results</h1> 
-    <div id="chart_div"></div> 
-    <div id="chart_div2"></div>
-
-
-  </body> 
-</html>
-<br>
-
-
-
+</head> 
+    
 <?php  
 $current_teacher = $this -> session -> get_userdata(); 
 require_once(__DIR__ . '/vendor/autoload.php');
@@ -262,91 +242,118 @@ $statisticsGatherer = new LinearStatisticsGatherer(
 $tStatistics = $statisticsGatherer->getTStatistics();
 
 
+/*
+print("Q1:  " . round($tStatistics[0], 2) . " ");
+print("Q2:  " . round($tStatistics[1], 2) . " ");
+print("Q3:  " . round($tStatistics[2], 2) . " ");
+print("Q4:  " . round($tStatistics[3], 2) . " ");
+print("Q5:  " . round($tStatistics[4], 2) . " ");
+print("Q6:  " . round($tStatistics[5], 2) . " ");
+print("Q7:  " . round($tStatistics[6], 2) . " ");
+print("Q8:  " . round($tStatistics[7], 2) . " ");
+print("Q9:  " . round($tStatistics[8], 2) . " ");
+print("Q10:  " . round($tStatistics[9], 2) . " ");
+
+print("Q11:  " . round($tStatistics[10], 2) . " ");
+print("Q12:  " . round($tStatistics[11], 2) . " ");
+
+print("Q13:  " . round($tStatistics[12], 2) . " ");
+print("Q14:  " . round($tStatistics[13], 2) . " ");
+print("Q15:  " . round($tStatistics[14], 2) . " ");
+print("Q16:  " . round($tStatistics[15], 2) . " ");
+*/
+
+
 
 
 
 ?>
-
-<h3 id = "reg_title">After regression analysis, these are the questions that are significant for your class:</h3>
-<div id = "reg_stats">
-<?php
-$stat_array=array();
-for($i =0;$i<16;$i++){
-    if(abs($tStatistics[$i])>=2){
-        $x = $i+1;
-        array_push($stat_array, $x);
-        
-    }
-}
-
-?>
-</div>
-<br>
-
- <link href="<?php echo base_url();?>/assets/css/resultsCSS.css" rel="stylesheet"> 
-<h3 id = "parents">The number of students with one parent: <?php echo $s_one_parent ?></h3>
-<h3 id = "percent">The percent of students that have taken the survey is: <?php echo $percent ?>%</h3>
-<br>
-
-<h2 id = "bullied_title" >Students that feel like they are getting bullied</h2>
-
-
-            <div  id = "bulliedTB">
-                <table id ="TB" class="table">
-                    <thead>
-                        <tr> 
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach($bullied_array as $person) : ?>
-                            
-                            <tr>
-                                <th scope="row"><?php echo $person['fname'] ?></th>
-                                <td><?php echo $person['lname'] ?></td>
-                                
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
-<h4 id = "like_school" >Students that either do not like school or only like it sometimes</h4>
-
-
-            <div id = "like_schoolTB">
-                <table id ="TB" class="table">
-                    <thead>
-                        <tr> 
-                            <th scope="col">First</th>
-                            <th scope="col">Last</th>
-                            
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach($no_like_school as $person) : ?>
-                            
-                            <tr>
-                                <th scope="row"><?php echo $person['fname'] ?></th>
-                                <td><?php echo $person['lname'] ?></td>
-                                
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
-
-<div id = "regress">
+<div class = "container">
+    <h1>Results</h1>
+    <br>
+    <div id = "charts">
+        <div id="chart_div"></div>
+        <div id="chart_div2"></div>
+    </div>
     
-<h4 id = "reg_nums"><?php for($i =0; $i<sizeof($stat_array); $i++){
-        print("Q" . $stat_array[$i] . "  ");
-} ?></h4>
-<div id = "reg_questions">
-<h4>What is your least favorite subject?</h4>
-<h4>Do you like going to school?</h4>
-<h4>Do you get along with other students?</h4>
-<h4>Do you work hard at school?</h4>
+    <div id = "studentStats">
+        <h3 id = "parents">The number of students with one parent: <?php echo $s_one_parent ?></h3>
+        <h3 id = "percent">The percent of students that have taken the survey is: <?php echo $percent ?>%</h3>
+    </div>
+
+    <div id = "reg_stats">
+
+        <h3 id = "reg_title">After regression analysis, these are the questions that are significant for your class:</h3>
+        <?php
+            $stat_array=array();
+            for($i =0;$i<16;$i++){
+                if(abs($tStatistics[$i])>=2){
+                    $x = $i+1;
+                    array_push($stat_array, $x);
+                    
+                }
+            }
+        ?>
+
+        <div id = "regress">
+            <h4 id = "reg_nums">
+                <?php for($i =0; $i<sizeof($stat_array); $i++){
+                    print("Q" . $stat_array[$i] . "  ");} 
+                ?>
+                        
+            </h4>
+            <div id = "reg_questions">
+                <h4>What is your least favorite subject?</h4>
+                <h4>Do you like going to school?</h4>
+                <h4>Do you get along with other students?</h4>
+                <h4>Do you work hard at school?</h4>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div  id = "bulliedTB">
+        <h2 id = "bullied_title" >Students that feel like they are getting bullied</h2>
+        <table id ="TB" class="table">
+            <thead>
+                <tr> 
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($bullied_array as $person) : ?>
+                    <tr>
+                        <th scope="row"><?php echo $person['fname'] ?></th>
+                        <td><?php echo $person['lname'] ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+    
+
+    <div id = "like_schoolTB">
+        <h4 id = "like_school" >Students that either do not like school or only like it sometimes</h4>
+        <table id ="TB" class="table">
+            <thead>
+                <tr> 
+                    <th scope="col">First</th>
+                    <th scope="col">Last</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach($no_like_school as $person) : ?>
+                    <tr>
+                        <th scope="row"><?php echo $person['fname'] ?></th>
+                        <td><?php echo $person['lname'] ?></td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+
+    
+    <!--<h1 id = "box"></h1>-->
 </div>
-</div>
-<h1 id = "box"></h1>
