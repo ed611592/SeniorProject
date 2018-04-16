@@ -33,7 +33,7 @@
 
 
   <!-- Custom styles for this template -->
-  <link href="<?php echo base_url();?>assets/css/mainCss.css" rel="stylesheet">
+  <link href="/../Chip/assets/css/mainCss.css" rel="stylesheet">
 </head>
 
 <body>
