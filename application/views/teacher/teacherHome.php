@@ -16,7 +16,6 @@
 
 
 
-	<div class="wrapper">
 
 	    <nav id="sidebar" >
 	        
@@ -38,15 +37,9 @@
 
 	    </nav>
 
-	</div>
+	
 
 	<div class = "container">
-		<button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn" style ="width: 12%; height: 4%">
-        		<i class="glyphicon glyphicon-align-left"></i>
-        		Toggle Sidebar
-    		</button>
-    		
-		
 
 		<div class="home">
 			<!--Animations-->

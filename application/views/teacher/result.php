@@ -275,12 +275,6 @@ print("Q16:  " . round($tStatistics[15], 2) . " ");
         <div id="chart_div"></div>
         <div id="chart_div2"></div>
     </div>
-    
-    <div id = "studentStats">
-        <h3 id = "parents">The number of students with one parent: <?php echo $s_one_parent ?></h3>
-        <h3 id = "percent">The percent of students that have taken the survey is: <?php echo $percent ?>%</h3>
-    </div>
-
     <div id = "reg_stats">
 
         <h3 id = "reg_title">After regression analysis, these are the questions that are significant for your class:</h3>
@@ -311,6 +305,12 @@ print("Q16:  " . round($tStatistics[15], 2) . " ");
         </div>
     </div>
 
+    <div id = "studentStats">
+        <h3 id = "parents">The number of students with one parent: <?php echo $s_one_parent ?></h3>
+        <h3 id = "percent">The percent of students that have taken the survey is: <?php echo $percent ?>%</h3>
+    </div>
+
+    
 
 
     <div  id = "bulliedTB">
