@@ -19,6 +19,7 @@ h1{
 	width: 100%;
 	float: left;
 	margin-bottom: 1.5%;
+	text-shadow: none;
 }
 
 #chart_div{

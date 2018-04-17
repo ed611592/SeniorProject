@@ -43,9 +43,9 @@
         var chart = new google.visualization.ColumnChart(document.getElementById('chart_div')); 
         var chart2 = new google.visualization.ColumnChart(document.getElementById('chart_div2')); 
 
-        chart.draw(data, {width: 380, height: 250, title: 'Favorite Subject of Students' }); 
+        chart.draw(data, {width: 400, height: 250, title: 'Favorite Subject of Students' }); 
 
-        chart2.draw(data2, {width: 380, height: 250, title: 'Least Favorite Subject of Students' }); 
+        chart2.draw(data2, {width: 400, height: 250, title: 'Least Favorite Subject of Students' }); 
     }
 
     </script> 
@@ -242,26 +242,6 @@ $statisticsGatherer = new LinearStatisticsGatherer(
 $tStatistics = $statisticsGatherer->getTStatistics();
 
 
-/*
-print("Q1:  " . round($tStatistics[0], 2) . " ");
-print("Q2:  " . round($tStatistics[1], 2) . " ");
-print("Q3:  " . round($tStatistics[2], 2) . " ");
-print("Q4:  " . round($tStatistics[3], 2) . " ");
-print("Q5:  " . round($tStatistics[4], 2) . " ");
-print("Q6:  " . round($tStatistics[5], 2) . " ");
-print("Q7:  " . round($tStatistics[6], 2) . " ");
-print("Q8:  " . round($tStatistics[7], 2) . " ");
-print("Q9:  " . round($tStatistics[8], 2) . " ");
-print("Q10:  " . round($tStatistics[9], 2) . " ");
-
-print("Q11:  " . round($tStatistics[10], 2) . " ");
-print("Q12:  " . round($tStatistics[11], 2) . " ");
-
-print("Q13:  " . round($tStatistics[12], 2) . " ");
-print("Q14:  " . round($tStatistics[13], 2) . " ");
-print("Q15:  " . round($tStatistics[14], 2) . " ");
-print("Q16:  " . round($tStatistics[15], 2) . " ");
-*/
 
 
 

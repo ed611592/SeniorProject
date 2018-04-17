@@ -24,7 +24,7 @@ body{
 }
 
 form{
-    border: 1px solid black;
+    
     height: 100%;
     width: 60%;
     float: left;
@@ -33,16 +33,14 @@ form{
 }
 
 #story{
-	border: 1px solid black;
     width: 100%;
-    margin-top: 1%;
+    margin-top: 1.5%;
     margin-left: 1%;
     font-size: 1.2em;
     text-align: center;
 }
 
 #question{
-	border: 1px solid black;
     float: left;
     width: 70%;
     height: 25%;
@@ -54,15 +52,15 @@ form{
 
 #answer{
 	/*border: 1px solid black;*/
-    font-size: 1.0em;
+    font-size: 1.4em;
     position: relative;
     float: left;
+    margin-top:-5%;
     width: 100%;
 }
 
 
 #storyPic{
-	border: 1px solid black;
     position: relative;
     height: 45%;
     width: 45%;
