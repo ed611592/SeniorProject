@@ -32,7 +32,6 @@
 	        <ul class ="list-group">
 				<li class ="list-group-item"><a href ="<?php echo base_url();?>student/register">Add Students</a></li>
 				<li class ="list-group-item"><a href="<?php echo base_url();?>teacher/view/result">View Results</a></li>
-				<li class ="list-group-item"><a href = "#">Add Survey</a></li>
 			</ul>
 
 	    </nav>
