@@ -295,13 +295,14 @@ $tStatistics = $statisticsGatherer->getTStatistics();
                         array_push($question, $this -> Teacher_model -> get_Q($stat_array[$i]));
                         
                     } 
+
+                     for($i =0; $i<sizeof($stat_array); $i++){
+                        print_r($question[$i]['Q_text']);
+                        echo "<br> <br>";
+                        
+                    } 
                     print_r($question[0]['Q_text']);
                     echo "<br> <br>";
-                    print_r($question[1]['Q_text']);
-                    echo "<br> <br>";
-                    print_r($question[2]['Q_text']);
-                    echo "<br> <br>";
-                    print_r($question[3]['Q_text']);
                 ?>
 
 
