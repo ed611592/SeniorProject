@@ -13,7 +13,7 @@
 		}
 
 		public function get_kids_likeschool($S_ID){
-			$query = $this -> db -> query("SELECT Responses.Student_Answer,  Responses.Q_ID, Responses.S_ID FROM Responses WHERE Q_ID = 5 AND S_ID = $S_ID");
+			$query = $this -> db -> query("SELECT Responses.Student_Answer,  Responses.Q_ID, Responses.S_ID FROM Responses WHERE Q_ID = 6 AND S_ID = $S_ID");
 			return $query -> result_array();
 		}
 

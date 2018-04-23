@@ -1,0 +1,1152 @@
+.MyDocumentsProfile .Content, .MyDocumentsPage .Content {
+    border: none;
+    background-image: none;
+    padding: 0px;
+}
+
+.MyDocumentsProfile h2, .MyDocumentsPage h2 {
+    padding: 0px;
+    background: none;
+    border-bottom-color: #1b6e8e;
+    color: #545556;
+    font-weight: normal;
+    border-bottom-width: 1px;
+    font-size: 18px; /*136%;*/
+    border-bottom: 1px solid;
+}
+
+.MyDocumentsProfile .HLContainer .Details { width: 430px; }
+
+.MyDocumentsPage .HLContainer .Details { width: 640px; }
+
+/************ Solve ie8  issue **********/
+
+.HLWelcomeHeader .Login {
+    /*left:78px;*/
+    margin-top: 0;
+    /*padding-top:42px;*/
+    position: relative;
+    top: 55px;
+    margin-right: 30px;
+}
+
+/******** solve height difference in welcome control *****/
+
+.HLWelcome {
+    margin-top: 0px;
+    margin-bottom: 4px;
+}
+
+.MenuBarUnderline { font-size: 7px; }
+
+.profileControlBig .h1, .profileControlBig .Heading1 {
+    border-top: 0px;
+    font-size: 20px;
+}
+
+#MPSearchBlock .Watermark, #MPSearchBlock .TextBox {
+    #padding-top: 2px;
+    text-align: center;
+    width: 120px !important;
+}
+
+
+#MPheader {
+    background-image: url("https://imis.phisigmasigma.org/scriptcontent/images/PhiSig-websiteHeader-2015.jpg");
+    background-position: 35px top;
+    background-repeat: no-repeat;
+    height: 183px;
+    position: relative;
+    top: 20px;
+    z-index: 2;
+}
+
+.MPTop {
+    background-image: url('https://imis.phisigmasigma.org/scriptcontent/images/top strip.gif');
+    background-position: left center;
+    background-repeat: repeat-x;
+    height: 19px;
+}
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-Sep { background-image: none; }
+
+.MenuBarUnderline { height: 10px; }
+
+.HLWelcomeHeader .Content { margin-top: 1em; }
+
+.HLWelcomeHeader .Login a { color: #002569; }
+
+
+/***Arrow image- WithChildren -Buttonnav***/
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:Hover li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-Hover li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li:Hover li.AspNet-Menu-WithChildren li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-Hover li.AspNet-Menu-WithChildren li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover ul li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren:Hover ul li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover ul li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren a:hover,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-ChildSelected ul li.AspNet-Menu-WithChildren.AspNet-Menu-ChildSelected a:hover,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover ul li.AspNet-Menu-WithChildren a:hover,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren:hover a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren:hover a,
+#MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren:hover a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover a {
+    background-image: url('https://imis.phisigmasigma.org/scriptcontent/images/sidearr.gif');
+    background-repeat: no-repeat;
+    background-position: 168px center;
+}
+
+/***Sidemenu icon***/
+
+.MPSideNav ul.AspNet-Menu li a,
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-Leaf a,
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-WithChildren a {
+    background-color: transparent;
+    background-image: url(https://imis.phisigmasigma.org/scriptcontent/images/SideMenuIconuat.jpg);
+}
+
+
+
+/***Search asc,desc image***/
+
+.HLSearch .Content .SortAscending {
+    vertical-align: middle;
+    background-image: url(https://imis.phisigmasigma.org/scriptcontent/images/down_yell.gif);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+}
+
+.HLSearch .Content .SortDescending {
+    vertical-align: middle;
+    background-image: url(https://imis.phisigmasigma.org/scriptcontent/images/up_yell.gif);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 10px;
+}
+
+/***IE8 issue in search button visibility**/
+
+#MPSearchBlock .Button { height: 22px; }
+
+/****Welcome control : Completeness bar style****/
+
+.ProgressBarProgress { height: 6px; }
+
+.ProgressBar {
+    height: 10px;
+    font-size: 7px;
+    margin-bottom: 2px;
+}
+
+.HLWelcome .Profile { padding-top: 2px; }
+
+
+/***Rss image : issue in next control*/
+
+.HLAnnouncements h2 { position: relative; }
+
+.SubscribeRSS {
+    float: right;
+    position: absolute;
+    right: 5px;
+    top: 3px;
+}
+
+
+/***IE6 issue in engagement control***/
+
+/*.HLLandingControl ol li, .HLLandingControl ul li
+{
+    width:100%
+}*/
+
+/***New blog link spacing from tabs***/
+
+.addBlogEntry { padding-left: 8px; }
+
+/***My Documents alignment***/
+
+/*mass replace Rick and Patrick 8-21-2012*/
+
+/***Login link browser issue***/
+
+#LeftToLogo, #RightToLogo { min-height: 100px; }
+
+#LeftToLogo {
+    
+    position: relative;
+    top: 41px;
+    width: 290px;
+}
+
+#Logo, #LeftToLogo, #RightToLogo {
+    float: left;
+    min-height: 110px;
+}
+
+#MPSlogan { font-size: 22px; }
+
+#Logo {
+	
+    padding-left: 0;
+    bottom: 20px;
+    padding-left: 0;
+    position: relative;
+    height: 100px;    
+}
+
+.MPButtonNav ul.AspNet-Menu li a {
+    padding-top: 10px;
+    font-size: 11px;
+    font-weight: normal;
+}
+
+#MPAuxNav {
+    padding-top: 5px;
+    margin-right: 30px;
+}
+
+.MPAuxNav ul.AspNet-Menu li a:hover {
+    background-color: #FCE8A9;
+    color: #fff;
+}
+
+.HLWelcomeHeader .Content {
+    margin-top: 3px;
+    margin-bottom: 0px;
+    /*margin-top:7px;
+    margin-bottom:7px;*/
+    margin-right: 30px;
+}
+
+/***Directory inbox checkbox alignment***/
+
+.InboxMessages input { margin-right: 5px; }
+
+/***Send Message - Button style**/
+
+.ButtonBlock .ButtonStyle { background: none }
+
+/**Inbox - border between messages ***/
+
+.InboxMessages {
+    border-bottom: 1px dotted #FCE8A9;
+    margin-bottom: 1em;
+}
+
+/****Body background - image***/
+
+.bodyBackground {
+    /*background-image:url('images/BGgrid.jpg');
+	background-position: left bottom;*/	
+}
+
+/***New classes***/
+
+.HLWelcome {
+    background: none !important;
+    border: none !important;
+}
+
+#MPButtonBar {
+    height: 28px;
+    left: 13px;
+    position: relative;
+    top: -18px;
+    width: 931px;
+    z-index: 3;
+}
+
+.Welcome .Details {
+    /*width:220px;*/
+    float: left;
+}
+
+/*** Solve ie6 issue start***/
+
+.HLWelcomeHeader .Welcome { width: 250px; }
+
+/*** Solve ie6 issue end***/
+
+.repeatImage { background-image: none; }
+
+.SponsorImagePanel { text-align: center; }
+
+/***Search box left align***/
+
+#MPSearchBlock .Watermark, #MPSearchBlock .TextBox {
+
+    /*padding:2px 3px 0;*/
+    #padding-top: 2px;
+    padding-left: 1px;
+    /*width:110px;*/
+    height: 21px !important;
+}
+
+#MPSearchBlock {
+    padding-top: 0px;
+    padding-right: 33px;
+}
+
+/**** Solve IE6 issue ****/
+/*
+.MPContentSection {
+    padding-left: 18px;
+    padding-right: 8px;
+
+    margin-right: auto;
+    text-align: left;
+    width: 921px; 
+    padding-top: 0;
+    margin-top: 0;
+}
+*/
+/*** Provide gap b/w tabs in IE7 ***/
+
+.Tab, .TabSelected {
+    margin-right: 0px;
+    border-right: solid 3px #ffffff;
+}
+
+#details { z-index: 1001; }
+
+/*********** Solve Height issue in Group Details ***************/
+
+#pnlEdit { height: 15px; }
+
+/***home page usercontrol styles***/
+
+.MPContentAreaHome .HLLandingControl h2, .MPContentAreaHome .DubConnectPopUp h2 {
+    /*background-image:url("images/top_curved.gif");*/
+    background-image: url("https://imis.phisigmasigma.org/scriptcontent/images/bottom-functiontitles.gif");
+    background-repeat: no-repeat;
+    height: 19px;
+    padding-top: 12px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 18px;
+}
+
+.HLLandingControl.HLAnnouncements .Content h2 { background-image: none; }
+
+.HLLandingControl .Details { /*width:222px; firefox wrapping issue*/ }
+
+.HLContainer { overflow: auto; }
+
+.HLEngagement .Content li, .HLDiscussions .Content ol li {
+ 
+    overflow: auto;
+    height: 100%; 
+}
+
+.HLAnnouncements h2 { position: relative; }
+
+.HLContainer { height: 100%; }
+
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-Selected ul li.AspNet-Menu-Sep,
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-ChildSelected ul li.AspNet-Menu-Sep { border: none; }
+
+h3, .Heading3, h3 a { font-size: 16px; }
+
+.HLLandingControl .Content { background-image: none; }
+
+.MPRightAux {
+    float: right;
+    width: 500px;
+    margin-top: 10px;
+}
+
+.ProgressBarProgress {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+
+.GlossaryDefinition { margin-left: 8px; }
+
+.MPUploadedImage { background-repeat: no-repeat; }
+
+.MPContentAreaWide {
+    padding-left: 13px;
+    width: 675px; /* 705px; */
+}
+
+* html .HLLandingControl.HLDiscussions h3 { margin-top: -10px; }
+
+* html .HLLandingControl.HLDiscussions h4 {
+    font-size: 14px;
+    width: 80%;
+}
+
+.HLLandingControl.HLDiscussions h3 {
+    margin-top: 0.5em;
+    #margin-top: -5px;
+}
+
+/************************************************************** NEWLY ADDED  **********************************/
+
+/***************************** NEWLY ADDED for aux nav drop down styles **************************************/
+
+.MPAuxNav ul.AspNet-Menu li li.AspNet-Menu-Sep { border: none; }
+
+.MPAuxNav ul.AspNet-Menu li:hover ul,
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-Hover ul {
+    display: block;
+    width: 100px;
+    z-index: 1000;
+}
+
+.MPAuxNav ul.AspNet-Menu { z-index: 1000; }
+
+#RightToLogo {
+    z-index: 99;
+    float: right;
+}
+
+.MPAuxNav ul.AspNet-Menu li:hover ul li,
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-Hover ul li { display: block; }
+
+.MPAuxNav ul.AspNet-Menu li:hover ul li li { display: none; }
+
+.MPAuxNav ul.AspNet-Menu li li.AspNet-Menu-WithChildren.AspNet-Menu-Sep.AspNet-Menu-ParentSelected a { color: #000; }
+
+.MPAuxNav ul.AspNet-Menu li ul li.AspNet-Menu-Hover a,
+.MPAuxNav ul.AspNet-Menu li ul li.AspNet-Menu a:hover,
+.MPAuxNav ul.AspNet-Menu li ul li.AspNet-Menu-WithChildren:hover a,
+.MPAuxNav ul.AspNet-Menu li ul li.AspNet-Menu-WithChildren a:hover,
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-Hover ul li a,
+.MPAuxNav ul.AspNet-Menu li a.AspNet-Menu-Hover ul li a,
+.MPAuxNav ul.AspNet-Menu li li a,
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-childSelected a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #002569;
+    margin-top: 0px;
+    color: #fff;
+}
+
+.MPAuxNav ul.AspNet-Menu li ul li.AspNet-Menu-Hover a:hover,
+.MPAuxNav ul.AspNet-Menu li ul li.AspNet-Menu a:hover,
+.MPAuxNav ul.AspNet-Menu li ul li.AspNet-Menu-WithChildren:hover a:hover,
+.MPAuxNav ul.AspNet-Menu li ul li.AspNet-Menu-WithChildren a,
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-Hover ul li a:hover,
+.MPAuxNav ul.AspNet-Menu li a.AspNet-Menu-Hover ul li a:hover,
+.MPAuxNav ul.AspNet-Menu li li a:hover,
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-ParentSelected a,
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-Selected a {
+   
+    background-color: #F68027;
+    color: #fff;
+}
+
+
+.MPAuxNav ul.AspNet-Menu li li a.AspNet-Menu-Link {
+    min-height: 15px;
+    height: auto;
+    width: 115px;
+}
+
+
+.MPAuxNav ul.AspNet-Menu li { height: auto; }
+
+.MPButtonNav ul.AspNet-Menu { z-index: 99; }
+
+.MPButtonNav ul.AspNet-Menu li:hover ul,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-Hover ul {
+    display: block;
+    width: 85px;
+    z-index: 1000;    
+} 
+
+
+/****************************NEWLY ADDED for rad editor*************************************/
+
+.Default.reToolbarWrapper, .web20.reToolbarWrapper, .reToolCell div { height: auto !important; }
+
+Table.rwTitlebarControls { margin-bottom: 0px; }
+
+.Web20 .reContentCell { border-bottom: 1px solid #BCD2F1; }
+
+.RadEditor table {
+    border: 0 none;
+    padding: 0;
+}
+
+.Web20.reWrapper {
+    /*width:774px !important;*/
+    height: 600px;
+}
+
+.reToolbarWrapper { width: 700px !important; }
+
+/* html>body .RadEditor table
+{ 
+   *height:342px!important;
+}*/
+
+.RadScheduler_Office2007 .rsHeader, .RadScheduler_Office2007 .rsHeader a:hover {
+    color: #000000;
+    z-index: 90;
+}
+
+.RadScheduler .rsTopWrap { z-index: 90; }
+
+/******************* NEWLY ADDED Width in shared documents ****************/
+
+.HLLandingControl.HLMyDocuments .Details {
+    width: 72%;
+    /*  #width:229px;  */
+}
+
+/********** NEWLY ADDED Home page width with ad **********/
+
+.MPContentAreaHomeWithAd { width: 824px; }
+
+.MPContentAreaHome { width: 890px; }
+
+.MPContentAreaHomeWithAd .HLLandingControl.HLEngagement.HLLandingControl .Details { width: 230px; }
+
+/***********NEWLY ADDED Bottom nav style starts**********/
+
+.MPBottomNav ul.AspNet-Menu li { height: auto; }
+
+
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-Hover,
+.MPBottomNav ul.AspNet-Menu li:hover,
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-Leaf:Hover,
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:Hover,
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-Sep:Hover,
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-Hover,
+.MPBottomNav ul.AspNet-Menu li:hover,
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:Hover,
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-Sep:Hover
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-Leaf-Hover {
+    background-color: #ccc;
+    color: #fff;
+}
+
+.MPBottomMenu ul.AspNet-Menu li:hover ul li,
+.MPBottomMenu ul.AspNet-Menu li.AspNet-Menu-Hover ul li { display: block; }
+
+.MPBottomMenu ul.AspNet-Menu li:hover ul li li { display: none; }
+
+.MPBottomMenu ul.AspNet-Menu li ul li.AspNet-Menu-Hover a,
+.MPBottomMenu ul.AspNet-Menu li ul li.AspNet-Menu a:hover,
+.MPBottomMenu ul.AspNet-Menu li ul li.AspNet-Menu-WithChildren:hover a,
+.MPBottomMenu ul.AspNet-Menu li ul li.AspNet-Menu-WithChildren a:hover,
+.MPBottomMenu ul.AspNet-Menu li.AspNet-Menu-Hover ul li a,
+.MPBottomMenuv ul.AspNet-Menu li a.AspNet-Menu-Hover ul li a,
+.MPBottomMenu ul.AspNet-Menu li li a {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    background-color: #FC6;
+    margin-top: 0px;
+    color: #fff;
+}
+
+.MPBottomMenu ul.AspNet-Menu li ul li.AspNet-Menu-Hover a:hover,
+.MPBottomMenu ul.AspNet-Menu li ul li.AspNet-Menu a:hover,
+.MPBottomMenu ul.AspNet-Menu li ul li.AspNet-Menu-WithChildren:hover a:hover,
+.MPBottomMenu ul.AspNet-Menu li ul li.AspNet-Menu-WithChildren a:hover,
+.MPBottomMenu ul.AspNet-Menu li.AspNet-Menu-Hover ul li a:hover,
+.MPBottomMenu ul.AspNet-Menu li a.AspNet-Menu-Hover ul li a:hover,
+.MPBottomMenu ul.AspNet-Menu li li a:hover {
+    background-color: #002569;
+    color: #fff;
+}
+
+.MPBottomMenu ul.AspNet-Menu li ul { background-color: #FCE8A9; }
+
+.MPBottomMenu ul.AspNet-Menu li li a.AspNet-Menu-Link {
+    min-height: 15px;
+    height: auto;
+}
+
+.MPBottomMenu ul.AspNet-Menu li ul li {
+    /*min-height:10px;
+    height:auto;*/
+}
+
+.MPBottomMenu ul.AspNet-Menu li { height: auto; }
+
+.MPButtonNav ul.AspNet-Menu { z-index: 99; }
+
+.MPBottomNav div.AspNet-Menu-Horizontal ul.AspNet-Menu li { float: left; }
+
+.MPBottomNav ul.AspNet-Menu li a, .MPBottomNav ul.AspNet-Menu li span { display: block; }
+
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-Hover,
+.MPBottomNav ul.AspNet-Menu li:hover,
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-Leaf:Hover,
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:Hover,
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-Sep:Hover,
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-Hover,
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-Sep:Hover
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-Leaf-Hover { background-color: #002569; }
+
+/********************* style of bottom nav ends here *****************/
+
+/* .MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:Hover
+.MPBottomNav ul.AspNet-Menu li:hover, 
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:Hover,*/
+
+
+ 
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-Hover,
+.MPAuxNav ul.AspNet-Menu li:hover,
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-Leaf:Hover,
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:Hover,
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-Sep:Hover,
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-Hover,
+.MPAuxNav ul.AspNet-Menu li:hover,
+
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-Sep:Hover,
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-Leaf-Hover { background-color: #FCE8A9; }
+
+.MPAuxNav ul.AspNet-Menu li:hover a,
+
+
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-Hover a,
+.MPAuxNav ul.AspNet-Menu li a.AspNet-Menu-Hover,
+.MPAuxNav ul.AspNet-Menu li ul { color: #fff; }
+
+.MPAuxNav ul.AspNet-Menu li a:hover { color: #002569; }
+
+.MPAuxNav ul.AspNet-Menu li a {
+    color: #FFF;
+    background-color: #002569;
+}
+
+.MPContentAreaHomeWithAd .HLLandingControl.HLEngagement.HLLandingControl .Details { width: 170px; }
+
+#bd { #margin-top: 20px; }
+
+/**** styles on 10.6.2010***/
+
+h4, .Heading4, h4 a {
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.ByLine { font-style: normal; }
+
+.rlDataLabel { font-weight: normal; }
+
+/************************************* Styles for all Layouts *******************/
+
+.MPContentAreaHome .Section3 .HLLandingControl.HLEngagement .Details,
+.MPContentAreaHomeWithAd .Section3 .HLLandingControl.HLEngagement .Details { width: 170px; }
+
+.MPContentAreaHome .yui-g .yui-u .HLLandingControl.HLEngagement .Details,
+.MPContentAreaHomeWithAd .yui-g .yui-u .HLLandingControl.HLEngagement .Details { width: 170px; }
+
+.MPContentAreaHome td .HLLandingControl.HLEngagement .Details,
+.MPContentAreaHomeWithAd td .HLLandingControl.HLEngagement .Details { width: 170px; }
+
+.MPContentAreaHome .yui-gd .yui-u .HLLandingControl.HLEngagement .Details,
+.MPContentAreaHomeWithAd .yui-gd .yui-u .HLLandingControl.HLEngagement .Details { width: 170px; }
+
+.MPContentAreaHome .yui-gd .yui-u .HLLandingControl.HLMyDocuments .Details,
+.MPContentAreaHomeWithAd .yui-gd .yui-u .HLLandingControl.HLMyDocuments .Details { width: 480px; }
+
+.MPContentAreaHome .yui-gd div.first .HLLandingControl.HLMyDocuments .Details,
+.MPContentAreaHomeWithAd .yui-gd div.first .HLLandingControl.HLMyDocuments .Details { width: 200px; }
+
+.MPContentAreaHome .yui-gb .yui-u .HLLandingControl.HLEngagement .Details,
+
+.MPContentAreaHomeWithAd .yui-gb .yui-u .HLLandingControl.HLEngagement .Details { width: 150px; }
+
+.MPContentAreaHome .yui-gb .yui-u .HLLandingControl.HLMyDocuments .Details,
+.MPContentAreaHomeWithAd .yui-gb .yui-u .HLLandingControl.HLMyDocuments .Details { width: 230px; }
+
+.MPContentAreaHome .Column2 .HLLandingControl.HLEngagement .Details,
+.MPContentAreaHomeWithAd .Column2 .HLLandingControl.HLEngagement .Details { width: 120px; }
+
+.MPContentAreaHome .Column1 .HLLandingControl.HLMyDocuments .Details,
+.MPContentAreaHomeWithAd .Column1 .HLLandingControl.HLMyDocuments .Details { width: 550px; }
+
+.MPContentAreaHome .Column2 .HLLandingControl.HLMyDocuments .Details,
+.MPContentAreaHomeWithAd .Column2 .HLLandingControl.HLMyDocuments .Details { width: 180px; }
+
+.MPContentAreaHomeWithAd .Column2 .HLLandingControl.HLEngagement .Details { width: 106px; }
+
+.MPContentAreaHome .yui-gb .yui-u first .HLLandingControl.HLEngagement .Details,
+.MPContentAreaHomeWithAd .yui-gb .yui-u first .HLLandingControl.HLEngagement .Details { width: 170px; }
+
+.MPContentAreaWide .HLLandingControl.HLMyDocuments .Details { width: 260px; }
+
+.MPContentArea .HLLandingControl.HLMyDocuments .Details {
+    width: 230px;
+    #width: 220px;
+}
+
+.MPContentAreaHome td .HLLandingControl.HLMyDocuments .Details,
+.MPContentAreaHomeWithAd td .HLLandingControl.HLMyDocuments .Details { width: auto; }
+
+/************************* Style for all Layouts ends ********************/
+
+/*.HLLandingControl.HLRecentBlogs h2 
+{
+background-image:url("images/blog_post.jpg");
+background-repeat:no-repeat;
+height:28px;
+padding-bottom:0;
+padding-left:40px;
+}
+.HLLandingControl.HLDiscussions h2 
+{
+background-image:url("images/comments28.jpg");
+background-repeat:no-repeat;
+padding-left:40px;
+height:20px;
+}*/
+
+/*.HLLandingControl.HLEventList h2 {
+background-image:url("images/calheader1.jpg");
+background-repeat:no-repeat;
+height:28px;
+padding-bottom:0;
+padding-left:40px;
+}
+.HLLandingControl.HLAnnouncements #ctl00_HomeCopy_CANNOUNCEMENTS1_TitleText{
+background-image:url("images/announcement_new2.jpg");
+background-repeat:no-repeat;
+height:22px;
+padding-left:45px;
+padding-top:7px;
+}*/
+
+/*.HLLandingControl.HLDiscussions .Content
+{
+    border-top:none;
+}*/
+
+.HLLandingControl.HLRecentBlogs h3 { #margin-top: -2px; }
+
+.HLLandingControl.HLRecentBlogs .ByLine h4 { display: none; }
+
+.HLLandingControl.HLRecentBlogs .ByLine a { #padding-right: 4px; }
+
+.HLLandingControl.MPIcon h3 { #margin-top: -18px; }
+
+.HLLandingControl.MPIcon h4 { #width: auto; }
+
+.HLLandingControl.MPIcon .ByLine h4 { #display: none; }
+
+/********************************  Side Menu with bgcolor *********************/
+
+
+.MPSideNav ul.AspNet-Menu li a, .MPSideNav ul.AspNet-Menu li.AspNet-Menu-Leaf a, .MPSideNav ul.AspNet-Menu li.AspNet-Menu-WithChildren a,
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-Selected a, .MPSideNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-Selected a.AspNet-Menu-Selected {
+    background-color: #F8F8F8;
+
+    border: 1px solid #C8C8CA;
+    margin-bottom: 3px;
+}
+
+.MPSideNav ul.AspNet-Menu li, .MPSideNav ul.AspNet-Menu li.AspNet-Menu-ChildSelected, .MPSideNav ul.AspNet-Menu li.AspNet-Menu-ChildSelected li.AspNet-Menu-ChildSelected, .MPSideNav ul.AspNet-Menu li.AspNet-Menu-Selected { background-image: none; }
+
+.MPSideNav ul.AspNet-Menu li a, .MPSideNav ul.AspNet-Menu li.AspNet-Menu-Leaf a, .MPSideNav ul.AspNet-Menu li.AspNet-Menu-WithChildren a {
+    background-position: 8px 8px;
+    padding-bottom: 0;
+    padding-left: 20px;
+}
+
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li a { background-position: 15px 8px; }
+
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-Selected a, .MPSideNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-Selected a.AspNet-Menu-Selected { background-position: 8px 8px; }
+
+
+/********************************  Side Menu with bgcolor ends *********************/
+
+.MPButtonNav ul.AspNet-Menu li a {
+    /* padding:9px 9px 8px;
+  padding:9px 8px 8px;
+    font-family: Verdana,san-serif;*/
+    font-family: Arial, sans-serif;
+    padding: 9px 11px 8px;
+}
+
+/* Customization of top menu */
+
+.MPButtonNav ul.AspNet-Menu { position: relative; }
+
+.MPButtonNav ul.AspNet-Menu li { position: static !important; }
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul {
+    padding-top: 5px;
+    background-color: #FFF;
+    border-color: #FCE8A9;
+    border-style: none solid solid;
+    border-width: 1px 5px 5px;
+    position: absolute;
+    text-align: center;
+    z-index: 5000;
+    margin-left: -9999px;
+}
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:hover ul li a {
+    text-decoration: none;
+    padding: 1px 3px !important; /* 2px 3px !important;*/
+
+    background: none repeat scroll 0 0 #002569;
+    border: 1px solid #002569;
+    color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: normal;
+    margin-bottom: 1px;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li a:hover,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:hover ul li a:hover {
+    color: #002569 !important;
+    background-color: Transparent;
+}
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li ul li a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:hover ul li ul li a {
+    background-color: transparent !important;
+    border: 1px solid #FCE8A9 !important;
+    color: #002569 !important;
+    display: block;
+    font-size: 11px;
+    min-height: 11px !important;
+    line-height: 11px; /* 14px;*/
+    margin: 2px 4px;
+    text-decoration: none;
+    text-indent: 2px;
+}
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li ul li a:hover,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li ul li a:hover {
+    font-style: italic;
+    color: #002569 !important;
+}
+
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul {
+    background: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    position: static;
+    width: auto;
+}
+
+.MPButtonNav .MPButtonNav ul.AspNet-Menu li.AspNet-Menu-Sep { background-image: none; }
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:hover ul {
+    position: absolute;
+    display: block;
+    clear: left;
+    margin: 0px;
+    left: 4px; /* 24px; */
+    top: 28px;
+    padding: 0px;
+    z-index: 2000;
+
+
+    background: none repeat scroll 0 0 #FCE8A9;
+    border: 1px solid #002569;
+    color: #002569;
+    Width: 881px; /* 876px;*/
+}
+
+
+.MPButtonNav .AspNet-Menu-Horizontal ul.AspNet-Menu li li { float: none; }
+
+.MPButtonNav ul.AspNet-Menu ul.AspNet-Menu-WithChildren {
+    position: absolute;
+    z-index: 5000;
+    margin-left: -9999px;
+    text-align: left;
+    border: 20px solid #c7dbda;
+    border-left: 0px;
+    border-right: 0px;
+    background: #c7dbda url('https://imis.phisigmasigma.org/scriptcontent/images//megaMenu_separator.jpg') repeat-y top center;
+}
+
+.MPButtonNav ul.AspNet-Menu li ul li a, .MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:hover ul li a, .MPButtonNav ul.AspNet-Menu li.AspNet-Menu-Hover ul li a, .MPButtonNav ul.AspNet-Menu li a.AspNet-Menu-Hover ul li a {
+    width: 145px !important;
+    word-wrap: break-word;
+}
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:hover ul li {
+    display: inline-block;
+    font-size: 0.9em;
+    list-style: none outside none;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 !important;
+    vertical-align: top;
+    zoom: 1;
+    *display: inline;
+}
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:hover ul li ul li {
+    float: none !important;
+    display: block !important;
+    clear: both !important;
+    position: static !important;
+}
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li ul li { margin-left: 3px !important; }
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:hover ul { display: block !important; }
+
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:Hover li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-Hover li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li:Hover li.AspNet-Menu-WithChildren li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-Hover li.AspNet-Menu-WithChildren li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren a:hover,
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-ChildSelected ul li.AspNet-Menu-WithChildren.AspNet-Menu-ChildSelected a:hover,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover ul li.AspNet-Menu-WithChildren a:hover,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren:hover a,
+#MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren:hover a,
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover ul li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren:Hover ul li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover ul li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover a,
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren:hover a,
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover a {
+    background-image: none !important;
+    color: #FFF;
+}
+
+ {
+    background-image: none !important;
+    Color: #002569;
+}
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-Sep ul li { width: 150px !important; }
+
+.MPButtonNav ul.AspNet-Menu li ul li ul li ul,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover ul,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren:hover ul { background-color: #FFFFFF; }
+
+.BottomLink { height: 25px; }
+
+.MoreLink { float: left; }
+
+.AddButtonBlock {
+    float: right;
+    margin-top: 0.5em;
+}
+
+.homepagemisctable { margin-bottom: 17px; }
+
+#MPOuter {
+    background-image: url("https://imis.phisigmasigma.org/scriptcontent/images/box_03a.jpg");
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    text-align: left;
+    width: 947px;
+    z-index: 1;
+    border: none;
+}
+
+#BottomContainer {
+    background-image: url("https://imis.phisigmasigma.org/scriptcontent/images/box_03c.jpg");
+    background-repeat: no-repeat;
+    height: 125px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    position: relative;
+    text-align: left;
+    width: 947px;
+    z-index: 1;
+}
+
+body {
+    color: #545556;
+    font-family: Arial, sans-serif; /* Verdana,san-serif; */
+    font-size: 13px; /* 12*/
+    line-height: 130%;
+    text-align: left;
+    word-spacing: 1px;
+}
+
+.MPSideNav ul.AspNet-Menu li,
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-ChildSelected,
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-ChildSelected li.AspNet-Menu-ChildSelected,
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-Selected { background-image: none; }
+
+.MPSideNav ul.AspNet-Menu li { background-image: none; }
+
+.MPSideNav ul.AspNet-Menu li a,
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-Leaf a,
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-WithChildren a,
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-Selected a,
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-Selected a.AspNet-Menu-Selected {
+    background-color: #FCE7A6;
+    border: 1px solid #C8C8CA;
+    margin-bottom: 3px;
+}
+
+
+
+
+.MPSideNav ul.AspNet-Menu li a,
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-Leaf a,
+.MPSideNav ul.AspNet-Menu li.AspNet-Menu-WithChildren a { color: #002569; }
+
+#FooterImageArea {
+    background-image: url("https://imis.phisigmasigma.org/scriptcontent/images/phisig-redesign2010-footer_14_1.jpg");
+    background-repeat: no-repeat;
+    height: 100px;
+    left: 13px;
+    position: relative;
+    top: 10px;
+    width: 930px;
+}
+
+.MPButtonNav { margin-left: 16px; }
+
+#ctl00_PageTitleH1h1 {
+    border: medium none;
+    color: #002569;
+    font-family: Arial, sans-serif; /* Georgia,"Times New Roman",serif;*/
+    font-size: 20px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+#ButtonBarMenu a { white-space: normal !important; }
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover ul li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren:hover ul li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover ul li.AspNet-Menu-WithChildren a {
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.MPSideNav { width: 200px; }
+
+#ButtonBarMenu ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren { #margin-right: 4px; }
+
+
+.JoinLeaveLink a {
+    color: #FCE7A6 !important;
+    background-color: #002569;
+}
+
+#CommunityTabs ul li a:hover { color: #002569; }
+
+.HLLandingControl p { font-size: 12px; }
+
+.HLLandingControl h4 { font-size: 14px; }
+
+.HLLandingControl h2 { font-size: 18px; }
+
+.HLLandingControl h1 { font-size: 20px; }
+
+fieldset legend {
+    background-color: #002569;
+    border: 1px solid #FCE7A6;
+    color: #FCE7A6;
+}
+
+fieldset legend span { color: #FCE7A6 !important; }
+
+fieldset {
+    border: 2px solid #FCE7A6;
+    position: relative;
+}
+
+
+.JoinLeaveLink a:hover { text-decoration: none; }
+
+a, a:link, a:visited { text-decoration: underline; }
+
+.ContentUserControl.ResourcesControl {
+
+    left: 6px;
+    position: relative;
+    width: 95%;
+}
+
+
+
+
+.MPFooter {
+    background-image: url("https://higherlogicdownload.s3.amazonaws.com/PHISIGMASIGMA/135cba17-b443-4126-8cd9-fa2d47823cad/UploadedImages/footerbg.jpg");
+    background-repeat: repeat;
+}
+
+.MPFooter {
+    background-repeat: no-repeat !important;
+    height: 129px;
+    margin-left: -12px;
+    min-height: 29px;
+    font-size: 11px;
+    font-weight: normal;
+    padding-top: 16px;
+    width: 100%;
+}
+
+.MPFooter, #MPCopyright {
+    background-color: #ffffff;
+    color: #545556;
+}
+
+#MPOuter {
+    background: url("https://higherlogicdownload.s3.amazonaws.com/PHISIGMASIGMA/135cba17-b443-4126-8cd9-fa2d47823cad/UploadedImages/headerbg.jpg") no-repeat scroll center top rgba(0, 0, 0, 0) !important;
+    border: medium none !important;
+    border-radius: 15px;
+    margin-top: -30px;
+    padding-top: 44px;
+    width: 965px;
+}
+
+
+.MPContentSection {
+    background: url("https://higherlogicdownload.s3.amazonaws.com/PHISIGMASIGMA/135cba17-b443-4126-8cd9-fa2d47823cad/UploadedImages/mpcontentbg.jpg") repeat-y scroll center top rgba(0, 0, 0, 0) !important;
+    float: left;
+    width: 944px;
+    border: medium none;
+    margin: auto;
+    padding: 11px;
+}
+
+.MPContentAreaHome {
+    margin-left: 20px;
+    width: 900px;   
+}
+
+.GridviewTable td
+ {
+ padding-right:15px;
+ padding-left:15px;
+ }
+
+.myDatagrid td
+{
+  padding: 3px;
+}
+
+.myDatagrid th
+{
+  padding: 5px;
+}

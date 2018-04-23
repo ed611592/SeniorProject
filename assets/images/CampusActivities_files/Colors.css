@@ -1,0 +1,738 @@
+/**Level3 display(level1-hover) issue in ie7**/
+/*.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:hover ul li ul li a, .MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:hover ul li ul li.AspNet-Menu-Sep, .MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:hover ul li ul, .MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:hover ul li ul li.AspNet-Menu-WithChildren a
+{ 
+    #background-color: #002569;
+}*/
+
+
+#MPheader {
+}
+
+/***Dark color : hover color - Start***/
+
+.MenuBarUnderline {
+    background-color: #002569;
+}
+
+#MPSlogan {
+    color: #FCE8A9;
+}
+
+.MPButtonNav ul.AspNet-Menu li a {
+    color: #fff;
+}
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-Selected a.AspNet-Menu-Selected,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-ChildSelected a.AspNet-Menu-Link.AspNet-Menu-ChildSelected {
+    background-color: transparent;
+    color: #fff;
+}
+
+    .MPButtonNav ul.AspNet-Menu li.AspNet-Menu-Selected a.AspNet-Menu-Selected:hover {
+        Background-color: #FCE8A9;
+        Color: #002569;
+    }
+
+.MPButtonNav ul.AspNet-Menu li a:hover,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-Hover a,
+.MPButtonNav ul.AspNet-Menu li:hover a,
+.MPButtonNav ul.AspNet-Menu li a.AspNet-Menu-Hover {
+    Color: #002569;
+    background-color: #FCE8A9;
+}
+
+
+
+.MPButtonNav ul.AspNet-Menu li ul li {
+    /*    background-color: #002569;
+    color: #fff; */
+}
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:Hover li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren:Hover li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-Hover li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li:Hover li.AspNet-Menu-WithChildren li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-Hover li.AspNet-Menu-WithChildren li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren a.AspNet-Menu-Link,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a {
+    color: #fff;
+    background-color: #002569;
+}
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover ul li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren:Hover ul li.AspNet-Menu-WithChildren a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover ul li.AspNet-Menu-WithChildren a {
+    background-color: #002569;
+    color: #002569;
+}
+
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren a:hover,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren:hover a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren:hover a,
+#MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren:hover a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover a,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover a {
+    color: #fff;
+    background-color: #002569;
+}
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren.AspNet-Menu-ChildSelected ul li.AspNet-Menu-WithChildren.AspNet-Menu-ChildSelected a:hover,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren.AspNet-Menu-Hover ul li.AspNet-Menu-WithChildren a:hover {
+    background-color: transparent;
+    color: #002569;
+}
+
+.HLWelcomeHeader .Content, .HLWelcome .Content {
+    border-color: #002569;
+}
+
+/***Directory - selected tab**/
+
+.TabButtonBottom {
+    background-color: #002569;
+}
+
+.MPContentSection a.TabSelectedDir {
+    background-color: #002569;
+    color: #fff;
+}
+
+    .MPContentSection a.TabSelectedDir, .MPContentSection a.TabSelectedDir:hover {
+        color: #FCE8A9;
+    }
+
+th {
+    background-color: #FCE8A9;
+}
+
+.ListContainer .ListHeader td, .ListContainer .ListHeader th, .DGHBottom {
+    color: #FCE7A6;
+}
+
+.ListContainer .ListHeader a:hover, .ListContainer .ListHeader a:link,
+.ListContainer .ListHeader a:visited {
+    color: #fff;
+}
+
+.TabBlock {
+    border-bottom: 4px solid #002569;
+}
+
+a:visited, a:active, a:link, a:focus {
+    color: #002569;
+}
+
+a:hover {
+    color: #002569;
+}
+
+.HLWelcome .UnreadMessages a {
+    color: #000;
+}
+
+.MPContentArea, .MPContentAreaWide {
+    color: #002569;
+}
+
+/***Page title**/
+
+h1#PageTitleH1 {
+    border-bottom: 1px solid #002569;
+    color: #002569;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+
+p, fieldset, table {
+    color: #002569;
+}
+
+h1, .Heading1 {
+    border-bottom: medium none;
+    border-top: medium none;
+    color: #002569;
+    font-family: arial sans-serif;
+    font-size: 20px;
+}
+
+/***Documet Page***/
+
+.TabSelected {
+    background-color: #002569;
+}
+
+/*.rlItemHeader, .rlSectionHeader, .rlCollapseHeader
+{
+    background-color: #002569;
+}*/
+
+
+
+.BreadCrumb, .BreadCrumb a, h2 a:link, h2 a:visited,
+h2 a:focus, h3 a:link, h3 a:visited, h3 a:focus, .rlScore, .rlScore:hover {
+    color: #002569;
+}
+
+.DGHBottom {
+    background-color: #002569;
+}
+
+.TableHeader {
+    background-color: #002569;
+    color: #fff;
+}
+
+/***Search headerbg**/
+
+.HLSearch .Content .HeaderStatusBar {
+    background-color: #FCE8A9;
+}
+
+    .HLSearch .Content .ResultStatus, .HLSearch .Content .SortBy,
+    .HLSearch .Content .HeaderStatusBar a {
+        color: #fff;
+    }
+
+/***Send message - BG***/
+
+.ModalPopupHeading {
+    background-color: #002569;
+}
+
+/***Orange color : hover color - End***/
+
+
+/***Green color : Button bar color - Start***/
+
+#MPButtonBar {
+    background-color: #002569; /*#FCE8A9*/
+}
+
+/*.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a.AspNet-Menu-Link
+{
+	color:#000;
+}*/
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a.AspNet-Menu-Hover,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren a.AspNet-Menu-Link:hover,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a:hover {
+    background-color: #FCE8A9; /* #002569;*/
+    color: #fff;
+    border: 1px solid #002569 !important;
+    z-index: 10000;
+    font-style: normal;
+}
+
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a:hover,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a:hover,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a.AspNet-Menu-Hover,
+.MPButtonNav ul.AspNet-Menu li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-WithChildren ul li.AspNet-Menu-Leaf a.AspNet-Menu-Hover {
+    color: #002569 !important;
+    background-color: #002569;
+    color: #002569 !important;
+    border: 1px solid #002569 !important;
+    z-index: 10000;
+    font-style: normal;
+}
+
+/*.MPSideNav ul.AspNet-Menu li a, .MPSideNav ul.AspNet-Menu li.AspNet-Menu-Leaf a, .MPSideNav ul.AspNet-Menu li.AspNet-Menu-WithChildren a
+{
+    color:  #000;
+}*/
+
+.MPAuxNav ul.AspNet-Menu li a {
+    color: #002569;
+}
+
+    .MPAuxNav ul.AspNet-Menu li a:hover {
+        color: #002569;
+    }
+
+.MPSideNavBottom {
+    color: #002569;
+}
+
+.HLWelcomeHeader .Login a {
+    color: #002569;
+}
+
+    .HLWelcomeHeader .Login a:hover {
+        color: #002569;
+    }
+
+hr.delimiter {
+    /* border-top-color:#002569;*/
+    border-top-color: #FCE8A9;
+    background-color: #FCE8A9;
+}
+
+.HLWelcome .Welcome { /*background-color:#002569;*/
+}
+
+/***Profile bio, interest,etc heading***/
+
+h2, .Heading2, h2 a {
+    color: #002569;
+    font-size: 18px;
+}
+
+/***Blue color : Button bar - End**/
+
+.HLLandingControl h2, .DubConnectPopUp h2 {
+    background-color: #FFFFFF;
+    color: #0B2170;
+    font-size: 18px;
+}
+
+.HLLandingControl .Content {
+    border-color: #FCE8A9;
+    border-style: none solid solid;
+}
+
+.HLAnnouncements .Content h2, .HLRSSReader .Content h2 {
+    color: #000;
+}
+
+
+.HLWelcome .MenuLinks a {
+    color: #000;
+    border-left-color: #000;
+}
+
+.HLWelcomeHeader h1 {
+    color: #002569;
+    font-family: arial sans-serif; /*Verdana,san-serif;*/
+}
+
+.HLWelcome .MenuLinks a:hover {
+    color: #000;
+}
+
+/***Sort By link color***/
+
+.SortBy a:link, .SortBy a:hover, .SortBy a:active {
+    color: white;
+}
+
+/***Progressbar color***/
+
+.ProgressBarProgress {
+    background-color: #002569;
+}
+
+.MPFooter {
+    background-color: #FCE8A9;
+}
+
+.MPAuxNav ul.AspNet-Menu li.AspNet-Menu-Sep {
+    border-right-color: #fff;
+}
+
+a.TabDeselectedDir {
+    background-color: #FCE8A9;
+}
+
+.MPContentSection a.TabDeselectedDir, .MPContentSection a.TabDeselectedDir:hover,
+.MPContentSection .Tab a {
+    color: #002569;
+}
+
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-Sep a {
+    border-right-color: #fff;
+}
+
+.MPBottomNav ul.AspNet-Menu li a {
+    color: #fff;
+}
+
+    .MPBottomNav ul.AspNet-Menu li a:hover {
+        color: #fff;
+    }
+
+.MPBottomNav ul.AspNet-Menu li.AspNet-Menu-Sep {
+    border-right: 1px solid #FCE8A9; /***NEW STYLE***/
+}
+
+#MPCopyright {
+    color: #fff;
+}
+
+.head a {
+    color: #fff;
+}
+
+.GridHeader a {
+    color: #fff;
+}
+
+.Tab {
+    background-color: #FCE8A9;
+}
+
+/*** for blog viewer styles ***/
+
+.drItemSubHeader, .headerItem {
+    background-color: #FCE8A9;
+    border-color: #FCE8A9;
+    color: #fff;
+}
+
+.dsItemBackground {
+    background-color: #002569;
+    border-color: #002569;
+    color: #fff;
+}
+
+.drItemSubHeader a, .ListGroupRow span, .ListContainer .ListGroupRow,
+.HeaderForeColor {
+    /*color:#ebe7dc;*/
+    color: #fff;
+}
+
+.DigestVCrumbBar td span.contentBoldNew {
+    color: #fff;
+}
+
+.ListContainer .ListHeader {
+    background-color: #002569;
+}
+
+/***************** Digest viewer classes start*************/
+
+.ListContainer .ListGroupRow {
+    background-color: #FCE8A9;
+}
+
+.ListContainer .ListHeader th {
+    background-color: #002569;
+}
+
+.DigestVCrumbBar td span a.contentBoldNew,
+.DigestVCrumbBar td a.Heading1New, .DigestVCrumbBar td span span a,
+.DigestVCrumbBar td span.contentBoldNew span a,
+.DigestVCrumbBar td span {
+    color: #fff;
+}
+
+.DigestVCrumbBar {
+    background-color: #FCE8A9;
+    border: 1px solid #BEBEBE;
+}
+
+/***************** Digest viewer classes end*************/
+
+.tabStyle .ajax__tab_active .ajax__tab_outer {
+    background: #002569;
+    border-color: #002569;
+}
+
+.tabStyle .ajax__tab_active .ajax__tab_inner {
+    background: #002569 none repeat scroll 0 0;
+}
+
+.tabStyle .ajax__tab_active .ajax__tab_tab {
+    background: #002569 none repeat scroll 0 0;
+    border-color: #002569;
+    color: #fff;
+}
+
+.tabStyle .ajax__tab_tab {
+    background-color: #FCE8A9;
+    color: #fff;
+    background-image: none;
+}
+
+.tabStyle .ajax__tab_header {
+    border-bottom-color: #002569;
+}
+
+.tabStyle .ajax__tab_tab, .tabStyle .ajax__tab_inner, .tabStyle .ajax__tab_outer {
+    background-image: none;
+}
+
+/**** egroups ******/
+
+.Container thead .Header td {
+    background-color: #002569; /*#FCE8A9;*/
+    color: #fff;
+}
+
+.Container .SubHead td {
+    background-color: #FCE8A9;
+    color: #FFFFFF;
+}
+
+.HLEngagement h3, .HLLandingControl h5 {
+    color: #000;
+}
+
+td.TabSelected a, td.TabSelected a:hover, td.TabSelected a:visited,
+.MPContentSection .TabSelected a {
+    color: #fff;
+}
+
+.ModalPopupHeading {
+    background-color: #002569;
+}
+
+.repeatImageSelected, .homeRepeatImageSelected, .groupsRepeatImageSelected {
+    background-color: #002569;
+    background-image: none;
+}
+
+.homeRepeatImage, .repeatImage, .groupsRepeatImage {
+    background-color: #FCE8A9;
+    color: #fff;
+    background-image: none;
+}
+
+/***Egroups home - border -search**/
+
+.NewBorder1 {
+    border: 1px solid #848484;
+}
+
+.Tab, .TabSelected {
+    border-right-color: #fff;
+}
+
+.ViewDetails {
+    background-color: #002569; /*#FCE8A9;*/
+    color: #fff;
+}
+
+.trbgcolor {
+    background-color: #ebe7dc;
+}
+
+.head {
+    background-color: #FCE8A9;
+}
+
+    .head td span {
+        color: #fff;
+    }
+
+/***************** colors for library admin ********/
+
+.rlItemHeader, .rlSectionHeader, .rlCollapseHeader {
+    background-color: #002569;
+    color: #fff;
+}
+
+.rlCollapseHeader, .rlColumns th {
+    background-color: #FCE8A9;
+    color: #FFFFFF;
+}
+
+/***Search Library - spacing issue**/
+
+.rlCollapseHeader {
+    border-bottom: 2px solid #FCE8A9;
+}
+
+/**************** Contibutors search result heading ****************/
+
+.GridBorder .rlColumns a:link {
+    color: #fff;
+}
+
+.GridBorder .rlColumns td a:link {
+    color: #000;
+}
+
+.ViewDetails a {
+    color: White;
+}
+
+.glHome table {
+    width: 100%;
+}
+
+.dsItemBackground a {
+    color: #fff;
+}
+
+td.Tab a, td.Tab a:hover, td.Tab a:visited {
+    color: #fff;
+}
+
+.CommentModalPopupHeader {
+    background-color: #002569;
+    color: #fff;
+}
+
+.bodyBackground {
+    /*    background-image: url(   'images/defaultbackground.gif' );
+    background-position:left bottom;
+    background-repeat:repeat-x; */
+    background-color: #9B9B9B;
+}
+
+
+.ItemContainer .ItemHeader {
+    background-color: #FCE8A9;
+}
+
+    .ItemContainer .ItemHeader a {
+        color: #fff;
+    }
+
+.Help {
+    background-color: #FFFACD;
+    border: 1px solid #4B253E;
+}
+
+
+.HLLandingControl .Content p {
+    color: #002569;
+}
+
+
+
+.HeaderClass {
+    height: 45px;
+}
+
+.HLMyDocuments .Content {
+    padding: 5px 10px;
+}
+
+#MPButtonBar ul.level1, #MPButtonBar ul.level1 li.static {
+    position: static !important;
+}
+
+    #MPButtonBar ul.level1 li a.selected {
+        background-color: #002569;
+        color: #FFF;
+    }
+
+    #MPButtonBar ul.level1 li:hover a {
+        background-color: #FCE8A9;
+        color: #002569;
+    }
+
+
+    #MPButtonBar ul.level1 li.has-popup ul li a.highlighted, #MPButtonBar ul.level1 li.has-popup ul li a:hover {
+        background-color: #002569;
+        color: #FFF;
+    }
+
+    #MPButtonBar ul.level1 li a {
+        font-size: 11px;
+        font-weight: normal;
+        font-family: Arial, sans-serif;
+        padding: 9px 11px 8px;
+    }
+
+    #MPButtonBar ul.level1 li.has-popup a, #MPButtonBar ul.level1 li.static a {
+        border-right: 1px solid white;
+    }
+
+
+    #MPButtonBar ul.level1 li ul {
+        background-color: #FFFFFF;
+        border-color: #FCE8A9;
+        border-style: none solid solid;
+        border-width: 1px 5px 5px;
+        margin-left: -9999px;
+        padding-top: 5px;
+        position: absolute;
+        text-align: center;
+        z-index: 5000;
+    }
+
+    #MPButtonBar ul.level1 li:hover ul {
+        background: none repeat scroll 0 0 #FCE8A9;
+        border: 1px solid #002569;
+        clear: left;
+        color: #002569;
+        display: block !important;
+        left: 4px !important;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 28px !important;
+        width: 881px;
+        z-index: 2000;
+    }
+
+
+        #MPButtonBar ul.level1 li:hover ul li {
+            display: inline-block;
+            font-size: 0.9em;
+            list-style: none outside none;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 !important;
+            vertical-align: top;
+        }
+
+            #MPButtonBar ul.level1 li:hover ul li a {
+                background-color: #002569;
+                color: #FFFFFF;
+            }
+
+            #MPButtonBar ul.level1 li:hover ul li ul {
+                background: none repeat scroll 0 0 transparent;
+                border: medium none;
+                margin: 0;
+                padding: 0;
+                position: static;
+                width: auto;
+            }
+
+                #MPButtonBar ul.level1 li:hover ul li ul li {
+                    clear: both !important;
+                    display: block !important;
+                    float: none !important;
+                    position: static !important;
+                }
+
+
+                    #MPButtonBar ul.level1 li:hover ul li ul li a:hover {
+                        background-color: #FCE8A9;
+                        border: 1px solid #002569 !important;
+                        color: #002569 !important;
+                        font-style: normal;
+                        z-index: 10000;
+                    }
+
+    #MPButtonBar ul.level1 li.has-popup ul li.dynamic a {
+        background-color: #FCE8A9;
+        color: #002569;
+    }
+
+    #MPButtonBar ul.level1 li ul li {
+        width: 150px !important;
+        float: none;
+        background-image: none;
+    }
+
+        #MPButtonBar ul.level1 li ul li ul {
+            background: none repeat scroll 0 0 transparent;
+            border: medium none;
+            margin: 0;
+            padding: 0;
+            position: static;
+            width: auto;
+        }
+
+
+
+            #MPButtonBar ul.level1 li ul li ul li {
+                margin-left: 3px !important;
+                width: 150px !important;
+                float: none;
+                background-image: none;
+            }

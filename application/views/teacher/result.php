@@ -74,11 +74,13 @@ $outcomes = array();
 $student_answers = array();
 $bullied_array = array();
 $no_like_school = array();
+$like_schoolarray= array();
 $students_total = 0;
 $students_done = 0;
 $s_one_parent = 0;
 
  foreach($students as $student){
+
     $id = $student['S_ID'];
     $student_teacher = $student['teach_ID'];
 
@@ -106,13 +108,17 @@ $s_one_parent = 0;
             }
 
         }
+       
 
         if(!empty($no_like_school)){
             $no_like_school = $no_like_school[0];
             if($no_like_school['Student_Answer']==3 || $no_like_school['Student_Answer']==4){
-                array_push($no_like_school, $student);
+                array_push($like_schoolarray, $student);
             }
         }
+        //print_r($no_like_school);
+
+//        print_r($like_schoolarray);
 
         //changes it from array to just grade
         $grade_array = $get_grade[0];
@@ -324,7 +330,7 @@ $tStatistics = $statisticsGatherer->getTStatistics();
                 </tr>
             </thead>
             <tbody>
-                <?php foreach($no_like_school as $person) : ?>
+                <?php foreach($like_schoolarray as $person) : ?>
                     <tr>
                         <th scope="row"><?php echo $person['fname'] ?></th>
                         <td><?php echo $person['lname'] ?></td>
