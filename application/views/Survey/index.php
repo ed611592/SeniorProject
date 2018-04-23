@@ -88,7 +88,6 @@ $data = $q->result_array();
       <input type="hidden" name="counter" value="<?php echo $_SESSION['counter']; ?>"/>
       <h3 id = "story"> <?php echo($data[$_SESSION['counter']]['story']); ?></h3>
       <h3 id = "question"> <?php echo($data[$_SESSION['counter']]['Q_text']); ?></h3>
-  <!--    <img id = "bubble" src = "<?php echo base_url();?>assets/images/speechBubble.png"> -->
 
 
     <div id= "answer">
