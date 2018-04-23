@@ -84,11 +84,11 @@ INSERT INTO `Fav_Subject`(`subj_ID`, `subj_name`, `quantity`) VALUES (4,'History
 
 INSERT INTO Teacher VALUES(1,'Jane Smith', 'Jane', '8D788385431273D11E8B43BB78F3AA41');
 
-INSERT INTO Student VALUES(1,'Andy', 90, 1, 'Andy',  'DA41BCEFF97B1CF96078FFB249B3D66E', 'less');
+INSERT INTO Student VALUES(1,'Andy', 90, 1, 'Andy',  'DA41BCEFF97B1CF96078FFB249B3D66E', 'Less');
 
-INSERT INTO Student VALUES(2,'Brandy', 65, 1, 'Brandy',  '6C29E9CC4042D972B15FF0304E636886', 'jackson-shorts');
+INSERT INTO Student VALUES(2,'Brandy', 65, 1, 'Brandy',  '6C29E9CC4042D972B15FF0304E636886', 'Jackson-Shorts');
 
-INSERT INTO Student VALUES(3,'Emily', 70, 1, 'Emily',  'B02AE5AAEFE3F7090668DF034B0F2324', 'demarco');
+INSERT INTO Student VALUES(3,'Emily', 70, 1, 'Emily',  'B02AE5AAEFE3F7090668DF034B0F2324', 'DeMarco');
 
 INSERT INTO Student VALUES(4,'Shara', 95, 1, 'Shara',  '683713f2c613cf8986b3f7dd1d5362f2', 'Lavin');
 

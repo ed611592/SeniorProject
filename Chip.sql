@@ -434,9 +434,9 @@ CREATE TABLE `Student` (
 --
 
 INSERT INTO `Student` (`S_ID`, `fName`, `AVG_Grade`, `teach_ID`, `username`, `password`, `lName`) VALUES
-(1, 'Andy', 90, 1, 'Andy', 'DA41BCEFF97B1CF96078FFB249B3D66E', 'less'),
-(2, 'Brandy', 65, 1, 'Brandy', '6C29E9CC4042D972B15FF0304E636886', 'jackson-shorts'),
-(3, 'Emily', 70, 1, 'Emily', 'B02AE5AAEFE3F7090668DF034B0F2324', 'demarco'),
+(1, 'Andy', 90, 1, 'Andy', 'DA41BCEFF97B1CF96078FFB249B3D66E', 'Less'),
+(2, 'Brandy', 65, 1, 'Brandy', '6C29E9CC4042D972B15FF0304E636886', 'Jackson-Shorts'),
+(3, 'Emily', 70, 1, 'Emily', 'B02AE5AAEFE3F7090668DF034B0F2324', 'DeMarco'),
 (4, 'Shara', 95, 1, 'Shara', '683713f2c613cf8986b3f7dd1d5362f2', 'Lavin'),
 (5, 'Chad', 68, 1, 'Chad', 'e03653dedd6f4e142f4aca131995964f', 'Goodman'),
 (6, 'Sally', 70, 1, 'Sally', '3fa8b9cc38915ca488e412b59a8aaa79', 'Dunhill'),
