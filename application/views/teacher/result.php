@@ -278,10 +278,7 @@ $tStatistics = $statisticsGatherer->getTStatistics();
 
         <div id = "regress">
             <h4 id = "reg_nums">
-                <?php for($i =0; $i<sizeof($stat_array); $i++){
-                    print("Q" . $stat_array[$i] . "  ");} 
-
-                ?>
+                
 
                 <?php 
                     
