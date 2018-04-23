@@ -35,7 +35,7 @@ elseif ($_SESSION['counter'] == 4 || $_SESSION['counter'] == 5) {
 }
 
 elseif ($_SESSION['counter'] == 6 || $_SESSION['counter'] == 7) {
-  $image = "REDFUCKINGBANDANA.png";
+  $image = "REDBANDANA.png";
 }
 
 elseif ($_SESSION['counter'] == 8 || $_SESSION['counter'] == 9) {
