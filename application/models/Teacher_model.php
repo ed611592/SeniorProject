@@ -36,12 +36,12 @@
 		}
 
 		public function get_Answers($id){
-			$query = $this -> db -> query("SELECT Responses.Student_Answer, Responses.value, Responses.Q_ID, Responses.S_ID, Responses.R_ID, Responses.Surv_ID FROM Responses WHERE S_ID = $id");
+			$query = $this -> db -> query("SELECT Responses.Student_Answer,  Responses.Q_ID, Responses.S_ID, Responses.R_ID, Responses.Surv_ID FROM Responses WHERE S_ID = $id");
 			return $query -> result_array();
 		}
 
 		public function get_Question($Q_ID, $S_ID){
-			$query = $this -> db -> query("SELECT Responses.Student_Answer, Responses.value, Responses.Q_ID, Responses.S_ID, Responses.R_ID, Responses.Surv_ID FROM Responses WHERE Q_ID = $Q_ID AND S_ID = $S_ID");
+			$query = $this -> db -> query("SELECT Responses.Student_Answer,  Responses.Q_ID, Responses.S_ID, Responses.R_ID, Responses.Surv_ID FROM Responses WHERE Q_ID = $Q_ID AND S_ID = $S_ID");
 			return $query -> row_array();
 		}
 
