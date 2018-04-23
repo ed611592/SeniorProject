@@ -293,7 +293,7 @@ $tStatistics = $statisticsGatherer->getTStatistics();
                         
                     } 
 
-                     for($i =0; $i<sizeof($stat_array); $i++){
+                     for($i =0; $i<sizeof($question); $i++){
                         print_r($question[$i]['Q_text']);
                         echo "<br> <br>";
                         
