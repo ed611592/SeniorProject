@@ -16,7 +16,7 @@ body{
 }
 
 #chip{
-	border: 1px solid black;
+	border: 3px solid white;
     height: 60%;
     width: 30%;
     float: left;
@@ -24,7 +24,11 @@ body{
 }
 
 form{
+<<<<<<< HEAD
+    /*border: 1px solid black;*/
+=======
     
+>>>>>>> 5484df3720e6f4296a23d9b0b90205d4c1da4e0f
     height: 100%;
     width: 60%;
     float: left;
@@ -33,6 +37,10 @@ form{
 }
 
 #story{
+<<<<<<< HEAD
+	/*border: 1px solid black;*/
+=======
+>>>>>>> 5484df3720e6f4296a23d9b0b90205d4c1da4e0f
     width: 100%;
     margin-top: 1.5%;
     margin-left: 1%;
@@ -41,6 +49,10 @@ form{
 }
 
 #question{
+<<<<<<< HEAD
+	/*border: 1px solid black;*/
+=======
+>>>>>>> 5484df3720e6f4296a23d9b0b90205d4c1da4e0f
     float: left;
     width: 70%;
     height: 25%;
@@ -61,6 +73,10 @@ form{
 
 
 #storyPic{
+<<<<<<< HEAD
+	/*border: 1px solid black;*/
+=======
+>>>>>>> 5484df3720e6f4296a23d9b0b90205d4c1da4e0f
     position: relative;
     height: 45%;
     width: 45%;

@@ -270,7 +270,8 @@ $tStatistics = $statisticsGatherer->getTStatistics();
                 if(abs($tStatistics[$i])>=2){
                     $x = $i+1;
                     array_push($stat_array, $x);
-                    
+                 
+
                 }
             }
         ?>
@@ -279,14 +280,31 @@ $tStatistics = $statisticsGatherer->getTStatistics();
             <h4 id = "reg_nums">
                 <?php for($i =0; $i<sizeof($stat_array); $i++){
                     print("Q" . $stat_array[$i] . "  ");} 
+
+                ?>
+
+                <?php 
+                    
                 ?>
                         
             </h4>
             <div id = "reg_questions">
-                <h4>What is your least favorite subject?</h4>
-                <h4>Do you like going to school?</h4>
-                <h4>Do you get along with other students?</h4>
-                <h4>Do you work hard at school?</h4>
+                <?php
+                $question = array();
+                    for($i =0; $i<sizeof($stat_array); $i++){
+                        array_push($question, $this -> Teacher_model -> get_Q($stat_array[$i]));
+                        
+                    } 
+                    print_r($question[0]['Q_text']);
+                    echo "<br> <br>";
+                    print_r($question[1]['Q_text']);
+                    echo "<br> <br>";
+                    print_r($question[2]['Q_text']);
+                    echo "<br> <br>";
+                    print_r($question[3]['Q_text']);
+                ?>
+
+
             </div>
         </div>
     </div>

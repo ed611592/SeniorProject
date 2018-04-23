@@ -45,6 +45,11 @@
 			return $query -> row_array();
 		}
 
+		public function get_Q($one){
+			$query = $this -> db -> query("SELECT question.Q_text FROM `question` WHERE Q_ID = $one");
+			return $query -> row_array();
+		}
+
 		public function get_Grade($id){
 			$query = $this-> db -> query("SELECT Student.AVG_Grade FROM Student WHERE S_ID = $id");
 			return $query -> result_array();
