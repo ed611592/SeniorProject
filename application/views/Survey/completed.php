@@ -13,8 +13,6 @@ h2{
 
 <link href="<?php echo base_url();?>/assets/css/UserCSS.css" rel="stylesheet">
 
-
-
 <img SRC="<?php echo base_url();?>assets/completed.gif">
 <h2>
 <center>Please logout and wait for everyone else to be done!!!</center>

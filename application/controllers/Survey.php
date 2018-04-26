@@ -1,6 +1,9 @@
 <?php
 	class Survey extends CI_Controller{
 
+        /**
+        *This method creates the initial survey page
+        */
 		public function index(){
 			$data['title'] = 'Survey';
 
@@ -11,6 +14,11 @@
             $this->load->view('templates/footer');
 		}
 
+        /**
+        *This method loads the barebones survey page
+        *@param string $page
+        *variable to load the proper php page
+        */
 		 public function view($page = 'home')
         {
             if(!file_exists(APPPATH.'views/Survey/'.$page.'.php')){
@@ -24,16 +32,16 @@
             $this->load->view('templates/footer');
         }
 
+        /**
+        *This method sends all of the survey data to the survey page to be displayed 
+        *
+        */
         public function takeSurvey(){
             $this->load->database();
 
             $test['title'] = 'Survey';
 
             $test['survey'] = $this -> Survey_model -> get_survey();
-
-           // $data['categories'] = $this -> post_model -> get_categories();
-
-
 
             $data['title'] = 'Add a response to Survey';
 
@@ -57,7 +65,12 @@
                 $this -> load-> view('templates/footer');
               }
           }
-           
+        
+        /**
+        *This method loads the completed page when called
+        *@param string $page
+        *this tells the function what page to load
+        */   
         public function done($page = 'completed')
         {
             if(!file_exists(APPPATH.'views/Survey/'.$page.'.php')){
