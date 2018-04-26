@@ -1,6 +1,11 @@
 <?php
+
     class Student extends CI_Controller {
-        //why isn't this working
+        /**
+        * @param string $page
+        *   An string that contains the page name
+        *
+        */
           public function view($page = 'StudentSurvey')
         {
             if(!file_exists(APPPATH.'views/student/'.$page.'.php')){
@@ -13,7 +18,11 @@
             $this->load->view('student/'.$page, $data);
             $this->load->view('templates/footer');
         }
-//register student
+
+        /**
+        * This method uses the user entered information from the student register page and adds that student to the database.  
+        *
+        */
 
         public function register(){
      
@@ -49,7 +58,10 @@
 
         }
 
-        //Log in user
+         /**
+        * This method uses the user entered information from the student login page. It checks to see if the username/password exists in the student database, and it if does then it logs in the student and redirects to the student home page.
+        *
+        */
          public function login(){
             $data['title'] = 'Sign In';
 
@@ -83,7 +95,7 @@
 
                     $this -> session -> set_userdata($user_data);
 
-                  //  $this -> session -> set_flashdata('user_loggedin','You are now logged in');
+                 
 
                     redirect('student/view/studentHome');
 
@@ -102,7 +114,10 @@
 
         }
 
-        // log user out
+         /**
+        * This method logs out the student session data and returns to the homepage. 
+        *
+        */
         public function logout(){
             //Unset user data
             $this -> session -> unset_userdata('s_logged_in');
@@ -111,13 +126,16 @@
 
             session_unset();
 
-          
-          //  $this -> session ->set_flashdata('user_loggedout', 'You are now logged out');
+        
 
             redirect('home');
         }
 
-        //Check if username exists
+        /**
+        * @param string $username
+        * This method checks if the student username exists in the database.  
+        *
+        */
         public function check_username_exists($username){
 
             $this -> form_validation ->set_message('check_username_exists', 'That username is taken. Please choose a different one.');

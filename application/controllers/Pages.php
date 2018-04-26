@@ -1,6 +1,10 @@
 <?php
     class Pages extends CI_Controller {
-
+        /**
+        * @param string $page
+        *   An string that contains the page name
+        *
+        */
         public function view($page = 'home')
         {
             if(!file_exists(APPPATH.'views/pages/'.$page.'.php')){
