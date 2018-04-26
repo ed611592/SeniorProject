@@ -4,7 +4,11 @@
 
     class Teacher extends CI_Controller {
 
-
+        /**
+        *This method loads the teacher homepage
+        *@param string $page
+        *says what webpage to load
+        */
         public function view($page = 'home')
         {
             if(!file_exists(APPPATH.'views/teacher/'.$page.'.php')){
@@ -27,6 +31,10 @@
             $this->load->view('templates/footer');
         }
 
+        /**
+        *This method 
+        *
+        */
         public function index(){
             $this -> load -> view('Chart_view');
         }
@@ -194,9 +202,6 @@
             $this -> session -> unset_userdata('t_logged_in');
             $this -> session -> unset_userdata('teach_ID');
             $this -> session -> unset_userdata('username');
-
-            //this isn't working either
-           // $this -> session ->set_flashdata('user_loggedout', 'You are now logged out');
 
             redirect('home');
         }

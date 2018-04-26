@@ -30,13 +30,6 @@
           <input type = "password" name = "password" class = "form-control" placeholder = "Password" required autofocus>
         </div>
 
-
-        <!--<div class="checkbox">
-          <label>
-          <input type="checkbox" value="remember-me"> Remember me
-          </label>
-        </div>-->
-
         <button type = "submit" class = "btn btn-lg btn-primary btn-block">Sign in</button>
 
       </div>

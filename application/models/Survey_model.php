@@ -1,19 +1,29 @@
 <?php
 
 	class Survey_model extends CI_Model{
-
-		 
-		
+		/**
+		*This function loads the database method for the Survey_Model to use
+		*
+		*/
 		public function __construct(){
 			parent::__construct();
 			$this -> load -> database();
 		}
 
+		/**
+		*This method queries the database for the questions pertaining to he proper survey
+		*@param int $id
+		*tells the query what survey to look in
+		*/
 		public function get_survey($id = 1){
 			$query = $this-> db -> query("SELECT * FROM Question WHERE Surv_ID = $id");
 			return $query-> result_array();
 		}
 
+		/**
+		*This method takes the student's responses and posts them to the responses database as well as the the favorite subject table and least favorite subject table
+		*
+		*/
 		public function takeSurvey(){
 			$data2 = array();
 			$data_least = array();
