@@ -10,5 +10,7 @@ var searchData=
   ['get_5fkids_5flikeschool',['get_kids_likeschool',['../class_teacher__model.html#a28beba43485e0f656ea0e0307dea7dc0',1,'Teacher_model']]],
   ['get_5fq',['get_Q',['../class_teacher__model.html#af8a05a0becca8e5e260066e3519e50f9',1,'Teacher_model']]],
   ['get_5fquestion',['get_Question',['../class_teacher__model.html#a49bff62ebf8e06d9e759364183919068',1,'Teacher_model']]],
-  ['get_5fsurvey',['get_survey',['../class_survey__model.html#addea63c1a7d5b3ae113ac9c8b58837d4',1,'Survey_model']]]
+  ['get_5fsurvey',['get_survey',['../class_survey__model.html#addea63c1a7d5b3ae113ac9c8b58837d4',1,'Survey_model']]],
+  ['getdata',['getdata',['../class_teacher.html#a3b9e6dcf22f337e934ad2ee04952e58c',1,'Teacher']]],
+  ['getdata2',['getdata2',['../class_teacher.html#af261246474f8652d26869325e675866e',1,'Teacher']]]
 ];

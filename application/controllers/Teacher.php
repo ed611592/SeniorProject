@@ -32,13 +32,16 @@
         }
 
         /**
-        *This method 
+        *This method loads the chart view for the results part
         *
         */
         public function index(){
             $this -> load -> view('Chart_view');
         }
 
+        /**
+        *This moethod gets all of the data for for the favorite subjects
+        */
        public function getdata(){
 
 
@@ -77,6 +80,9 @@
         } 
 
 
+        /**
+        *This moethod gets all of the data for for the least favorite subjects
+        */
        public function getdata2(){
 
 
@@ -116,7 +122,10 @@
 
 
 
-//Register Teacher User
+
+        /**
+        *This method registers a student based on the information the teacher inputted 
+        */
         public function register(){
      
             $data['title'] = 'Sign Up';
@@ -143,8 +152,10 @@
             }
 
         }
-         
-//Log in user
+    
+        /**
+        *This method logs a teacher in 
+        */
          public function login(){
             $data['title'] = 'Sign In';
 
@@ -196,7 +207,9 @@
 
         }
 
-        // log user out
+         /**
+        *This method logs a teacher out 
+        */
         public function logout(){
             //Unset user data
             $this -> session -> unset_userdata('t_logged_in');
@@ -206,7 +219,9 @@
             redirect('home');
         }
 
-        //Check if username exists
+        /**
+        *This method checks to see if username exists
+        */
         public function check_username_exists($username){
 
             $this -> form_validation ->set_message('check_username_exists', 'That username is taken. Please choose a different one.');
