@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['get_5fsurvey',['get_survey',['../class_survey__model.html#addea63c1a7d5b3ae113ac9c8b58837d4',1,'Survey_model']]]
+  ['done',['done',['../class_survey.html#adf25c82ca0d964d8d6a4d3291a63ae21',1,'Survey']]]
 ];

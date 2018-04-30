@@ -1,6 +1,13 @@
 <?php
 
 	class Student_model extends CI_Model{
+
+		 /**
+        * @param $enc_password
+        * @param $teach_ID 
+        * This method is called in the controller. It takes in the students new username and the teacher that student has and inserts the student information into the Student table.
+        *
+        */
 		
 		public function register($enc_password, $teach_ID){
 
@@ -19,7 +26,13 @@
 		}	
 		
 
-		//Log student in
+		 /**
+        * @param $username
+        * @param $password 
+        * This method is called in the controller. It takes in the students new username and password and gets that student from the database.
+        *
+        */
+		
 		public function login($username, $password){
 			//Validate
 			$this -> db -> where('username', $username);
@@ -35,7 +48,11 @@
 			}
 		}
 
-		//check username exists
+		 /**
+        * @param $username
+        * This method checks to see if the username exists in the student table.
+        *
+        */
 		public function check_username_exists($username){
 
 			$query = $this ->db ->get_where('Student', array('username'=>$username));

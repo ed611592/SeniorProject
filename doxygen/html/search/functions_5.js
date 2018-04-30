@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['view',['view',['../class_survey.html#ab99a6b7c92f9e0c05333e1581fe6661b',1,'Survey\view()'],['../class_teacher.html#ab99a6b7c92f9e0c05333e1581fe6661b',1,'Teacher\view()']]]
+  ['login',['login',['../class_student.html#aa311da27ba5706f5710cea7706c8eae1',1,'Student\login()'],['../class_student__model.html#ad870c94a5775868891f6c50b9818d627',1,'Student_model\login()'],['../class_teacher__model.html#ad870c94a5775868891f6c50b9818d627',1,'Teacher_model\login()']]],
+  ['logout',['logout',['../class_student.html#a082405d89acd6835c3a7c7a08a7adbab',1,'Student']]]
 ];

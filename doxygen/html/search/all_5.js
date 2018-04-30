@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['student',['Student',['../class_student.html',1,'']]],
-  ['student_5fmodel',['Student_model',['../class_student__model.html',1,'']]],
-  ['survey',['Survey',['../class_survey.html',1,'']]],
-  ['survey_5fmodel',['Survey_model',['../class_survey__model.html',1,'']]]
+  ['login',['login',['../class_student.html#aa311da27ba5706f5710cea7706c8eae1',1,'Student\login()'],['../class_student__model.html#ad870c94a5775868891f6c50b9818d627',1,'Student_model\login()'],['../class_teacher__model.html#ad870c94a5775868891f6c50b9818d627',1,'Teacher_model\login()']]],
+  ['logout',['logout',['../class_student.html#a082405d89acd6835c3a7c7a08a7adbab',1,'Student']]]
 ];

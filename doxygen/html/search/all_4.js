@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['pages',['Pages',['../class_pages.html',1,'']]],
-  ['post_5fmodel',['Post_model',['../class_post__model.html',1,'']]],
-  ['posts',['Posts',['../class_posts.html',1,'']]]
+  ['index',['index',['../class_survey.html#a149eb92716c1084a935e04a8d95f7347',1,'Survey\index()'],['../class_teacher.html#a149eb92716c1084a935e04a8d95f7347',1,'Teacher\index()'],['../class_welcome.html#a149eb92716c1084a935e04a8d95f7347',1,'Welcome\index()']]]
 ];

@@ -2,7 +2,6 @@ var hierarchy =
 [
     [ "CI_Controller", null, [
       [ "Pages", "class_pages.html", null ],
-      [ "Posts", "class_posts.html", null ],
       [ "Student", "class_student.html", null ],
       [ "Survey", "class_survey.html", null ],
       [ "Teacher", "class_teacher.html", null ],

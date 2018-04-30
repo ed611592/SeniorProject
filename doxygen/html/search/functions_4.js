@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['takesurvey',['takeSurvey',['../class_survey.html#a84ff765abed0d4ede5a009583d906aee',1,'Survey\takeSurvey()'],['../class_survey__model.html#a84ff765abed0d4ede5a009583d906aee',1,'Survey_model\takeSurvey()']]]
+  ['index',['index',['../class_survey.html#a149eb92716c1084a935e04a8d95f7347',1,'Survey\index()'],['../class_teacher.html#a149eb92716c1084a935e04a8d95f7347',1,'Teacher\index()'],['../class_welcome.html#a149eb92716c1084a935e04a8d95f7347',1,'Welcome\index()']]]
 ];
